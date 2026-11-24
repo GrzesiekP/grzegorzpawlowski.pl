@@ -21,7 +21,7 @@
         <nav aria-label="Nawigacja główna">
           <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Blog</a>
           <a href="{{ '/o-mnie/' | relative_url }}"{% if page.url == '/o-mnie/' %} aria-current="page"{% endif %}>O mnie</a>
-          <a href="mailto:kontakt@grzegorzpawlowski.pl">Kontakt</a>
+          <a href="{{ '/kontakt/' | relative_url }}"{% if page.url == '/kontakt/' %} aria-current="page"{% endif %}>Kontakt</a>
         </nav>
       </div>
     </header>
@@ -33,7 +33,7 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <span>© {{ 'now' | date: '%Y' }} Grzegorz Pawłowski</span>
-        <div><a href="mailto:kontakt@grzegorzpawlowski.pl">Napisz do mnie</a><a href="https://www.linkedin.com/in/grzegorzpawlowski93/">LinkedIn</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></div>
+        <div><a href="{{ '/kontakt/' | relative_url }}">Kontakt</a><a href="https://www.linkedin.com/in/grzegorzpawlowski93/">LinkedIn</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></div>
       </div>
     </footer>
   </body>

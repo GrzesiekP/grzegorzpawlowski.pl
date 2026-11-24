@@ -110,8 +110,6 @@ nav a:hover, nav a[aria-current="page"] { color: var(--green); }
 .article-footer .back-link { margin: 0; }
 .page-header { margin-bottom: 34px; }
 .page-header h1 { font-size: clamp(40px, 6vw, 56px); }
-.about-photo { float: right; width: min(34%, 220px); height: auto; margin: 0 0 24px 32px; border-radius: 10px; }
-
 .site-footer { border-top: 1px solid var(--line); }
 .footer-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 12px; }
 .footer-inner div { display: flex; gap: 22px; }
@@ -142,7 +140,6 @@ nav a:hover, nav a[aria-current="page"] { color: var(--green); }
   .article-header .back-link { margin-bottom: 24px; }
   .article-body { font-size: 16px; }
   .article-body h2 { font-size: 26px; }
-  .about-photo { width: 38%; margin-left: 18px; }
   .footer-inner { min-height: 90px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 7px; }
   .footer-inner div { gap: 16px; }
 }

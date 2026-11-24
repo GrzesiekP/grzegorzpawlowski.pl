@@ -4,8 +4,6 @@ title: O mnie
 permalink: /o-mnie/
 ---
 
-![Grzegorz Pawłowski](/assets/images/about-photo.jpg){: .about-photo }
-
 Wykorzystuję technologię, żeby osiągnąć więcej, robiąc mniej. Tak, to takie proste!
 
 **Programowaniem zajmuję się zawodowo od 2016 r.** Od zawsze widziałem w IT możliwości, dzięki którym można osiągnąć więcej i pracować lepiej. Kreatywność oraz ciężka, ale mądra praca pozwala, korzystając z technologii, tworzyć wspaniałe rozwiązania!
@@ -21,4 +19,4 @@ Poza działalnością w IT interesuję się też turystyką wysokogórską, szcz
 ## Znajdź mnie
 
 - [LinkedIn](https://www.linkedin.com/in/grzegorzpawlowski93/)
-- [Napisz e-mail](mailto:kontakt@grzegorzpawlowski.pl)
+- [Kontakt](/kontakt/)

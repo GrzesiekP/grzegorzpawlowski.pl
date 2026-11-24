@@ -18,7 +18,6 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://grzegorzpawlowski.pl"
 API = f"{SITE}/wp-json/wp/v2/posts?per_page=100&_embed"
 EXTRA_IMAGES = {
-    f"{SITE}/wp-content/uploads/2020/10/p2-228x300.jpg": "about-photo.jpg",
     f"{SITE}/wp-content/uploads/2020/10/cropped-l1.png": "site-logo.png",
     f"{SITE}/wp-content/uploads/2020/12/profilowe1.png": "author.png",
 }
