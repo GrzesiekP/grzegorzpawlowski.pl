@@ -3,6 +3,8 @@ name: Publish site
 on:
   push:
     branches: [main, master]
+  pull_request:
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -27,7 +29,15 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
+      - name: Save built site for local preview
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview
+          path: ./_site
+          retention-days: 1
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
