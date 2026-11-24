@@ -14,19 +14,19 @@ Thesaurus (z łaciny skarbiec) – tak roboczo nazwałem projekt, w którym zebr
 #### Czego potrzebujesz?
 
 - Kodu – znajdziesz go [na GitHubie](https://github.com/GrzesiekP/Thesaurus/blob/master/Thesaurus.js) .
-- Do działania funkcji `CRYPTO_USD_PRICE` (opisałem we wpisie [Google Sheets #4: Cena Kryptowaluty w Arkuszach Google](/cena-kryptowaluty-w-arkuszach-google/) ) potrzebujesz klucz API CoinMarketCap (strona z kursami kryptowalut). Opis, jak go zdobyć również znajdziesz we [wspomnianym wpisie](/cena-kryptowaluty-w-arkuszach-google/) .
+- Do działania funkcji `CRYPTO_USD_PRICE` (opisałem we wpisie [Google Sheets #4: Cena Kryptowaluty w Arkuszach Google](../cena-kryptowaluty-w-arkuszach-google/) ) potrzebujesz klucz API CoinMarketCap (strona z kursami kryptowalut). Opis, jak go zdobyć również znajdziesz we [wspomnianym wpisie](../cena-kryptowaluty-w-arkuszach-google/) .
 
 #### Instrukcja:
 
 1. Otwórz ***Edytor Skryptów*** (Narzędzia -> Edytor Skryptów)
 
-![](/assets/images/b446d2d2-image-2.png)
+![](../assets/images/b446d2d2-image-2.png)
 
 2. Pojawi się kod skryptu ***Kod.gs***. Zamień go na kod z pliku [*Thesaurus.js* z GitHuba](https://github.com/GrzesiekP/Thesaurus/blob/master/Thesaurus.js).
 
-![](/assets/images/e19017ef-zamien-kod.gif)
+![](../assets/images/e19017ef-zamien-kod.gif)
 
-3. Podmień w pierwszej linijce wartość `coinMarketCapApiKey`– zamiast `apiKey`wklej swój klucz API CoinMarketCap (**[skąd go wziąć?](/cena-kryptowaluty-w-arkuszach-google/)**) i kliknij ikonę zapisu, np.
+3. Podmień w pierwszej linijce wartość `coinMarketCapApiKey`– zamiast `apiKey`wklej swój klucz API CoinMarketCap (**[skąd go wziąć?](../cena-kryptowaluty-w-arkuszach-google/)**) i kliknij ikonę zapisu, np.
 
 ```
 const coinMarketCapApiKey = "7b725c99-ed97-1dd8-c2b5-278d97885393"
@@ -46,8 +46,8 @@ const coinMarketCapApiKey = "7b725c99-ed97-1dd8-c2b5-278d97885393"
 
 10. Kliknij ***Zezwól***
 
-![](/assets/images/decdd5ae-zeszwol-na-dostep-2.gif)
+![](../assets/images/decdd5ae-zeszwol-na-dostep-2.gif)
 
 **Gotowe! Możesz używać funkcji!**
 
-Dokumentację i opis funkcji znajdziesz [na GitHubie](https://github.com/GrzesiekP/Thesaurus) oraz w innych wpisach z [serii Google Sheets](/category/google-sheets/).
+Dokumentację i opis funkcji znajdziesz [na GitHubie](https://github.com/GrzesiekP/Thesaurus) oraz w innych wpisach z [serii Google Sheets](../category/google-sheets/).

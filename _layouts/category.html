@@ -4,7 +4,7 @@ layout: default
 {% assign category_posts = site.posts | where_exp: "post", "post.categories contains page.category" %}
 <section class="category-archive">
   <header class="archive-header">
-    <a class="back-link" href="{{ '/' | relative_url }}">← Wszystkie wpisy</a>
+    <a class="back-link" href="{% include root-path.html %}">← Wszystkie wpisy</a>
     <p class="eyebrow">Archiwum kategorii</p>
     <h1>{{ page.category | escape }}</h1>
     <p>{{ category_posts.size }} {% if category_posts.size == 1 %}wpis{% elsif category_posts.size < 5 %}wpisy{% else %}wpisów{% endif %}</p>
@@ -12,12 +12,12 @@ layout: default
   <div class="post-grid">
     {% for post in category_posts %}
       <article class="post-card{% unless post.image %} post-card-text{% endunless %}">
-        {% if post.image %}<a class="card-image" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"></a>{% endif %}
+        {% if post.image %}<a class="card-image" href="{% include root-path.html %}{{ post.url | remove_first: '/' }}" tabindex="-1" aria-hidden="true"><img src="{% include root-path.html %}{{ post.image | remove_first: '/' }}" alt="" loading="lazy"></a>{% endif %}
         <div class="card-content">
           <div class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d.%m.%Y" }}</time></div>
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+          <h3><a href="{% include root-path.html %}{{ post.url | remove_first: '/' }}">{{ post.title | escape }}</a></h3>
           <p>{{ post.excerpt | escape }}</p>
-          <a class="read-more" href="{{ post.url | relative_url }}">Czytaj wpis <span aria-hidden="true">↗</span></a>
+          <a class="read-more" href="{% include root-path.html %}{{ post.url | remove_first: '/' }}">Czytaj wpis <span aria-hidden="true">↗</span></a>
         </div>
       </article>
     {% endfor %}

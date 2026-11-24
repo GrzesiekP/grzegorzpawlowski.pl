@@ -17,7 +17,7 @@ Niestety są dane, których nie pobierzesz dzięki `GOOGLEFINANCE`. Jedną z nic
 
 #### Jak używać funkcji?
 
-Przede wszystkim musisz najpierw mieć jej kod. Opis, skąd go wziąć i jak z niego w prosty sposób korzystać znajdziesz we wpisie [Google Sheets #3: Jak Używać Funkcji – Thesaurus](/jak-uzywac-funkcji-thesaurus/)  
+Przede wszystkim musisz najpierw mieć jej kod. Opis, skąd go wziąć i jak z niego w prosty sposób korzystać znajdziesz we wpisie [Google Sheets #3: Jak Używać Funkcji – Thesaurus](../jak-uzywac-funkcji-thesaurus/)  
 Mając zainstalowany kod, wystarczy zawołać funkcję:
 
 ```

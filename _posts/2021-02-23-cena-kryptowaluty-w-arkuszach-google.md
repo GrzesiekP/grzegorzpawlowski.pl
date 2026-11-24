@@ -21,9 +21,9 @@ Po pierwsze, potrzebujesz klucza API CoinMarketCap – to sposób, w jaki zabezp
 2. Po założeniu konta logujesz się i wchodzisz na [pro.coinmarketcap.com/account](https://pro.coinmarketcap.com/account) .
 3. Po najechaniu kursorem (jak na poniższym gifie) zobaczysz swój API Key i będziesz mógł go skopiować.
 
-![](/assets/images/56acf205-copy_cmc_apiKey.gif)
+![](../assets/images/56acf205-copy_cmc_apiKey.gif)
 
-Następnie klucz trzeba podmienić w kodzie, który musisz skopiować do edytora skryptów w Arkuszach Google tak, jak to opisałem we wpisie **[Google Sheets #3: Jak Używać Funkcji](/jak-uzywac-funkcji-thesaurus/)**
+Następnie klucz trzeba podmienić w kodzie, który musisz skopiować do edytora skryptów w Arkuszach Google tak, jak to opisałem we wpisie **[Google Sheets #3: Jak Używać Funkcji](../jak-uzywac-funkcji-thesaurus/)**
 
 Mając to wszystko, wystarczy podać ticker (symbol danej kryptowaluty, który znajdziesz na CoinMarketCap – zaznaczony na obrazku poniżej) jako argument, np. :
 
@@ -31,6 +31,6 @@ Mając to wszystko, wystarczy podać ticker (symbol danej kryptowaluty, który z
 =CRYPTO_USD_PRICE("BTC")
 ```
 
-![](/assets/images/7a4aff79-image-4-1024x227.png)
+![](../assets/images/7a4aff79-image-4-1024x227.png)
 
-Jak zawsze, kod znajdziesz [na GitHubie](https://github.com/GrzesiekP/Thesaurus). Jeśli chcesz poczytać o kryptowalutach dla początkujących, sprawdź serię [Krypto Dla Leniwych](/category/kryptowaluty/), gdzie staram się w prosty sposób przekazać to, co najważniejsze w temacie.
+Jak zawsze, kod znajdziesz [na GitHubie](https://github.com/GrzesiekP/Thesaurus). Jeśli chcesz poczytać o kryptowalutach dla początkujących, sprawdź serię [Krypto Dla Leniwych](../category/kryptowaluty/), gdzie staram się w prosty sposób przekazać to, co najważniejsze w temacie.

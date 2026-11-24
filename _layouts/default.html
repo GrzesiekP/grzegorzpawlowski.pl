@@ -7,21 +7,21 @@
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
     <meta name="theme-color" content="#f8f7f3">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }} — RSS" href="{{ '/feed.xml' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }} — RSS" href="{% include root-path.html %}feed.xml">
+    <link rel="stylesheet" href="{% include root-path.html %}assets/css/style.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Przejdź do treści</a>
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="{{ '/' | relative_url }}" aria-label="Grzegorz Pawłowski — strona główna">
-          <img src="{{ '/assets/images/site-logo.png' | relative_url }}" width="44" height="44" alt="" class="brand-mark">
+        <a class="brand" href="{% include root-path.html %}" aria-label="Grzegorz Pawłowski — strona główna">
+          <img src="{% include root-path.html %}assets/images/site-logo.png" width="44" height="44" alt="" class="brand-mark">
           <span><strong>Grzegorz Pawłowski</strong><small>Praktycznie o IT</small></span>
         </a>
         <nav aria-label="Nawigacja główna">
-          <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Blog</a>
-          <a href="{{ '/o-mnie/' | relative_url }}"{% if page.url == '/o-mnie/' %} aria-current="page"{% endif %}>O mnie</a>
-          <a href="{{ '/kontakt/' | relative_url }}"{% if page.url == '/kontakt/' %} aria-current="page"{% endif %}>Kontakt</a>
+          <a href="{% include root-path.html %}"{% if page.url == '/' %} aria-current="page"{% endif %}>Blog</a>
+          <a href="{% include root-path.html %}o-mnie/"{% if page.url == '/o-mnie/' %} aria-current="page"{% endif %}>O mnie</a>
+          <a href="{% include root-path.html %}kontakt/"{% if page.url == '/kontakt/' %} aria-current="page"{% endif %}>Kontakt</a>
         </nav>
       </div>
     </header>
@@ -33,7 +33,7 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <span>© {{ 'now' | date: '%Y' }} Grzegorz Pawłowski</span>
-        <div><a href="{{ '/kontakt/' | relative_url }}">Kontakt</a><a href="https://www.linkedin.com/in/grzegorzpawlowski93/">LinkedIn</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></div>
+        <div><a href="{% include root-path.html %}kontakt/">Kontakt</a><a href="https://www.linkedin.com/in/grzegorzpawlowski93/">LinkedIn</a><a href="{% include root-path.html %}feed.xml">RSS</a></div>
       </div>
     </footer>
   </body>

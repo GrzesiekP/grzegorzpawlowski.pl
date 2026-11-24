@@ -35,17 +35,17 @@ Tutaj pokażę to na przykładzie repozytorium *tslint-to-eslint-config*, z któ
 
 Dodałem jedną małą, ale bardzo ważną zmianę w Readme 😎
 
-![](/assets/images/045573c8-small_change_in_code.jpg)
+![](../assets/images/045573c8-small_change_in_code.jpg)
 
 Jednocześnie trochę namieszałem 😱
 
-![](/assets/images/45b02649-mess_in_git-1024x345.jpg)
+![](../assets/images/45b02649-mess_in_git-1024x345.jpg)
 
 A teraz jak z tego wybrnąć bez konieczności tworzenia forka od nowa?
 
 Najpierw sprawdzam, cze mam poprawnie zdefiniowany origin: `git remote -v`. Powiniem zobaczyć coś takiego:
 
-![](/assets/images/c775ad40-git_remote_-v.gif)
+![](../assets/images/c775ad40-git_remote_-v.gif)
 
 Robię zapasową gałąź, na której będą wszystkie commity, w tym super ważna zmiana w Readme.
 
@@ -69,8 +69,8 @@ git cherry-pick 4debd79a14d4776d5f098217c63b5886671c89de
 
 Teraz mogę podejrzeć na GitHubie, czy udało się zrobić porządek.
 
-![](/assets/images/3cb8f79a-after_cleanup-1024x347.jpg)
+![](../assets/images/3cb8f79a-after_cleanup-1024x347.jpg)
 
 ### Bonus
 
-Oczywiście zamiast pisać tyle komend, można to sobie opakować w skrypt i trzymać go pod aliasem, tak jak opisałem np. we wpisie [Alias w Gicie – jak i po co?](/alias-w-gicie-jak-i-po-co/).
+Oczywiście zamiast pisać tyle komend, można to sobie opakować w skrypt i trzymać go pod aliasem, tak jak opisałem np. we wpisie [Alias w Gicie – jak i po co?](../alias-w-gicie-jak-i-po-co/).

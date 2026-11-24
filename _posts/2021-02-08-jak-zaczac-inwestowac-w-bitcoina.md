@@ -83,7 +83,7 @@ Giełda, to kompromis pomiędzy ceną a szybkością i łatwością zakupu. Leps
 
 **Minusy:**
 
-- Rezygnacja z anonimowości – większość giełd jest zmuszona przez prawo do weryfikacji użytkowników (zazwyczaj skanem dowodu) . Więcej na ten temat w tekście *[Jak Zachować Bezpieczeństwo i Anonimowość Inwestując w Kryptowaluty?](/bezpieczenstwo-i-anonimowosc-w-kryptowalutach/)*
+- Rezygnacja z anonimowości – większość giełd jest zmuszona przez prawo do weryfikacji użytkowników (zazwyczaj skanem dowodu) . Więcej na ten temat w tekście *[Jak Zachować Bezpieczeństwo i Anonimowość Inwestując w Kryptowaluty?](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/)*
 - Mimo względnej prostoty trzeba chwilę zaznajomić się z działaniem giełdy, żeby dobrze kupić .
 - Jeśli chcemy kupić coś innego niż Bitcoin, Ethereum i najpopularniejsze kryptowaluty, często trzeba skorzystać z giełd zagranicznych.
 
@@ -141,10 +141,10 @@ Moim zdaniem, warto kierować się ceną, dlatego wybrałem giełdę. Wiele inst
 
 ## Gdzie szukać dalszych informacji?
 
-Na pewno na blogu pojawią się kolejne wpisy, więc polecam śledzić szczególnie serię [kryptowaluty dla leniwych](/category/kryptowaluty/):
+Na pewno na blogu pojawią się kolejne wpisy, więc polecam śledzić szczególnie serię [kryptowaluty dla leniwych](../category/kryptowaluty/):
 
-- [9 błędów początkujących](/kryptowaluty-9-bledow-poczatkujacych/)
-- [Jak Zachować Bezpieczeństwo i Anonimowość Inwestując w Kryptowaluty?](/bezpieczenstwo-i-anonimowosc-w-kryptowalutach/)
+- [9 błędów początkujących](../kryptowaluty-9-bledow-poczatkujacych/)
+- [Jak Zachować Bezpieczeństwo i Anonimowość Inwestując w Kryptowaluty?](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/)
 
 Ceny kryptowalut można śledzić na bardzo dobrym polskim portalu [Coinpaprika ](https://coinpaprika.com/pl/)lub na popularnych [CoinMarketCap ](https://coinmarketcap.com/)i [CoinGecko](https://www.coingecko.com/).
 
@@ -168,4 +168,4 @@ Jeśli chodzi o Youtube, polecam [kanał Phila Koniecznego](https://www.youtube.
 
 **Powodzenia! **
 
-![Bitcoin to the moon!](/assets/images/573fc6ca-giphy.gif)Lecimy!
+![Bitcoin to the moon!](../assets/images/573fc6ca-giphy.gif)Lecimy!
