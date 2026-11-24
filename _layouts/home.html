@@ -15,15 +15,15 @@ layout: default
   <div class="post-grid">
     {% for post in site.posts %}
       <article class="post-card{% unless post.image %} post-card-text{% endunless %}">
-        {% if post.image %}<a class="card-image" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"></a>{% endif %}
+        {% if post.image %}<a class="card-image" href="{% include root-path.html %}{{ post.url | remove_first: '/' }}" tabindex="-1" aria-hidden="true"><img src="{% include root-path.html %}{{ post.image | remove_first: '/' }}" alt="" loading="lazy"></a>{% endif %}
         <div class="card-content">
           <div class="post-meta">
-            {% if post.categories.first %}{% assign category_name = post.categories.first %}<a class="category" href="{{ site.category_urls[category_name] | relative_url }}">{{ category_name }}</a>{% endif %}
+            {% if post.categories.first %}{% assign category_name = post.categories.first %}{% assign category_path = site.category_urls[category_name] | remove_first: '/' %}<a class="category" href="{% include root-path.html %}{{ category_path }}">{{ category_name }}</a>{% endif %}
             <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d.%m.%Y" }}</time>
           </div>
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+          <h3><a href="{% include root-path.html %}{{ post.url | remove_first: '/' }}">{{ post.title | escape }}</a></h3>
           <p>{{ post.excerpt | escape }}</p>
-          <a class="read-more" href="{{ post.url | relative_url }}">Czytaj wpis <span aria-hidden="true">↗</span></a>
+          <a class="read-more" href="{% include root-path.html %}{{ post.url | remove_first: '/' }}">Czytaj wpis <span aria-hidden="true">↗</span></a>
         </div>
       </article>
     {% endfor %}

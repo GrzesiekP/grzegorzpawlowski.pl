@@ -11,17 +11,17 @@ layout: post
 
 Facebook monopolizuje nie tylko media społecznościowe, ale też komunikację przez internet. WhatsApp i Messenger to czołówka popularności, a oba należą do Facebooka. Dlaczego warto zastanowić się nad przynajmniej ograniczeniem korzystania z nich? Jakie są alternatywy? Do porównania stają komunikatory: [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/), [Telegram ](https://telegram.org/)i [Signal](https://signal.org/pl/).
 
-![](/assets/images/6485b5f4-Global+Social+Media+Platform+Ranking+October+2020+DataReport.jpg)Najpopularniejsze platformy społecznościowe (miesięczna liczba aktywnych użytkowników w milionach) [datareportal.com](https://datareportal.com/reports/digital-2020-october-global-statshot)
+![](../assets/images/6485b5f4-Global+Social+Media+Platform+Ranking+October+2020+DataReport.jpg)Najpopularniejsze platformy społecznościowe (miesięczna liczba aktywnych użytkowników w milionach) [datareportal.com](https://datareportal.com/reports/digital-2020-october-global-statshot)
 
 ## Prywatność
 
 Mało kto zdaje sobie sprawę z tego, do jak wielu danych o nas ma dostęp Facebook, jeśli używamy na co dzień 2-3 aplikacji tej Firmy. Dzięki wprowadzonej niedawno przez Apple funkcjonalności można sprawdzić, jakie to dane i do czego są wykorzystywane. W tabelce poniżej porównanie dla tytułowej czwórki.
 
-![](/assets/images/e4c883d1-Poronanie-dane-653x1024.jpg)Rodzaje danych użytkownika, do których mogą mieć dostęp komunikatory. Źródło: [apps.apple.com ](https://apps.apple.com/)
+![](../assets/images/e4c883d1-Poronanie-dane-653x1024.jpg)Rodzaje danych użytkownika, do których mogą mieć dostęp komunikatory. Źródło: [apps.apple.com ](https://apps.apple.com/)
 
 Po co aplikacja, która służy do wymiany wiadomości, rozmów audio i wideo, czy przesyłania zdjęć chciałaby mieć dostęp do historii przeglądania i wyszukiwania, danych o naszym zdrowiu, płatnościach i kredytach? Z podpowiedzią spieszy kolejna tabelka, pokazująca, do czego komunikatory używają naszych danych.
 
-![](/assets/images/4e43db25-porownanie-do-czego.jpg)Do czego komunikatory używają danych użytkownika. Źródło: [apps.apple.com](https://apps.apple.com/)
+![](../assets/images/4e43db25-porownanie-do-czego.jpg)Do czego komunikatory używają danych użytkownika. Źródło: [apps.apple.com](https://apps.apple.com/)
 
 Z tą wiedzą przechodzimy do kolejnego akapitu, żeby sprawdzić, kto tak naprawdę ma o nas tyle informacji.
 
@@ -71,7 +71,7 @@ Dostęp do telefonu przez niepożądaną osobę to dużo więcej poważnych kło
 
 Wycieki danych się zdarzają – nawet firmom, które użytkownicy uważali za godne zaufania – bo to przecież „poważna firma i nie pozwoli sobie na wpadki”. A jednak, w ostatnich latach wyciekły dane od takich firm jak Mariott, CouchSurfing, British Airways, Yahoo, Uber, Morele.net, Twitter, GitHub, LinkedIn i… Facebook. Wykradzione dane mogą zawierać najczęściej email i hasło, ale także inne dane gromadzone na serwerach firmy.
 
-![](/assets/images/633f7daf-image-1.png)Porównanie bezpieczeństwa
+![](../assets/images/633f7daf-image-1.png)Porównanie bezpieczeństwa
 
 ### Podsumowanie
 

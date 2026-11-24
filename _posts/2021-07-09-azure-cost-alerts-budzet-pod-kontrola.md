@@ -15,7 +15,7 @@ Jak upewnić się, że Twoje wydatki na usługi w Azure nie przekroczą założo
 
 Niestety Azure nie pozwala ustawić budżetu 0, więc musisz przeboleć wydatek 0.01 EUR.
 
-![nosacz-co-tak-drogo](/assets/images/2d2c8e6c-nosacz.jpg)
+![nosacz-co-tak-drogo](../assets/images/2d2c8e6c-nosacz.jpg)
 
 W** Cost Management + Billing > Cost Management > Cost Alerts** dodaj nowy alert. Musisz ustawić:
 
@@ -23,17 +23,17 @@ W** Cost Management + Billing > Cost Management > Cost Alerts** dodaj nowy alert
 - **Creation date i Expiration Date** – tutaj spokojnie można ustawić ważność budżetu na kilka lat w przód – w razie potrzeby zawsze można go usunąć.
 - **Budget Amount** – ustawiasz wysokość budżetu na dany okres rozliczeniowy. 0.01 EUR to najmniejsza kwota, jaką można ustawić.
 
-![cost-management-step-1](/assets/images/99ce6882-TworzenieAlertu1-1024x476.jpg)
+![cost-management-step-1](../assets/images/99ce6882-TworzenieAlertu1-1024x476.jpg)
 
 Po ustawieniu nazwy i budżetu przechodzisz do następnego kroku – **Set alerts**. Tu po pierwsze ustawiasz warunek (jeśli przewidywany koszt przekroczy 100% budżetu), a po drugie podajesz maila, na którego ma przyjść powiadomienie, w razie gdyby Twój budżet miał być przekroczony.
 
-![cost-management-step-2](/assets/images/d0ce9fbe-TworzenieAlertu2-1024x491.jpg)
+![cost-management-step-2](../assets/images/d0ce9fbe-TworzenieAlertu2-1024x491.jpg)
 
 Klikasz **Create **i gotowe.
 
 Pod **Cost alerts** jest zakładka **Budgets**, gdzie możesz przejrzeć i edytować utworzone budżety.
 
-![cost-management-step-3](/assets/images/f49c0b42-StworzonyBudzet-1024x213.jpg)
+![cost-management-step-3](../assets/images/f49c0b42-StworzonyBudzet-1024x213.jpg)
 
 ## Jak ograniczyć koszty?
 
@@ -41,8 +41,8 @@ Wiemy już, jak skorzystać z budżetu w przypadku, gdy nie chcemy płacić nic.
 
 Wspomnę o kilku kwestiach, którym warto się przyjrzeć w tym kontekscie:
 
-- Czy zasoby, które myślisz że są darmowe, naprawdę takie są? Czy przy planowaniu budżetu, szacujesz koszty dokładnie, używając np. [Azure Pricing Calculator](/azure-pricing-calculator/) ?
+- Czy zasoby, które myślisz że są darmowe, naprawdę takie są? Czy przy planowaniu budżetu, szacujesz koszty dokładnie, używając np. [Azure Pricing Calculator](../azure-pricing-calculator/) ?
 - Czy wszystkie dane (za których przechowywanie płacisz od wielkości) są potrzebne? Czy nie masz starych, zapomnianych backupów, logów sprzed lat i innych resztek?
-- Czy stosujesz skalowanie (planowane lub automatyczne, [pionowe ](/automatyzacja-skalowania-azure/) lub poziome) tam, gdzie jest to możliwe?
+- Czy stosujesz skalowanie (planowane lub automatyczne, [pionowe ](../automatyzacja-skalowania-azure/) lub poziome) tam, gdzie jest to możliwe?
 
 Jeśli na którekolwiek z powyższych pytań, odpowiedziałeś „Nie”, to obserwuj mój blog i zapisz się do newslettera, bo pojawią się (lub już się pojawiły) treści, które mogą Ci w tych tematach pomóc!

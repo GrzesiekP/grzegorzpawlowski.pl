@@ -15,7 +15,7 @@ Na początku zaznaczę tylko, że tekst dotyczy inwestowania długoterminowego (
 
 ### Trzymanie kryptowaluty na giełdach
 
-Dlaczego tego nie robić? Opisałem to krótko w [pierwszym wpisie](/jak-zaczac-inwestowac-w-bitcoina/) na temat kryptowalut, a kwestię anonimowości rozwinąłem w tekście [[*Jak Zachować Bezpieczeństwo i Anonimowość Inwestując w Kryptowaluty?*](/bezpieczenstwo-i-anonimowosc-w-kryptowalutach/)](/bezpieczenstwo-i-anonimowosc-w-kryptowalutach/).
+Dlaczego tego nie robić? Opisałem to krótko w [pierwszym wpisie](../jak-zaczac-inwestowac-w-bitcoina/) na temat kryptowalut, a kwestię anonimowości rozwinąłem w tekście [[*Jak Zachować Bezpieczeństwo i Anonimowość Inwestując w Kryptowaluty?*](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/)](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/).
 
 Przede wszystkim Twoje środki nie są tam bezpiecznie, bo nie masz dostępu do klucza prywatnego portfela. W związku z tym, możesz je w każdej chwili stracić, jeśli giełda upadnie, zostanie zhakowana, zawinie się z interesem lub nawet jeśli będzie miała problemy techniczne i nie będzie można się zalogować. Wszystkie te sytuacje już się zdarzały i jest to nadal realne zagrożenie.
 
@@ -79,7 +79,7 @@ Ostatnią, choć również istotną, kwestią jest obliczenie stopy zwrotu. Być
 
 #### **Rozwiązanie**
 
-Prowadź arkusz kalkulacyjny z ewidencją transakcji, przelewów, przesyłu między giełdami i portfelami oraz wszystkimi opłatami i prowizjami. Przy każdej transakcji zapisz, gdzie znaleźć potwierdzenie (np. potwierdzenie przelewu, hash transakcji dla przesyłanych między portfelami środków, czy potwierdzenie transakcji z giełdy). Mogą Ci się do tego przydać skrypty, które stworzyłem i których używam. Opisałem to między innymi we wpisie [Cena Kryptowaluty w Arkuszach Google](/cena-kryptowaluty-w-arkuszach-google/) i zamierzam je nadal rozwijać. Możesz też poszukać gotowej aplikacji, ale ja wolę własny arkusz, żeby wiedzieć, jak działa i mieć dokładnie te informacje, których potrzebuję.
+Prowadź arkusz kalkulacyjny z ewidencją transakcji, przelewów, przesyłu między giełdami i portfelami oraz wszystkimi opłatami i prowizjami. Przy każdej transakcji zapisz, gdzie znaleźć potwierdzenie (np. potwierdzenie przelewu, hash transakcji dla przesyłanych między portfelami środków, czy potwierdzenie transakcji z giełdy). Mogą Ci się do tego przydać skrypty, które stworzyłem i których używam. Opisałem to między innymi we wpisie [Cena Kryptowaluty w Arkuszach Google](../cena-kryptowaluty-w-arkuszach-google/) i zamierzam je nadal rozwijać. Możesz też poszukać gotowej aplikacji, ale ja wolę własny arkusz, żeby wiedzieć, jak działa i mieć dokładnie te informacje, których potrzebuję.
 
 ### Kupowanie altcoinów bez ich znajomości
 

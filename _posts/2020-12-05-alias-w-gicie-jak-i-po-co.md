@@ -47,12 +47,12 @@ git config --global --edit
 
 Możesz też po prostu dopisywać kolejne aliasy w pliku konfiguracyjnym.
 
-![Git aliases in work gif](/assets/images/70722c2e-git_alias.gif)
+![Git aliases in work gif](../assets/images/70722c2e-git_alias.gif)
 
 Są inne, ciekawsze i jeszcze bardziej przydatne sposoby na aliasy, ale wymagają nieco więcej pracy, więc opiszę je na blogu innym razem.
 
-Aliasy można też wykorzystywać w innych sytuacjach, gdzie przydają się jeszcze bardziej, na przykład chcąc [zrobić porządek w repozytorium](/synchronizacja-i-porzadek-w-repozytorium/).
+Aliasy można też wykorzystywać w innych sytuacjach, gdzie przydają się jeszcze bardziej, na przykład chcąc [zrobić porządek w repozytorium](../synchronizacja-i-porzadek-w-repozytorium/).
 
 Polecam oczywiście zapoznać się [dokumentacją aliasów](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases).  
   
-To był pierwszy wpis z serii Jest Git, sprawdź pozostałe [tutaj](/category/git/)!
+To był pierwszy wpis z serii Jest Git, sprawdź pozostałe [tutaj](../category/git/)!

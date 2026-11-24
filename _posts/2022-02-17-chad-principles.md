@@ -15,7 +15,7 @@ Ale założę się, że nikt nie zna pryncypiów **CHAD** dotyczących dobrych p
 
 ## Do rzeczy!
 
-![](/assets/images/dbf3a4aa-cover5.jpg)
+![](../assets/images/dbf3a4aa-cover5.jpg)
 
 ## C – Clear History
 

@@ -21,7 +21,7 @@ XSS polega na uruchomieniu w przeglądarce kodu JavaScript, który wykona jakiś
 
 ### XDS – Cross-Directory Scripting
 
-XDS ma taki sam cel, jak XSS, ale inną drogę działania. Jest możliwy, kiedy aplikacje, które powinny być odizolowane wcale takie nie są. Na przykład, kiedy są na tej samej domenie, ale pod inną ścieżką: `[https://grzegorzpawlowski.pl/safeapp](/)` oraz  `[https://example.com/notsafeapp](https://grzegorzpawlowski.pl/safeapp)`. W obu przypadkach mamy ten sam origin (poniżej wyjaśnienie, czym jest origin), więc zabezpieczenia polegające na izolacji per origin nie zadziałają.
+XDS ma taki sam cel, jak XSS, ale inną drogę działania. Jest możliwy, kiedy aplikacje, które powinny być odizolowane wcale takie nie są. Na przykład, kiedy są na tej samej domenie, ale pod inną ścieżką: `[https://grzegorzpawlowski.pl/safeapp](../)` oraz  `[https://example.com/notsafeapp](https://grzegorzpawlowski.pl/safeapp)`. W obu przypadkach mamy ten sam origin (poniżej wyjaśnienie, czym jest origin), więc zabezpieczenia polegające na izolacji per origin nie zadziałają.
 
 ### CSRF (XSS+CSRF) – Cross-Site Request Forgery
 
@@ -51,7 +51,7 @@ Jak Same Origin Policy może zablokować atak XSS? Rozpatrzmy bardzo podstawowy 
 2. Odwiedza złośliwą stronę `https://bezpiecznydarmowydogecoin.com`
 3. Kod JS ze złośliwej strony chce wysłać żądanie do API giełdy (np. przelać wszystkie BTC ofiary na portfel atakującego), do czego potrzebuje tokena. A tu psikus! Origin `https://bezpiecznydarmowydogecoin.com` , z którego pochodzi złośliwy kod i origin https://bitbay.net są różne, więc kod ze złośliwej strony nie będzie miał dostępu do danych pochodzących z origina `https://bitbay.net` .
 
-**Jeśli trzymasz kryptowaluty na giełdzie, to przeczytaj np. [tutaj](/kryptowaluty-9-bledow-poczatkujacych/), dlaczego to nie jest bezpieczny pomysł.*
+**Jeśli trzymasz kryptowaluty na giełdzie, to przeczytaj np. [tutaj](../kryptowaluty-9-bledow-poczatkujacych/), dlaczego to nie jest bezpieczny pomysł.*
 
 ## Sposoby Przechowywania
 

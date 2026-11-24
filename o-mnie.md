@@ -19,4 +19,4 @@ Poza działalnością w IT interesuję się też turystyką wysokogórską, szcz
 ## Znajdź mnie
 
 - [LinkedIn](https://www.linkedin.com/in/grzegorzpawlowski93/)
-- [Kontakt](/kontakt/)
+- [Kontakt](../kontakt/)

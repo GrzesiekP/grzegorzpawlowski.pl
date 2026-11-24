@@ -125,4 +125,4 @@ Upewnij się, że Runbook ma uprawnienia do modyfikowania App Service Planu.
 
 Aplikacje hostowane na App Service Planie będą przez chwilę niedostępne, ponieważ skalowanie wertykalnie wymaga ich restartu (są przenoszone na nowy, wyższy lub niższy plan). Podobny downtime występuje w przypadku innych usług, np. baz SQL. Podczas testów aplikacja była niedostępna przez co najwyżej kilka sekund, więc w przypadku produkcyjnym, jeśli aplikacja jest dobrze zaprojektowana, nie powinno być problemów.
 
-Jeśli zastanawiasz się nad kosztami, jakie realnie generują poszczególnie poziomy App Service Planów, zobacz [mój wpis o Azure Pricing Calculator](/azure-pricing-calculator/)
+Jeśli zastanawiasz się nad kosztami, jakie realnie generują poszczególnie poziomy App Service Planów, zobacz [mój wpis o Azure Pricing Calculator](../azure-pricing-calculator/)

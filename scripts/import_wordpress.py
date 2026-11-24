@@ -115,24 +115,24 @@ def image_urls(markup: str) -> list[str]:
 
 def local_url(url: str, image_map: dict[str, str], article_slugs: set[str]) -> str:
     if url in image_map:
-        return image_map[url]
+        return "../" + image_map[url].lstrip("/")
     clean = url.split("#", 1)[0]
     parsed = urllib.parse.urlparse(clean)
     if parsed.hostname in {"grzegorzpawlowski.pl", "www.grzegorzpawlowski.pl"}:
         path = parsed.path or "/"
         slug = path.strip("/").split("/")[-1]
         if path.startswith("/category/"):
-            return path
+            return "../" + path.lstrip("/")
         if path == "/wp-admin/edit.php":
             category = urllib.parse.parse_qs(parsed.query).get("category_name", [""])[0]
             if category:
-                return f"/category/{category}/"
+                return f"../category/{category}/"
         if slug in article_slugs:
-            return f"/{slug}/"
+            return f"../{slug}/"
         if path in {"/o-mnie", "/o-mnie/"}:
-            return "/o-mnie/"
+            return "../o-mnie/"
         if path in {"/", "/blog", "/blog/"}:
-            return "/"
+            return "../"
     return url
 
 

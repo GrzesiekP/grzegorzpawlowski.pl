@@ -36,7 +36,7 @@ Sam byłem zaskoczony, jakie mogą być różnice:
 
 Porównanie (na dzień 27.08.2020) dla zakupu za kwotę 1000 zł (kurs rynkowy wg. [Coinpaprika](https://coinpaprika.com/coin/btc-bitcoin/) to 186 840 zł) w bitomacie Flying Atom i giełdzie [BitBay](https://auth.bitbay.net/ref/446BpO5Lw0Ic).
 
-![](/assets/images/d86892d2-iu.jpg)Bitomat w Krakowie ([flyingatom.com](https://flyingatom.com/bitomat-krakow/))
+![](../assets/images/d86892d2-iu.jpg)Bitomat w Krakowie ([flyingatom.com](https://flyingatom.com/bitomat-krakow/))
 
 ### Co robić?
 
@@ -46,17 +46,17 @@ Porównanie (na dzień 27.08.2020) dla zakupu za kwotę 1000 zł (kurs rynkowy w
 
 ## Przechowywanie kryptowalut
 
-Są różne sposoby na przechowywanie krypto, opisałem je bardziej szczegółowo we wpisie [Jak Zacząć Inwestować w Bitcoina](/jak-zaczac-inwestowac-w-bitcoina/). Który sposób będzie najlepszy?
+Są różne sposoby na przechowywanie krypto, opisałem je bardziej szczegółowo we wpisie [Jak Zacząć Inwestować w Bitcoina](../jak-zaczac-inwestowac-w-bitcoina/). Który sposób będzie najlepszy?
 
 Tutaj sytuacja jest moim zdaniem jasna – najlepszy będzie portfel papierowy (oczywiście odpowiednio schowany i zabezpieczony). Dobrym wyborem jest też portfel sprzętowy, bo jedyne dane jakie udostępniamy to te, które podajemy producentowi podczas zakupu. Żeby zadbać o ich bezpieczeństwo (i o bezpieczeństwo samego portfela), polecam kupować tylko bezpośrednio u producenta.
 
 *Ledger Nano S ([https://shop.ledger.com/products/ledger-nano-s](https://shop.ledger.com/products/ledger-nano-s))*
 
-Najgorszy wybór (choć znów najwygodniejszy i najtańszy), to trzymanie krypto na giełdzie. Zdecydowanie odradzam nie tyle nawet ze względu na prywatność, co ze względu na bezpieczeństwo naszych środków – znów odsyłam po szczegóły do tekstu [Jak Zacząć Inwestować w Bitcoina](/jak-zaczac-inwestowac-w-bitcoina/) oraz [9 Błędów Początkujących](/kryptowaluty-9-bledow-poczatkujacych/).
+Najgorszy wybór (choć znów najwygodniejszy i najtańszy), to trzymanie krypto na giełdzie. Zdecydowanie odradzam nie tyle nawet ze względu na prywatność, co ze względu na bezpieczeństwo naszych środków – znów odsyłam po szczegóły do tekstu [Jak Zacząć Inwestować w Bitcoina](../jak-zaczac-inwestowac-w-bitcoina/) oraz [9 Błędów Początkujących](../kryptowaluty-9-bledow-poczatkujacych/).
 
 Istotna, choć nieoczywista rada – nie udostępniaj w internecie informacji o tym, gdzie ile i jakie posiadasz kryptowaluty.  Ściany mają uszy – szczególnie wall na Facebooku…
 
-![facebook szpieg anonimowość](/assets/images/90755418-glen-carrie-ra4vJwxnvAo-unsplash-1024x683.jpg)
+![facebook szpieg anonimowość](../assets/images/90755418-glen-carrie-ra4vJwxnvAo-unsplash-1024x683.jpg)
 
 ### Co zrobić?
 

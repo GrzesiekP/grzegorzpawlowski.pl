@@ -30,7 +30,7 @@ layout: post
 Treść wpisu w Markdownie.
 ```
 
-Obrazki dodaj do `assets/images/`, a następnie zrób commit i push. `slug` oraz `permalink` pozwalają zachować czytelny adres i nie zmieniać go przy edycji tytułu.
+Obrazki dodaj do `assets/images/`; w treści wpisu odwołuj się do nich ścieżką względną, np. `../assets/images/obrazek.jpg`. Takie ścieżki i linki pozostają poprawne zarówno pod adresem GitHub Pages z nazwą repozytorium w ścieżce, jak i na własnej domenie. Następnie zrób commit i push. `slug` oraz `permalink` pozwalają zachować czytelny adres i nie zmieniać go przy edycji tytułu.
 
 ## Import z WordPressa
 

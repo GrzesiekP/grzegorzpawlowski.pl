@@ -11,7 +11,7 @@ layout: post
 
 TFI w ramach IKE/IKZE to popularny sposób inwestowania. Stwierdziłem, że skoro chcę mieć w swoim arkuszu szybki podgląd na stan inwestycji, to warto, żeby i moje TFI się tam znalazły (mimo, że kwoty są niewielkie). Nie chcę jednak za każdym razem wchodzić na stronę NN TFI i spisywać aktualnych cen.
 
-**Na początek zaznaczę, że opisywana tutaj funkcja do Arkuszy Google to jedna z kilku, które znacznie ułatwiają używanie Arkuszy, jako narzędzia do monitorowania finansów. Jeśli chciałbyś je wykorzystać, żeby usprawnić swój arkusz, zajrzyj do wpisu [Google Sheets #3: Jak Używać Funkcji – Thesaurus](/jak-uzywac-funkcji-thesaurus/)**
+**Na początek zaznaczę, że opisywana tutaj funkcja do Arkuszy Google to jedna z kilku, które znacznie ułatwiają używanie Arkuszy, jako narzędzia do monitorowania finansów. Jeśli chciałbyś je wykorzystać, żeby usprawnić swój arkusz, zajrzyj do wpisu [Google Sheets #3: Jak Używać Funkcji – Thesaurus](../jak-uzywac-funkcji-thesaurus/)**
 
 A teraz do rzeczy!
 
@@ -43,7 +43,7 @@ W dobrej wierze i zakładając, że IT mocno weszło w świat finansów, zaczą�
 
 Skazano mnie na wyciąganie ceny funduszu z HTML-a. Pomyślałem przez chwilę o parsowaniu go Regexem, ale mam do tego dziwną awersję
 
-![Parsing HTML with regex meme](/assets/images/5afa18fe-regex.jpg)https://devhumor.com/media/using-regex-to-parse-html
+![Parsing HTML with regex meme](../assets/images/5afa18fe-regex.jpg)https://devhumor.com/media/using-regex-to-parse-html
 
 Do prostego wyciągnięcia jednego stringa z HTML-a wystarczą proste operacje na stringach. Podobno *jak coś jest głupie, ale działa, to nie jest głupie*.
 
