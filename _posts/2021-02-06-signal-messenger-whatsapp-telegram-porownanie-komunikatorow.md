@@ -1,5 +1,5 @@
 ---
-title: "Signal, Messenger, WhatsApp, Telegram – Porównanie Komunikatorów"
+title: "Signal, Messenger, WhatsApp, Telegram – porównanie komunikatorów"
 date: 2021-02-06
 slug: "signal-messenger-whatsapp-telegram-porownanie-komunikatorow"
 permalink: /signal-messenger-whatsapp-telegram-porownanie-komunikatorow/
@@ -9,19 +9,25 @@ image: "/assets/images/a8a52168-BezpObrazekWyrozniajacy-1024x512.jpg"
 layout: post
 ---
 
-Facebook monopolizuje nie tylko media społecznościowe, ale też komunikację przez internet. WhatsApp i Messenger to czołówka popularności, a oba należą do Facebooka. Dlaczego warto zastanowić się nad przynajmniej ograniczeniem korzystania z nich? Jakie są alternatywy? Do porównania stają komunikatory: [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/), [Telegram ](https://telegram.org/)i [Signal](https://signal.org/pl/).
+Facebook monopolizuje nie tylko media społecznościowe, ale też komunikację przez internet. WhatsApp i Messenger to czołówka popularności, a oba należą do Facebooka. Dlaczego warto zastanowić się nad przynajmniej ograniczeniem korzystania z nich? Jakie są alternatywy? Do porównania stają komunikatory: [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/), [Telegram](https://telegram.org/) i [Signal](https://signal.org/pl/).
 
-![](../assets/images/6485b5f4-Global+Social+Media+Platform+Ranking+October+2020+DataReport.jpg)Najpopularniejsze platformy społecznościowe (miesięczna liczba aktywnych użytkowników w milionach) [datareportal.com](https://datareportal.com/reports/digital-2020-october-global-statshot)
+![Ranking popularności platform społecznościowych w październiku 2020 r.](../assets/images/6485b5f4-Global+Social+Media+Platform+Ranking+October+2020+DataReport.jpg)
+
+Najpopularniejsze platformy społecznościowe (miesięczna liczba aktywnych użytkowników w milionach). Źródło: [DataReportal](https://datareportal.com/reports/digital-2020-october-global-statshot).
 
 ## Prywatność
 
-Mało kto zdaje sobie sprawę z tego, do jak wielu danych o nas ma dostęp Facebook, jeśli używamy na co dzień 2-3 aplikacji tej Firmy. Dzięki wprowadzonej niedawno przez Apple funkcjonalności można sprawdzić, jakie to dane i do czego są wykorzystywane. W tabelce poniżej porównanie dla tytułowej czwórki.
+Mało kto zdaje sobie sprawę z tego, do jak wielu danych o nas ma dostęp Facebook, jeśli używamy na co dzień 2–3 aplikacji tej firmy. Dzięki wprowadzonej niedawno przez Apple funkcjonalności można sprawdzić, jakie to dane i do czego są wykorzystywane. W tabelce poniżej porównanie dla tytułowej czwórki.
 
-![](../assets/images/e4c883d1-Poronanie-dane-653x1024.jpg)Rodzaje danych użytkownika, do których mogą mieć dostęp komunikatory. Źródło: [apps.apple.com ](https://apps.apple.com/)
+![Porównanie danych zbieranych przez cztery komunikatory](../assets/images/e4c883d1-Poronanie-dane-653x1024.jpg)
+
+Rodzaje danych użytkownika, do których mogą mieć dostęp komunikatory. Źródło: [apps.apple.com](https://apps.apple.com/).
 
 Po co aplikacja, która służy do wymiany wiadomości, rozmów audio i wideo, czy przesyłania zdjęć chciałaby mieć dostęp do historii przeglądania i wyszukiwania, danych o naszym zdrowiu, płatnościach i kredytach? Z podpowiedzią spieszy kolejna tabelka, pokazująca, do czego komunikatory używają naszych danych.
 
-![](../assets/images/4e43db25-porownanie-do-czego.jpg)Do czego komunikatory używają danych użytkownika. Źródło: [apps.apple.com](https://apps.apple.com/)
+![Porównanie sposobów wykorzystywania danych przez komunikatory](../assets/images/4e43db25-porownanie-do-czego.jpg)
+
+Do czego komunikatory używają danych użytkownika. Źródło: [apps.apple.com](https://apps.apple.com/).
 
 Z tą wiedzą przechodzimy do kolejnego akapitu, żeby sprawdzić, kto tak naprawdę ma o nas tyle informacji.
 
@@ -31,13 +37,13 @@ Jest takie powiedzenie: „Jeśli coś jest za darmo, to Ty jesteś produktem”
 
 Sprawdźmy, do kogo należą i kto tworzy poszczególne komunikatory.
 
-#### **Messenger **
+#### Messenger
 
-Wydawcą firma jest Facebook, Inc. – właściciel portalu społecznościowego Facebook. Jest także właścicielem aplikacji WhatsApp i Instagram.
+Wydawcą jest firma Facebook, Inc. – właściciel portalu społecznościowego Facebook. Jest także właścicielem aplikacji WhatsApp i Instagram.
 
-#### **WhatsApp **
+#### WhatsApp
 
-Właścicielem tego komunikatora także jest Facebook, który kupił go w 2014 r. Sam WhatsApp został założony w 2009 r. przez Briana Actona and Jana Kuma – byłych pracowników Yahoo!
+Właścicielem tego komunikatora także jest Facebook, który kupił go w 2014 r. Sam WhatsApp został założony w 2009 r. przez Briana Actona i Jana Kuma – byłych pracowników Yahoo!
 
 #### **Telegram**
 
@@ -45,7 +51,7 @@ Aplikacja autorstwa Telegram FZ-LLC. Telegram został stworzony przez Mikołaja 
 
 #### **Signal**
 
-Rozwijany przez Signal Foundation – amerykańską organizację non-profit założoną w 2018 przez Moxie Marlinspike’a and Briana Actona, który był współzałożycielem WhatsAppa i opuścił go po przejęciu komunikatora przez Facebooka. Kod Signala jest publicznie dostępny na [GitHubie](https://github.com/signalapp) – jest to aplikacja open-source. To ważne, bo wiadomo, że Signal niczego nie ukrywa przed użytkownikami – można dokładnie sprawdzić, jak działa. Signal Foundation utrzymuje się jedynie z dobrowolnych darowizn i grantów.
+Rozwijany przez Signal Foundation – amerykańską organizację non-profit założoną w 2018 r. przez Moxie Marlinspike’a i Briana Actona, który był współzałożycielem WhatsAppa i opuścił go po przejęciu komunikatora przez Facebooka. Kod Signala jest publicznie dostępny na [GitHubie](https://github.com/signalapp) – jest to aplikacja open-source. To ważne, bo wiadomo, że Signal niczego nie ukrywa przed użytkownikami – można dokładnie sprawdzić, jak działa. Signal Foundation utrzymuje się jedynie z dobrowolnych darowizn i grantów.
 
 #### Cenzura
 
@@ -65,13 +71,24 @@ Podstawowe zabezpieczenie przed tym zagrożeniem to szyfrowana komunikacja – E
 
 ### Włamanie na telefon i dostęp do komunikatora
 
-Dostęp do telefonu przez niepożądaną osobę to dużo więcej poważnych kłopotów niż tylko odczytanie wiadomości. Istotne jest, aby dane w pamięci telefonu nie były łatwo dostępne – aby też były zaszyfrowane. Signal szyfruje wszystkie dane i pliki przechowywane na urządzeniu, w przeciwieństwie to WhatsAppa.
+Dostęp niepożądanej osoby do telefonu oznacza dużo poważniejsze kłopoty niż tylko odczytanie wiadomości. Istotne jest, aby dane w pamięci telefonu nie były łatwo dostępne – aby też były zaszyfrowane. Signal szyfruje wszystkie dane i pliki przechowywane na urządzeniu, w przeciwieństwie do WhatsAppa.
 
 ### Włamanie na serwery wydawcy komunikatora – wyciek danych i/lub wiadomości użytkownika
 
-Wycieki danych się zdarzają – nawet firmom, które użytkownicy uważali za godne zaufania – bo to przecież „poważna firma i nie pozwoli sobie na wpadki”. A jednak, w ostatnich latach wyciekły dane od takich firm jak Mariott, CouchSurfing, British Airways, Yahoo, Uber, Morele.net, Twitter, GitHub, LinkedIn i… Facebook. Wykradzione dane mogą zawierać najczęściej email i hasło, ale także inne dane gromadzone na serwerach firmy.
+Wycieki danych się zdarzają – nawet firmom, które użytkownicy uważali za godne zaufania – bo to przecież „poważna firma i nie pozwoli sobie na wpadki”. A jednak w ostatnich latach wyciekły dane z takich firm jak Marriott, CouchSurfing, British Airways, Yahoo, Uber, Morele.net, Twitter, GitHub, LinkedIn i… Facebook. Wykradzione dane mogą zawierać adres e-mail i hasło, ale także inne dane gromadzone na serwerach firmy.
 
-![](../assets/images/633f7daf-image-1.png)Porównanie bezpieczeństwa
+Porównanie bezpieczeństwa (przepisane z ilustracji do czytelnej tabeli):
+
+| Funkcja | Messenger | WhatsApp | Telegram | Signal |
+| --- | --- | --- | --- | --- |
+| Szyfrowanie E2E | Tylko „tajne czaty” | Domyślne | Tylko „tajne czaty” | Domyślne |
+| Szyfrowanie wiadomości grupowych | Nie | Tak | Nie | Tak |
+| Szyfrowanie metadanych | Nie | Nie | Nie | Tak |
+| Szyfrowanie danych na urządzeniu | ? | Nie | Nie | Tak |
+| Kopia zapasowa na serwerach | Tak | Tak | Tak | Nie |
+| Szyfrowanie kopii zapasowej | ? | Nie | Tylko „tajne czaty” | Nie dotyczy |
+| Dostęp z innej platformy | Tak | Nie | Nie | Nie |
+| Mechanizmy szyfrowania open-source | Nie | Tak | Nie | Tak |
 
 ### Podsumowanie
 
@@ -79,12 +96,12 @@ Pod kątem prywatności, bezpieczeństwa i zaufania, te cztery komunikatory na p
 
 #### Źródła
 
-- [https://www.igeeksblog.com/whatsapp-vs-signal/](https://www.igeeksblog.com/whatsapp-vs-signal/)
+- [iGeeksBlog – WhatsApp vs Signal (kopia archiwalna)](https://web.archive.org/web/20210118050717/https://www.igeeksblog.com/whatsapp-vs-signal/)
 - [https://beebom.com/whatsapp-vs-telegram-vs-signal/](https://beebom.com/whatsapp-vs-telegram-vs-signal/)
 - [https://www.vida.pl/najgrozniejsze-ataki-hakerskie-i-najwieksze-wycieki-danych-w-2020-r/](https://www.vida.pl/najgrozniejsze-ataki-hakerskie-i-najwieksze-wycieki-danych-w-2020-r/)
-- [https://www.pcworld.pl/news/Najwieksze-kary-za-wycieki-danych,414679.html](https://www.pcworld.pl/news/Najwieksze-kary-za-wycieki-danych,414679.html)
+- [PC World – Największe kary za wycieki danych (kopia archiwalna)](https://web.archive.org/web/20191121191106/https://www.pcworld.pl/news/Najwieksze-kary-za-wycieki-danych,414679.html)
 - [https://avlab.pl/najwieksze-wycieki-danych-i-zmasowane-ataki-ostatnich-lat/](https://avlab.pl/najwieksze-wycieki-danych-i-zmasowane-ataki-ostatnich-lat/)
 - [https://securetechcongress.pl/najwieksze-wycieki-danych-na-swiecie-2018/](https://securetechcongress.pl/najwieksze-wycieki-danych-na-swiecie-2018/)
 - [https://hsm-recycling.pl/pl/blog/najwieksze-wycieki-danych-w-historii-4/](https://hsm-recycling.pl/pl/blog/najwieksze-wycieki-danych-w-historii-4/)
 - [https://nerdschalk.com/facebook-messenger-end-to-end-encryption/](https://nerdschalk.com/facebook-messenger-end-to-end-encryption/)
-- [https://jatapp.com/blog/telegram-open-source-pitfalls/](https://jatapp.com/blog/telegram-open-source-pitfalls/)
+- [JatApp – Telegram open-source pitfalls (kopia archiwalna)](https://web.archive.org/web/20211203014141/https://jatapp.com/blog/telegram-open-source-pitfalls/)

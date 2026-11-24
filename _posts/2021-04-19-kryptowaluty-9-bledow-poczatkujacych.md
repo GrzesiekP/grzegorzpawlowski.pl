@@ -15,9 +15,9 @@ Na początku zaznaczę tylko, że tekst dotyczy inwestowania długoterminowego (
 
 ### Trzymanie kryptowaluty na giełdach
 
-Dlaczego tego nie robić? Opisałem to krótko w [pierwszym wpisie](../jak-zaczac-inwestowac-w-bitcoina/) na temat kryptowalut, a kwestię anonimowości rozwinąłem w tekście [[*Jak Zachować Bezpieczeństwo i Anonimowość Inwestując w Kryptowaluty?*](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/)](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/).
+Dlaczego tego nie robić? Opisałem to krótko w [pierwszym wpisie](../jak-zaczac-inwestowac-w-bitcoina/) na temat kryptowalut, a kwestię anonimowości rozwinąłem w tekście [*Jak zachować bezpieczeństwo i anonimowość, inwestując w kryptowaluty?*](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/).
 
-Przede wszystkim Twoje środki nie są tam bezpiecznie, bo nie masz dostępu do klucza prywatnego portfela. W związku z tym, możesz je w każdej chwili stracić, jeśli giełda upadnie, zostanie zhakowana, zawinie się z interesem lub nawet jeśli będzie miała problemy techniczne i nie będzie można się zalogować. Wszystkie te sytuacje już się zdarzały i jest to nadal realne zagrożenie.
+Przede wszystkim Twoje środki nie są tam bezpieczne, bo nie masz dostępu do klucza prywatnego portfela. W związku z tym możesz je w każdej chwili stracić, jeśli giełda upadnie, zostanie zhakowana, zawinie się z interesem lub nawet jeśli będzie miała problemy techniczne i nie będzie można się zalogować. Wszystkie te sytuacje już się zdarzały i jest to nadal realne zagrożenie.
 
 #### **Rozwiązanie**
 
@@ -25,7 +25,7 @@ Po zakupie na giełdzie od razu przelej kryptowaluty na własny portfel.
 
 ### FOMO
 
-FOMO (ang. fear of missing out) – innymi niż na Wikipedii słowami, jest to sytuacja, kiedy wszyscy mówią o Bitcoinie, a Ty ciągle słyszysz, że ktoś zarobił 100, 200, 300 czy nawet 1000% w kilka miesięcy. W Twojej głowie rodzą się wizje „Gdybym zainwestował w to 10 000 zł, miałbym teraz 100 000 zł!” i zastanawiasz się, czy warto jeszcze kupić i ile jeszcze może urosnąć. Jeśli nie kupisz teraz, to przegapisz kolejne 1000% wzrostu, a okazja się nie powtórzy. Niestety… zazwyczaj w tym momencie ryzyko jest już bardzo duże, a decyzje podejmowane w takiej sytuacji są mniej przemyślane, co kończy się rozczarowaniem i stratami.
+FOMO (ang. fear of missing out) – ujmując to innymi słowami niż Wikipedia – to sytuacja, kiedy wszyscy mówią o Bitcoinie, a Ty ciągle słyszysz, że ktoś zarobił 100, 200, 300 czy nawet 1000% w kilka miesięcy. W Twojej głowie rodzą się wizje: „Gdybym zainwestował w to 10 000 zł, miałbym teraz 100 000 zł!” i zastanawiasz się, czy warto jeszcze kupić i ile jeszcze może urosnąć. Jeśli nie kupisz teraz, to przegapisz kolejne 1000% wzrostu, a okazja się nie powtórzy. Niestety… zazwyczaj w tym momencie ryzyko jest już bardzo duże, a decyzje podejmowane w takiej sytuacji są mniej przemyślane, co kończy się rozczarowaniem i stratami.
 
 #### **Rozwiązanie**
 
@@ -67,7 +67,7 @@ Powinieneś ogarniać, co, za ile i kiedy kupiłeś, sprzedałeś i gdzie to mas
 
 #### Gdzie są Twoje krypto?
 
-Jeżeli kupisz np. BTC, wyślesz go na swój portfel, później stwierdzisz, że warto kupić też ETH a później jeszcze inne altcoiny. Możliwe, że kupisz je na różnych giełdach i będziesz trzymać je na różnych portfelach. Być może część zostawisz na giełdach. W pewnym momencie hossa się skończy, ceny spadną i będziesz na minusie. Jako rozsądny długoterminowy inwestor, nie sprzedasz wszystkiego w panice, ale poczekasz na kolejną hossę. Jednak za kilka lat, kiedy kursy kryptowalut znów wystrzelą, będziesz tracić czas na przegrzebywanie portfeli i giełd, żeby sprawdzić ile, czego i gdzie masz. Szkoda na to cennego czasu.
+Załóżmy, że kupisz np. BTC i wyślesz go na swój portfel, a później stwierdzisz, że warto kupić też ETH, a następnie jeszcze inne altcoiny. Możliwe, że kupisz je na różnych giełdach i będziesz trzymać je na różnych portfelach. Być może część zostawisz na giełdach. W pewnym momencie hossa się skończy, ceny spadną i będziesz na minusie. Jako rozsądny długoterminowy inwestor nie sprzedasz wszystkiego w panice, ale poczekasz na kolejną hossę. Jednak za kilka lat, kiedy kursy kryptowalut znów wystrzelą, będziesz tracić czas na przegrzebywanie portfeli i giełd, żeby sprawdzić, ile, czego i gdzie masz. Szkoda na to cennego czasu.
 
 #### Od czego zapłacisz podatek?
 
@@ -75,7 +75,7 @@ Inna sytuacja to ewentualne rozliczenie podatku. Omówienie mechanizmu rozliczan
 
 #### Ile tak naprawdę zarobiłeś?
 
-Ostatnią, choć również istotną, kwestią jest obliczenie stopy zwrotu. Być może w okresie między kupnem a sprzedażą zmodyfikujesz swoją strategię inwestycyjną i postawisz sobie założenie, że sprzedasz, jeśli zwrot osiągnie x %. Warto w takich obliczeniach wziąć pod uwagę nie tylko prowizje od wymiany na giełdzie, ale też opłaty transakcyjne za przesył kryptowalut czy prowizję za wypłatę krypto lub FIAT (waluty fiducjarne jak PLN, USD, EUR itp.)  z giełdy na konto w banku. Dopiero wtedy możesz ocenić, czy i ile realnie zarobiłeś.
+Ostatnią, choć również istotną, kwestią jest obliczenie stopy zwrotu. Być może w okresie między kupnem a sprzedażą zmodyfikujesz swoją strategię inwestycyjną i postawisz sobie założenie, że sprzedasz, jeśli zwrot osiągnie x%. Warto w takich obliczeniach wziąć pod uwagę nie tylko prowizje od wymiany na giełdzie, ale też opłaty transakcyjne za przesył kryptowalut czy prowizję za wypłatę krypto lub FIAT (walut fiducjarnych, jak PLN, USD, EUR itp.) z giełdy na konto w banku. Dopiero wtedy możesz ocenić, czy i ile realnie zarobiłeś.
 
 #### **Rozwiązanie**
 
@@ -93,11 +93,11 @@ Przed zakupem poczytaj o danym altcoinie, poszukaj jego analiz i recenzji. Zasta
 
 ### Mylenie kryptowalut i technologii blockchain
 
-Słyszysz ciągle newsy, że kolejne wielkie firmy i wielkie banki zaczynają korzystać z blockchain i od razu nasuwa Ci się wniosek, że pewnie Bitcoin urośnie, skoro wielkie firmy się nim interesują. Nie! Musisz zapamiętać jedną różnicę – blockchain to technologia, którą Bitcoin (i większość kryptowalut) wykorzystuje do działania. Mimo, że Bitcoin jest najpopularniejszym, co powstało na blockchainie, to technologia ta ma mnóstwo innych zastosowań. W dodatku nie każdy pieniądz elektroniczny to kryptowaluta działająca na blockchainie. Eurogąbki nie były kryptowalutą i nie działały (a przynajmniej nic o tym nie wiem 🙃) na blockchainie.
+Słyszysz ciągle newsy, że kolejne wielkie firmy i wielkie banki zaczynają korzystać z blockchaina i od razu nasuwa Ci się wniosek, że pewnie Bitcoin urośnie, skoro wielkie firmy się nim interesują. Nie! Musisz zapamiętać jedną różnicę – blockchain to technologia, którą Bitcoin (i większość kryptowalut) wykorzystuje do działania. Mimo że Bitcoin jest najpopularniejszym projektem, który powstał na blockchainie, to technologia ta ma mnóstwo innych zastosowań. W dodatku nie każdy pieniądz elektroniczny to kryptowaluta działająca na blockchainie. Eurogąbki nie były kryptowalutą i nie działały (a przynajmniej nic o tym nie wiem 🙃) na blockchainie.
 
 #### **Rozwiązanie**
 
-Pamiętaj, że blockchain i kryptowaluty są ze sobą powiązanie, ale to nie to samo.
+Pamiętaj, że blockchain i kryptowaluty są ze sobą powiązane, ale to nie to samo.
 
 ### Nieświadomość kosztów
 
@@ -105,31 +105,31 @@ Inwestując w kryptowaluty, musisz wziąć pod uwagę koszty, które wpłyną na
 
 #### Spread
 
-Po pierwsze, zawsze na giełdzie, w kantorze, czy w bitomacie kupując zapłacisz więcej niż średni kurs, a sprzedając dostaniesz mniej niż średni kurs – ta różnica nazywa się spread występuje też na innych rynkach. Te różnice mogą wynosić kilka dziesiątych lub kilka procent.
+Po pierwsze, zawsze na giełdzie, w kantorze czy w bitomacie, kupując, zapłacisz więcej niż średni kurs, a sprzedając, dostaniesz mniej niż średni kurs – ta różnica nazywa się spread i występuje też na innych rynkach. Te różnice mogą wynosić kilka dziesiątych lub kilka procent.
 
 #### Prowizja
 
-Drugim kosztem jest prowizja, jaką płacisz za wymianę krypto-krypto lub krypto-FIAT (FIAT to waluta fiducjarna – dolar, złotówka, euro itp). Różnią się one w zależności od giełdy i zazwyczaj wynoszą kilka dziesiątych procenta wartości transakcji – [tutaj przykład z giełdy BitBay](https://bitbay.net/pl/tabela-oplat). Inaczej sytuacja wygląda w Bitomacie – tam, wszystkie koszty są już uwzględnione w kursie i zazwyczaj wynoszą ok. 3-5% od średniego kursu.
+Drugim kosztem jest prowizja, jaką płacisz za wymianę krypto-krypto lub krypto-FIAT (FIAT to waluta fiducjarna – dolar, złotówka, euro itp.). Prowizje różnią się w zależności od giełdy i zazwyczaj wynoszą kilka dziesiątych procenta wartości transakcji – [tutaj przykład z giełdy BitBay (kopia archiwalna)](https://web.archive.org/web/20211020091733/https://bitbay.net/pl/tabela-oplat). Inaczej sytuacja wygląda w bitomacie – tam wszystkie koszty są już uwzględnione w kursie i zazwyczaj wynoszą ok. 3–5% od średniego kursu.
 
 #### Opłaty transakcyjne
 
-Trzeci koszt to opłata transakcyjna (za przesyłanie kryptowaluty), kiedy np. wysyłasz krypto z giełdy na portfel lub kiedy sprzedając krypto musisz wysłać je na portfel kupującego (innej osoby, kantoru, bitomatu). Różni się ona pomiędzy kryptowalutami i zależy od „zapchania sieci”. W przypadku BTC są to aktualnie koszty rzędy kilkudziesięciu zł ([możesz sprawdzić tutaj](https://bitinfocharts.com/comparison/bitcoin-median_transaction_fee.html#3m)). Natomiast w przypadku Litecoina są to dosłownie grosze.
+Trzeci koszt to opłata transakcyjna (za przesyłanie kryptowaluty), kiedy np. wysyłasz krypto z giełdy na portfel lub kiedy, sprzedając krypto, musisz wysłać je na portfel kupującego (innej osoby, kantoru, bitomatu). Różni się ona pomiędzy kryptowalutami i zależy od „zapchania sieci”. W przypadku BTC są to aktualnie koszty rzędu kilkudziesięciu zł ([możesz sprawdzić tutaj](https://bitinfocharts.com/comparison/bitcoin-median_transaction_fee.html#3m)). Natomiast w przypadku Litecoina są to dosłownie grosze.
 
 #### Prowizja za wypłatę
 
-Kolejny koszt to prowizja za wypłatę. Na giełdzie prowizję zapłacisz za wypłatę kryptowaluty na swój portfel, ale także za wypłatę waluty FIAT na swoje konto bankowe. Tutaj również kwoty są bardzo zróżnicowane. Giełda [BitBay](https://bitbay.net/pl/tabela-oplat) pobiera 6 zł za każdy przelew, a za wypłatę Bitcoina 0.0005 BTC (ok. 25$). W Bitomatach prowizja jest wliczona w kurs.
+Kolejny koszt to prowizja za wypłatę. Na giełdzie prowizję zapłacisz za wypłatę kryptowaluty na swój portfel, ale także za wypłatę waluty FIAT na swoje konto bankowe. Tutaj również kwoty są bardzo zróżnicowane. Giełda [BitBay (archiwalna tabela opłat)](https://web.archive.org/web/20211020091733/https://bitbay.net/pl/tabela-oplat) pobiera 6 zł za każdy przelew, a za wypłatę Bitcoina 0,0005 BTC (ok. 25 USD). W bitomatach prowizja jest wliczona w kurs.
 
 #### Portfel sprzętowy
 
-Jeśli zamierzasz inwestować duże kwoty, które warto dla bezpieczeństwa przechowywać na portfelu sprzętowym, to weź pod uwagę jego koszt (ceny zaczynają się od ok 260 zł w przypadku [Ledgera Nano S](https://shop.ledger.com/products/ledger-nano-s)).
+Jeśli zamierzasz inwestować duże kwoty, które warto dla bezpieczeństwa przechowywać na portfelu sprzętowym, to weź pod uwagę jego koszt (ceny zaczynają się od ok. 260 zł w przypadku [Ledgera Nano S](https://shop.ledger.com/products/ledger-nano-s)).
 
 #### Podatek
 
-Ostatnim kosztem, którego jednak nie będę szczegółowo omawiał jest podatek. W przypadku kryptowalut w najprostszym scenariuszu, zapłacimy 19% od zysku.
+Ostatnim kosztem, którego jednak nie będę szczegółowo omawiał, jest podatek. W przypadku kryptowalut w najprostszym scenariuszu zapłacimy 19% od zysku.
 
 #### **Rozwiązanie**
 
-Tak, jak wspomniałem wcześniej, monitoruj inwestycje i uwzględniaj wszystkie opłaty. Przy planowaniu strategii czy już nawet konkretnego zakupu, pomyśl o wszystkich kosztach i porównaj je z potencjalnym zyskiem. Weź je też pod uwagę ,zastanawiając się, gdzie kupić i sprzedać kryptowaluty.
+Tak jak wspomniałem wcześniej, monitoruj inwestycje i uwzględniaj wszystkie opłaty. Przy planowaniu strategii czy już nawet konkretnego zakupu pomyśl o wszystkich kosztach i porównaj je z potencjalnym zyskiem. Weź je też pod uwagę, zastanawiając się, gdzie kupić i sprzedać kryptowaluty.
 
 ### Podsumowanie
 

@@ -4,7 +4,7 @@ date: 2025-12-20
 slug: "gdzie-sie-ukryc-aplikacja-o-schronach-ktora-tak-naprawde-jest-o-czyms-innym"
 permalink: /gdzie-sie-ukryc-aplikacja-o-schronach-ktora-tak-naprawde-jest-o-czyms-innym/
 categories: ["Bezpieczeństwo"]
-excerpt: "Na pierwszy rzut oka wszystko się zgadza. Nazwa: Gdzie się ukryć . Opis: schrony, miejsca ochronne, mapa. Czerwony pasek, poważna tematyka, bezpieczeństwo. I dokładnie z takim nastawieniem…"
+excerpt: "Na pierwszy rzut oka wszystko się zgadza. Nazwa: Gdzie się ukryć. Opis: schrony, miejsca ochronne, mapa. Czerwony pasek, poważna tematyka, bezpieczeństwo. I dokładnie z takim nastawieniem…"
 image: "/assets/images/fc913ef5-gdziesieukryc-731x1024.jpg"
 layout: post
 ---
@@ -23,7 +23,9 @@ Jest nawet czytelna instrukcja „Zainstaluj aplikację” – i to jest jeden z
 
 Tak, na górze wyskakuje komunikat o odmowie dostępu do lokalizacji.
 
-![](../assets/images/e5dd4141-IMG_6365-2-473x1024.png)
+Kliknij zrzut ekranu, aby otworzyć go w pełnej rozdzielczości.
+
+[![Ekran główny aplikacji z komunikatem o lokalizacji](../assets/images/e5dd4141-IMG_6365-2-473x1024.webp)](../assets/images/e5dd4141-IMG_6365-2-473x1024.webp)
 
 ## Mapa schronów – OK, ale bez kontekstu
 
@@ -34,9 +36,9 @@ Mapa jest. Punkty są. Można kliknąć, zobaczyć adres, współrzędne, odleg�
 - dawny schron z lat 70.?
 - budynek użyteczności publicznej?
 
-![](../assets/images/bb7da542-IMG_6371-1-473x1024.png)
+[![Szczegóły miejsca ochronnego na mapie](../assets/images/bb7da542-IMG_6371-1-473x1024.webp)](../assets/images/bb7da542-IMG_6371-1-473x1024.webp)
 
-Nie ma zdjęć, nie ma opisu wejścia, nie ma informacji, czy to jest dostępne realnie, czy tylko „na papierze”. Choć według przepisów powinno być. A może jest to miejsce na jakieś opinie użytkowników (podobnie jak na google)? W sytuacji kryzysowej to są rzeczy absolutnie kluczowe, aby szybko się tam dostać. Druga sprawa: **zasięg**. Mapa pokazuje obiekty w promieniu kilku kilometrów od aktualnej lokalizacji. I to jest fajne… dopóki nie potrzebujesz sprawdzić czegoś gdzie indziej.
+Nie ma zdjęć, nie ma opisu wejścia, nie ma informacji, czy to jest dostępne realnie, czy tylko „na papierze”. Choć według przepisów powinno być. A może jest to miejsce na jakieś opinie użytkowników (podobnie jak w Google)? W sytuacji kryzysowej to są rzeczy absolutnie kluczowe, aby szybko się tam dostać. Druga sprawa: **zasięg**. Mapa pokazuje obiekty w promieniu kilku kilometrów od aktualnej lokalizacji. I to jest fajne… dopóki nie potrzebujesz sprawdzić czegoś gdzie indziej.
 
 Wyobraź sobie prosty scenariusz:
 
@@ -44,13 +46,9 @@ Wyobraź sobie prosty scenariusz:
 > Mieszka w Nowej Hucie, a Ty choćby w Skawinie.  
 > Pyta: „gdzie ja mam iść?”
 >
->
->
->
->
 > I nagle okazuje się, że szybkie przesunięcie mapy i sprawdzenie schronów „obok” wcale nie jest takie oczywiste. Da się, ale to nie jest intuicyjne.
 
-![](../assets/images/7a1851f3-IMG_6372-1-473x1024.png)
+[![Widok mapy z zaznaczonymi miejscami ochronnymi](../assets/images/7a1851f3-IMG_6372-1-473x1024.webp)](../assets/images/7a1851f3-IMG_6372-1-473x1024.webp)
 
 ## I teraz najważniejsze: poradniki
 
@@ -64,35 +62,37 @@ A teraz przechodzimy do rzeczy, która kompletnie zmienia odbiór tej aplikacji.
 - przygotowanie domu,
 - checklisty.
 
-I to nie są lania wody.  
-To jest konkret, napisany prostym językiem, z logiczną strukturą. Choć można mieć zastrzeżenia merytoryczne, to jednak dla przeciętnego obywatela już i tak ogromy krok na przód. Gdybym miał coś zmienić w całej aplikacji „na już”, to **wyciągnąłbym poradniki na pierwszy plan**.  
+I to nie jest lanie wody.
+
+To jest konkret, napisany prostym językiem, z logiczną strukturą. Choć można mieć zastrzeżenia merytoryczne, to jednak dla przeciętnego obywatela to już i tak ogromny krok naprzód. Gdybym miał coś zmienić w całej aplikacji „na już”, to **wyciągnąłbym poradniki na pierwszy plan**.
+
 Bo edukacyjnie to jest dużo cenniejsze niż sama mapa. No i sama aplikacja mogłaby nazywać się inaczej, na przykład Ostoja, Tarcza, Bastion, Czuwaj…
 
-![](../assets/images/785d5f25-IMG_6369-1-473x1024.png)
+[![Lista poradników w aplikacji](../assets/images/785d5f25-IMG_6369-1-473x1024.webp)](../assets/images/785d5f25-IMG_6369-1-473x1024.webp)
 
 ## Sygnały alarmowe – i bardzo poważny zgrzyt
 
-Jest sekcja o sygnałach alarmowych. Opisane, czym się różni alarm od odwołania alarmu. I nagle widzisz coś takiego:  **Posłuchaj: Alarm dla ludności cywilnej**. Klikasz. I… nic się nie dzieje. I to jest naprawdę duży problem. Bo jeśli mówimy o **bezpieczeństwie**, to możliwość *odsłuchania* sygnału jest ważniejsza niż jego opis tekstowy. Nie chodzi o estetykę. Chodzi o „pamięć mięśniową”, o rozpoznanie dźwięku w stresie. Bez pliku audio ta sekcja jest po prostu niekompletna.
+Jest sekcja o sygnałach alarmowych. Opisano, czym się różni alarm od odwołania alarmu. I nagle widzisz coś takiego: **Posłuchaj: Alarm dla ludności cywilnej**. Klikasz. I… nic się nie dzieje. I to jest naprawdę duży problem. Bo jeśli mówimy o **bezpieczeństwie**, to możliwość *odsłuchania* sygnału jest ważniejsza niż jego opis tekstowy. Nie chodzi o estetykę. Chodzi o „pamięć mięśniową”, o rozpoznanie dźwięku w stresie. Bez pliku audio ta sekcja jest po prostu niekompletna.
 
-![](../assets/images/3e8eecf1-IMG_6366-1-473x1024.png)
+[![Poradnik o sygnałach alarmowych](../assets/images/3e8eecf1-IMG_6366-1-473x1024.webp)](../assets/images/3e8eecf1-IMG_6366-1-473x1024.webp)
 
 ## „Włącz radio lub telewizor” – czyli instrukcja z innej epoki
 
 W poradniku „Co zrobić, gdy usłyszysz alarm?” pojawia się punkt: **Włącz radio lub telewizor**. I tu serio musiałem się zatrzymać. Bo (i pewnie nie ja jeden):
 
-- nie mam radia (no dobra, mam nawet dwa na sytuacje awaryjne, ale na co dzień ich przy sobie nie noszę,
+- nie mam radia (no dobra, mam nawet dwa na sytuacje awaryjne, ale na co dzień ich przy sobie nie noszę),
 - nie mam telewizora,
 - alarm mogę usłyszeć poza domem.
 
 Za to **prawie każdy ma telefon**. Powiadomienia RCB, aplikacja RSO, komunikaty w mObywatelu – to powinno być pierwsze, a nie ostatnie źródło informacji. To nie jest drobna uwaga stylistyczna. To jest realna luka między instrukcją a rzeczywistością.
 
-![](../assets/images/a183791f-IMG_6367-1-473x1024.png)
+[![Instrukcja postępowania po usłyszeniu alarmu](../assets/images/a183791f-IMG_6367-1-473x1024.webp)](../assets/images/a183791f-IMG_6367-1-473x1024.webp)
 
 ## Checklista – bardzo dobry pomysł
 
-Za to checklisty to jest strzał w dziesiątkę. Nie tylko „checklista sprzętu”, tylko **checklista wiedzy i przygotowania**. Masz pasek postępu, masz poczucie, że coś ogarniasz, masz lekką grywalizację, ale bez infantylności. I to działa dokładnie tak, jak powinno: uczy, porządkuje i nie przytłacza.
+Za to checklisty to strzał w dziesiątkę. Nie tylko „checklista sprzętu”, tylko **checklista wiedzy i przygotowania**. Masz pasek postępu, masz poczucie, że coś ogarniasz, masz lekką grywalizację, ale bez infantylności. I to działa dokładnie tak, jak powinno: uczy, porządkuje i nie przytłacza.
 
-![](../assets/images/50695258-IMG_6368-1-473x1024.png)
+[![Checklista przygotowania na sytuacje zagrożenia](../assets/images/50695258-IMG_6368-1-473x1024.webp)](../assets/images/50695258-IMG_6368-1-473x1024.webp)
 
 ## „Walcz” w zagrożeniach terrorystycznych – i znowu pół kroku za daleko
 
@@ -102,20 +102,19 @@ Sekcja „Uciekaj – Ukryj się – Walcz” jest znana i sensowna. Ale kiedy d
 - parasol,
 - butelka.
 
-I mam z tym problem. Bo to ustawia człowieka **w pozycji nigdy nie przygotowanej ofiary**. A może dodać:
+I mam z tym problem. Bo to ustawia człowieka **w pozycji nigdy nieprzygotowanej ofiary**. A może dodać:
 
-- gaz pieprzowego,
+- gaz pieprzowy,
 - nóż,
-- zachęty do przygotowania się *wcześniej* , a nie improwizowania w ostatniej chwili?
+- zachętę do przygotowania się *wcześniej*, a nie improwizowania w ostatniej chwili?
 
-a do tego przypominajkę „Art. 25 § 1. *Nie popełnia przestępstwa, kto w obronie koniecznej odpiera bezpośredni, bezprawny zamach na jakiekolwiek dobro chronione prawem.*„, więc nie wahaj się zabić terrorysty.
+A do tego przypominajkę: „Art. 25 § 1. *Nie popełnia przestępstwa, kto w obronie koniecznej odpiera bezpośredni, bezprawny zamach na jakiekolwiek dobro chronione prawem.*”, więc nie wahaj się zabić terrorysty.
 
-![](../assets/images/53cca73d-IMG_6370-1-473x1024.png)
+[![Poradnik dotyczący zagrożeń terrorystycznych](../assets/images/53cca73d-IMG_6370-1-473x1024.webp)](../assets/images/53cca73d-IMG_6370-1-473x1024.webp)
 
 To jest trudny temat, jasne. Ale unikanie go w imię „bezpiecznego przekazu” też jest decyzją – i moim zdaniem nie najlepszą. Nie zrozumcie mnie źle. Nie chodzi mi o to, żeby zachęcać każdego do zgrywania kozaka, który rzuci się z nożem na masowego zabójcę z karabinem. Chodzi o to, żeby zachęcać do wcześniejszego przygotowania się na taką sytuację.
 
-Dla zainteresowanych tym, z jakimi naprawdę będziemy się mierzyć zagrożeniami polecam poniższy film:  
-[https://www.youtube.com/embed/Cj0bEBrpVkM?si=43AGtBz-72mIavDX](https://www.youtube.com/embed/Cj0bEBrpVkM?si=43AGtBz-72mIavDX)
+Dla zainteresowanych tym, z jakimi zagrożeniami naprawdę będziemy się mierzyć, polecam [ten film na YouTube](https://www.youtube.com/watch?v=Cj0bEBrpVkM).
 
 ## API – potencjał, który aż się prosi o wykorzystanie
 
@@ -125,7 +124,7 @@ Na koniec coś, co zauważą głównie techniczni. Strona korzysta z **własnego
 - integracje,
 - aplikacje lokalne.
 
-Na prawdę jest wielu wolontariuszy, którzy mając narzędzia mogą zrobić świetne rzeczy.
+Naprawdę jest wielu wolontariuszy, którzy, mając narzędzia, mogą zrobić świetne rzeczy.
 
 ## Podsumowanie
 

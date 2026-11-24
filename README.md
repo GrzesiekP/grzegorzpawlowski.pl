@@ -34,4 +34,8 @@ Obrazki dodaj do `assets/images/`; w treści wpisu odwołuj się do nich ścież
 
 ## Import z WordPressa
 
-`python scripts/import_wordpress.py` pobiera publiczne wpisy z API obecnej strony, konwertuje ich treść na Markdown i zapisuje używane obrazy lokalnie. Uruchom importer ponownie, jeśli przed migracją pojawią się nowe wpisy. Importer nadpisuje wygenerowane pliki w `_posts/` — ręczne zmiany treści w tych plikach wykonuj po ostatnim imporcie.
+`python scripts/import_wordpress.py` pobiera publiczne wpisy z API WordPressa, konwertuje ich treść na Markdown i zapisuje używane obrazy lokalnie. **Importer nadpisuje pliki w `_posts/`. Po ręcznej korekcie archiwum nie uruchamiaj go ponownie na tych plikach** — ewentualne nowe wpisy importuj do osobnej kopii i przenoś pojedynczo, żeby nie utracić poprawek.
+
+## Kontrola linków i obrazów
+
+Po zbudowaniu strony uruchom `python scripts/check_site.py _site` (albo podaj inną ścieżkę do wyniku budowania). Skrypt sprawdzi lokalne linki, kotwice i obrazy zarówno dla własnej domeny, jak i dla adresu GitHub Pages z nazwą repozytorium w ścieżce. Nie wymaga dodatkowych bibliotek ani dostępu do sieci.

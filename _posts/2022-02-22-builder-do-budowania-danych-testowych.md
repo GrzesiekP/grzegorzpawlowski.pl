@@ -1,5 +1,5 @@
 ---
-title: "Wzorzec Builder do Budowania Danych Testowych"
+title: "Wzorzec Builder do budowania danych testowych"
 date: 2022-02-22
 slug: "builder-do-budowania-danych-testowych"
 permalink: /builder-do-budowania-danych-testowych/
@@ -9,13 +9,13 @@ image: "/assets/images/27f5b253-bob.jpg"
 layout: post
 ---
 
-Pisząc testy jednostkowe, często potrzebujemy danych testowych. Częścią tych danych mogą być instancje jednej konkretnej klasy, ale różniące się wartościami właściwości w przypadku poszczególnych testów. Część właściwości będzie jednak wspólna lub obojętna dla większości testów. W celu uniknięcia powtarzania kodu w testach, warto zastosować jakiś automat – świetnie sprawdza się tu wzorzec **Budowniczy (Builder)**.
+Pisząc testy jednostkowe, często potrzebujemy danych testowych. Częścią tych danych mogą być instancje jednej konkretnej klasy, ale różniące się wartościami właściwości w przypadku poszczególnych testów. Część właściwości będzie jednak wspólna lub obojętna dla większości testów. W celu uniknięcia powtarzania kodu w testach warto zastosować jakiś automat – świetnie sprawdza się tu wzorzec **Budowniczy (Builder)**.
 
 ## Do przykładu!
 
 ### Mamy następujący kod
 
-**Klasę** `Order`, która ma wszystkie właściwości wymagane – trzeba podać w konstruktorze.
+**Klasę** `Order`, w której wszystkie właściwości są wymagane – ich wartości trzeba podać w konstruktorze.
 
 ```
     public class Order
@@ -37,7 +37,7 @@ Pisząc testy jednostkowe, często potrzebujemy danych testowych. Częścią tyc
     }
 ```
 
-Następnie mamy **serwis**, który wykonuje jakieś akcje na obiekcie `Order`. Jak widać, w różnych metodach różne właściwości obiektu `Order`będą potrzebne
+Następnie mamy **serwis**, który wykonuje jakieś akcje na obiekcie `Order`. Jak widać, w różnych metodach różne właściwości obiektu `Order` będą potrzebne.
 
 ```
 public class OrderService
@@ -100,7 +100,7 @@ public class OrderService
     }
 ```
 
-No i oczywiście nasze **testy**. Testujemy jeden serwis i jego 3 metody, w każdym teście potrzebny jest nieco inny `Order`. Wygląda na to, że w każdym teście powtarzamy częściowo wywołanie konstruktora, podając dane, które dla danego testu są obojętne. Np. `TotalPrice`nie ma żadnego znaczenia przy testowaniu metody `SendMail`.
+No i oczywiście nasze **testy**. Testujemy jeden serwis i jego 3 metody, w każdym teście potrzebny jest nieco inny `Order`. Wygląda na to, że w każdym teście powtarzamy częściowo wywołanie konstruktora, podając dane, które dla danego testu są obojętne. Np. `TotalPrice` nie ma żadnego znaczenia przy testowaniu metody `SendMail`.
 
 ```
     [TestClass]
@@ -148,10 +148,10 @@ No i oczywiście nasze **testy**. Testujemy jeden serwis i jego 3 metody, w każ
 
 Jak użyć Buildera, żeby trochę poprawić sytuację? Potrzebujemy zdefiniować w nim jakieś domyślne wartości i metody, które pozwolą utworzyć instancję ze zmodyfikowanymi konkretnymi właściwościami.
 
-**Oto jak działa nasz Budowniczy. **
+**Oto jak działa nasz Budowniczy.**
 
-- Właściwości, które są nam totalnie obojętne (np. `CreatedDate` ) możemy podać w konstruktorze klasy `Order` w metodzie `Build` .
-- Właściwości, nad którymi  chcemy mieć kontrolę będziemy przypisywać ze zmiennych przechowywanych w Builderze. W konstruktorze Buildera ustawimy je na jakieś domyślne, a w razie potrzemy będzie je można zmodyfikować metodami `With...` , w których podajemy żądaną wartość.
+- Właściwości, które są nam totalnie obojętne (np. `CreatedDate`), możemy podać w konstruktorze klasy `Order` w metodzie `Build`.
+- Właściwości, nad którymi chcemy mieć kontrolę, będziemy przypisywać ze zmiennych przechowywanych w Builderze. W konstruktorze Buildera ustawimy je na jakieś wartości domyślne, a w razie potrzeby będzie je można zmodyfikować metodami `With...`, w których podajemy żądaną wartość.
 
 ```
 public class OrderBuilder
@@ -192,7 +192,7 @@ public class OrderBuilder
     }
 ```
 
-Ok, a teraz nasze testy po małej refaktoryzacji z użyciem buildera. Nie musimy już przejmować się obojętnymi nam właściwościami wywołując za każdym razem konstruktor. Zamiast tego budujemy sobie order z interesującymi nas wartościami dla danych właściwości.
+OK, a teraz nasze testy po małej refaktoryzacji z użyciem Buildera. Nie musimy już przejmować się obojętnymi nam właściwościami, wywołując za każdym razem konstruktor. Zamiast tego budujemy sobie obiekt `Order` z interesującymi nas wartościami dla danych właściwości.
 
 ```
     public class OrderBuilder
@@ -233,14 +233,14 @@ Ok, a teraz nasze testy po małej refaktoryzacji z użyciem buildera. Nie musimy
     }
 ```
 
-Oczywiście prawdziwą moc Budowniczy pokazuje dopiero przy bardziej skomplikowanych implementacja. Tutaj starałem się to pokazać na w miarę prostym przykładzie, żeby zobrazować ideę.
+Oczywiście prawdziwą moc Budowniczy pokazuje dopiero przy bardziej skomplikowanych implementacjach. Tutaj starałem się to pokazać na w miarę prostym przykładzie, żeby zobrazować ideę.
 
 ## Podsumowując
 
 Na koniec kilka dobrych praktyk związanych z tym rozwiązaniem:
 
-- Domyślne dane powinny być w miarę możliwości prawidłowe. W moim przykładzie ustawiłem sensowne `TotalPrice` (10) i `Currency` (USD), ale złamałem tę zasadę przypisując pusty string do `Description` .
-- Dodawaj tylko te metody rozszerzające ( `With...` ), których potrzebujesz. Jeśli dla danego przypadku (tutaj dla testów) jedna wartość jest zawsze ok, to ustaw ją jako domyślną. Ja np. mógłbym tutaj podać jako domyślną wartość `TotalPrice` 100, a nie 10, bo w obu testach, gdzie potrzebuję `TotalPrice` mogę użyć tej samej wartości.
+- Domyślne dane powinny być w miarę możliwości prawidłowe. W moim przykładzie ustawiłem sensowne `TotalPrice` (10) i `Currency` (USD), ale złamałem tę zasadę, przypisując pusty string do `Description`.
+- Dodawaj tylko te metody rozszerzające (`With...`), których potrzebujesz. Jeśli dla danego przypadku (tutaj dla testów) jedna wartość jest zawsze OK, to ustaw ją jako domyślną. Ja np. mógłbym tutaj podać jako domyślną wartość `TotalPrice` 100, a nie 10, bo w obu testach, gdzie potrzebuję `TotalPrice`, mogę użyć tej samej wartości.
 - Staraj się w każdym teście używać nowej instancji Buildera. Zastosowanie jednej instancji dla całej klasy testowej może spowodować, że jeden test zmodyfikuje dane testowe innego testu, czym złamiemy zasadę izolacji testów.
 
 Daj znać, czy używasz Buildera do testów? Może masz jakieś podpowiedzi, co jeszcze można robić lepiej?
