@@ -1,5 +1,5 @@
 ---
-title: "Krypto dla leniwych #1: Jak  zacząć inwestować w Bitcoina?"
+title: "Krypto dla leniwych #1: Jak zacząć inwestować w Bitcoina?"
 date: 2021-02-08
 slug: "jak-zaczac-inwestowac-w-bitcoina"
 permalink: /jak-zaczac-inwestowac-w-bitcoina/
@@ -28,14 +28,14 @@ Kluczową decyzją jest ta inwestycyjna – czy, kiedy, za ile kupić Bitcoina? 
 
 ## Gdzie bezpiecznie trzymać bitcoina?
 
-Zanim przejdę dalej, krótkie kluczowe wyjaśnienie, czym w prostych słowach jest portfel. To połączenie adresu i klucza prywatnego. W analogii do konta bankowego adres to nr konta, a klucz prywatny to pin, hasło lub podpis – coś co jest konieczne, żeby mieć dostęp do portfela. Każdy, kto zna klucz prywatny ma pełną władzę nad portfelem, dlatego trzeba go pilnować.
+Zanim przejdę dalej, krótkie, kluczowe wyjaśnienie, czym w prostych słowach jest portfel. To połączenie adresu i klucza prywatnego. W analogii do konta bankowego adres to nr konta, a klucz prywatny to PIN, hasło lub podpis – coś, co jest konieczne, żeby mieć dostęp do portfela. Każdy, kto zna klucz prywatny, ma pełną władzę nad portfelem, dlatego trzeba go pilnować.
 
 ### Giełda kryptowalut
 
 Jest to najmniej bezpieczny sposób i to z kilku powodów:
 
-- Nie ma dostępu do klucza prywatnego, więc portfel nie jest nasz. Mamy tyle pewności, na ile ufasz giełdzie.
-- Czasami giełdy upadają. Popularne giełdy, które upadły, to m. in. BitMarket.pl, MtGox, Coinroom, Abucoins, Bitcurex.
+- Nie mamy dostępu do klucza prywatnego, więc portfel nie jest nasz. Mamy tyle pewności, na ile ufamy giełdzie.
+- Czasami giełdy upadają. Popularne giełdy, które upadły, to m.in. BitMarket.pl, MtGox, Coinroom, Abucoins, Bitcurex.
 - Zdarzają się kradzieże z giełd.
 
 Plusem jest jedynie to, że jeśli chcemy handlować na giełdzie, to środki już tam są i nie trzeba ich przelewać. Ale takie rozwiązanie ma sens tylko dla krótkoterminowych spekulacji, tradingu. Jeśli chcemy po prostu kupić Bitcoina i poczekać kilka tygodni, miesięcy lub lat, koniecznie trzeba go wypłacić z giełdy.
@@ -44,11 +44,11 @@ Plusem jest jedynie to, że jeśli chcemy handlować na giełdzie, to środki ju
 
 To już lepsza opcja, bo mamy dostęp do klucza prywatnego i nie jesteśmy zależni od giełdy. Klucz prywatny jest zabezpieczony na naszym komputerze, a aplikacje chronione np. hasłem. Czy istnieje jakieś niebezpieczeństwo? Tak – możemy być ofiarą hakera, zgubić lub zniszczyć sprzęt, na którym mamy zainstalowany portfel albo zapomnieć hasła. Jeśli jednak dbamy o bezpieczeństwo cyfrowe, to ryzyko jest takie samo, jak ryzyko, że ktoś z naszego komputera włamie się na nasze konto bankowe.
 
-Ogromnym plusem jest także to, że takie portfele są zazwyczaj… darmowe. Jedne z bardziej popularnych to [Exodus](https://www.exodus.io/), [Jaxx Liberty,](https://www.jaxx.io/downloads) [Atomic](https://atomicwallet.io/), [Electrum](https://electrum.org/index.html#home).
+Ogromnym plusem jest także to, że takie portfele są zazwyczaj… darmowe. Jedne z bardziej popularnych to [Exodus](https://www.exodus.com/), Jaxx Liberty ([archiwalna strona pobierania](https://web.archive.org/web/20210227210411/https://www.jaxx.io/downloads)), [Atomic](https://atomicwallet.io/), [Electrum](https://electrum.org/index.html#home).
 
 W aplikacjach portfeli elektronicznych możemy też łatwo wygenerować klucz publiczny i prywatny.
 
-### Potfel papierowy (cold wallet)
+### Portfel papierowy (cold wallet)
 
 To po prostu kartka papieru z zapisanym kluczem prywatnym. Jest to bezpieczny sposób na trzymanie środków offline. Oczywiście na tyle bezpieczny, na ile zabezpieczymy kartkę przed niepożądanym dostępem, zniszczeniem, zgubieniem lub uszkodzeniem.
 
@@ -56,11 +56,11 @@ Jeśli zdecydujesz się na tę formę, polecam pamiętać o tym, żeby klucz pry
 
 ### Portfel sprzętowy (cold wallet)
 
-To urządzenie przypominające pendrive’a, na którym przechowywane są klucze prywatne. Co ważne, nawet gdy podłączamy go do komputera, klucze prywatne nigdy nie wydostają się poza urządzenie. Najpopularniejsze portfele to **Ledger Nano S**, Ledger Nano X, Trezor. Różnią się funkcjonalnością i ceną, ale na początek Ledger Nano S spokojnie wystarczy. Ledgera zabezpieczamy 4-8 cyfrowym pinem, a jako backup służy seed – 24 tajne słowa pozwalające odzyskać dostęp bez pinu.
+To urządzenie przypominające pendrive’a, na którym przechowywane są klucze prywatne. Co ważne, nawet gdy podłączamy go do komputera, klucze prywatne nigdy nie wydostają się poza urządzenie. Najpopularniejsze portfele to **Ledger Nano S**, Ledger Nano X, Trezor. Różnią się funkcjonalnością i ceną, ale na początek Ledger Nano S spokojnie wystarczy. Ledgera zabezpieczamy 4–8-cyfrowym PIN-em, a jako backup służy seed – 24 tajne słowa pozwalające odzyskać dostęp bez PIN-u.
 
 Warto portfel kupować z [oficjalnego sklepu producenta](https://shop.ledger.com/products/ledger-nano-s) – mamy pewność, że kupujemy oryginalne i niezmodyfikowane urządzenie. U pośredników cena może być jednak nieco niższa. Ledger Nano S prosto od producenta razem z przesyłką do Polski kosztuje obecnie ok. 250-300 zł.
 
-Warto wspomnieć, że na Ledgera nie da się „przenieść” portfela papierowego używając klucza prywatnego lub seeda. Jeśli mamy kryptowaluty na portfelu elektronicznym lub papierowym, trzeba je będzie po prostu przelać na nowo utworzony w Ledgerze adres.
+Warto wspomnieć, że na Ledgera nie da się „przenieść” portfela papierowego, używając klucza prywatnego lub seeda. Jeśli mamy kryptowaluty na portfelu elektronicznym lub papierowym, trzeba je będzie po prostu przelać na nowo utworzony w Ledgerze adres.
 
 Ledger Nano S ([shop.ledger.com](https://shop.ledger.com/products/ledger-nano-s))
 
@@ -72,19 +72,19 @@ To zależy od kwoty inwestycji. Jeśli ma być to kilkaset złotych, to spokojni
 
 ### Giełda kryptowalut
 
-Giełda, to kompromis pomiędzy ceną a szybkością i łatwością zakupu. Lepsze ceny są zazwyczaj tylko przy zakupie bezpośrednim (od innego posiadacza BTC, F2F). Proces zakupu jest prosty – zakładamy konto, wpłacamy pieniądze, kupujemy Bitcoina, wypłacamy Bitcoina. Są też polskie giełdy, które działają bardzo dobrze, a możliwość wpłaty PLN powoduje, że zakupy są prostsze i tańsze. Giełda, której używam i polecam to [BitBay](https://auth.bitbay.net/ref/446BpO5Lw0Ic), a z zagranicznych [Bitfinex](https://www.bitfinex.com/?refcode=SOFD6rBQW) i [Binance](https://www.binance.com/en/register?ref=10253080) (rejestrując się na Binance z mojego reflinka, masz 10% mniejszą prowizje).  
+Giełda to kompromis pomiędzy ceną a szybkością i łatwością zakupu. Lepsze ceny są zazwyczaj tylko przy zakupie bezpośrednim (od innego posiadacza BTC, F2F). Proces zakupu jest prosty – zakładamy konto, wpłacamy pieniądze, kupujemy Bitcoina, wypłacamy Bitcoina. Są też polskie giełdy, które działają bardzo dobrze, a możliwość wpłaty PLN powoduje, że zakupy są prostsze i tańsze. Giełda, której używam i którą polecam, to BitBay ([archiwalna strona giełdy](https://web.archive.org/web/20210812222443/https://bitbay.net/pl)), a z zagranicznych [Bitfinex](https://www.bitfinex.com/?refcode=SOFD6rBQW) i [Binance](https://www.binance.com/en/register?ref=10253080) (rejestrując się na Binance z mojego reflinka, masz 10% mniejszą prowizję).
   
 **Plusy:**
 
 - Dobra cena
 - Bezpieczeństwo (jeśli przestrzegamy podstawowych zasad, o których piszę na końcu)
 - Prostota, wygoda, dostępność
-- Możliwość kupna za PLN .
+- Możliwość kupna za PLN.
 
 **Minusy:**
 
-- Rezygnacja z anonimowości – większość giełd jest zmuszona przez prawo do weryfikacji użytkowników (zazwyczaj skanem dowodu) . Więcej na ten temat w tekście *[Jak Zachować Bezpieczeństwo i Anonimowość Inwestując w Kryptowaluty?](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/)*
-- Mimo względnej prostoty trzeba chwilę zaznajomić się z działaniem giełdy, żeby dobrze kupić .
+- Rezygnacja z anonimowości – większość giełd jest zmuszona przez prawo do weryfikacji użytkowników (zazwyczaj skanem dowodu). Więcej na ten temat w tekście *[Jak zachować bezpieczeństwo i anonimowość, inwestując w kryptowaluty?](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/)*
+- Mimo względnej prostoty trzeba chwilę zaznajomić się z działaniem giełdy, żeby dobrze kupić.
 - Jeśli chcemy kupić coś innego niż Bitcoin, Ethereum i najpopularniejsze kryptowaluty, często trzeba skorzystać z giełd zagranicznych.
 
 ### „Ulica” – F2F (face-to-face)
@@ -99,7 +99,7 @@ Po prostu znajdujemy kogoś, kto chce sprzedać Bitcoina. Dogadujemy się na cen
 **Minusy:**
 
 - Mała dostępność
-- Trzeba zadbać o bezpieczeństwo – najlepiej umówić się, poczekać razem ze sprzedającym aż Bitcoin trafi na nasz portfel. Przy dużych zakupach warto zabrać ze sobą napakowanego szwagra .
+- Trzeba zadbać o bezpieczeństwo – najlepiej umówić się i poczekać razem ze sprzedającym, aż Bitcoin trafi na nasz portfel. Przy dużych zakupach warto zabrać ze sobą napakowanego szwagra.
 
 ### Kantor kryptowalut
 
@@ -108,7 +108,7 @@ Działa podobnie jak giełda, ale nie trzeba się rejestrować. Zazwyczaj po wyb
 **Plusy:**
 
 - Prościej niż na giełdzie
-- Są jeszcze kantory, które do pewnego limitu transakcji nie wymagają rejestracji i weryfikacji tak, jak giełdy .
+- Są jeszcze kantory, które do pewnego limitu transakcji nie wymagają rejestracji i weryfikacji tak jak giełdy.
 
 **Minusy:**
 
@@ -117,7 +117,7 @@ Działa podobnie jak giełda, ale nie trzeba się rejestrować. Zazwyczaj po wyb
 
 ### Bitomat
 
-Bitomat to stacjonarne urządzenie, w którym można kupić i sprzedać Bitcoina. W zależności od Bitomatu szczegóły mogą się różnić, ale proces zakupu jest bardzo prosty. Najpierw trzeba mieć adres publiczny portfela  można np. wygenerować go w portfelu elektronicznym. Mając adres naszego portfela, idziemy do Bitomatu. Wybieramy opcję zakupu Bitcoina, wkładamy pieniądze do Bitomatu (na ekranie pokaże się ilość BTC, jaką możemy kupić za włożone pieniądze), następnie wprowadzamy adres publiczny portfela i potwierdzamy. Wybieramy wielkość prowizji (im większa, tym szybciej dostaniemy BTC) i potwierdzamy wybór. Jeśli wszystko poszło dobrze, dostajemy potwierdzenie zakupu. Możemy teraz odejść od Bitomatu i spokojnie czekać, aż środki wpłyną na portfel.
+Bitomat to stacjonarne urządzenie, w którym można kupić i sprzedać Bitcoina. W zależności od bitomatu szczegóły mogą się różnić, ale proces zakupu jest bardzo prosty. Najpierw trzeba mieć adres publiczny portfela – można np. wygenerować go w portfelu elektronicznym. Mając adres naszego portfela, idziemy do bitomatu. Wybieramy opcję zakupu Bitcoina, wkładamy pieniądze do bitomatu (na ekranie pokaże się ilość BTC, jaką możemy kupić za włożone pieniądze), następnie wprowadzamy adres publiczny portfela i potwierdzamy. Wybieramy wielkość prowizji (im większa, tym szybciej dostaniemy BTC) i potwierdzamy wybór. Jeśli wszystko poszło dobrze, dostajemy potwierdzenie zakupu. Możemy teraz odejść od bitomatu i spokojnie czekać, aż środki wpłyną na portfel.
 
 **Plusy:**
 
@@ -133,7 +133,7 @@ Bitomat to stacjonarne urządzenie, w którym można kupić i sprzedać Bitcoina
 
 Kierując się chęcią zachowania pełnej anonimowości, najlepiej wybrać zakup w Bitomacie lub F2F za gotówkę. Warto jednak pomyśleć, dlaczego zależy nam na anonimowości?
 
-Można teraz anonimowo kupić równowartość 10 000 zł w Bitcoinie, ale jeśli cena wystrzeli w kosmos i pewnego dnia obudzimy się z Bitcoinem wartym 500 000 zł, to i tak ciężko będzie uniknąć sformalizowania takiej inwestycji i konieczności zapłacenia podatków – nawet jeśli wypłacimy to jakimś cudem w gotówce, to zakup np. mieszkania nie umknie oczu kochanej skarbówki. No chyba, że to będzie dom w raju podatkowym. 😉
+Można teraz anonimowo kupić równowartość 10 000 zł w Bitcoinie, ale jeśli cena wystrzeli w kosmos i pewnego dnia obudzimy się z Bitcoinem wartym 500 000 zł, to i tak ciężko będzie uniknąć sformalizowania takiej inwestycji i konieczności zapłacenia podatków – nawet jeśli wypłacimy to jakimś cudem w gotówce, to zakup np. mieszkania nie umknie oczom kochanej skarbówki. No chyba że to będzie dom w raju podatkowym. 😉
 
 Jeśli chcemy uniknąć przekazywania danych do giełdy, to również trzeba pomyśleć, czy uda się zachować prywatność przy sprzedaży. Trzeba pomyśleć przyszłościowo, bo kiedyś prawdopodobnie będziemy chcieli Bitcoina sprzedać.
 
@@ -144,11 +144,11 @@ Moim zdaniem, warto kierować się ceną, dlatego wybrałem giełdę. Wiele inst
 Na pewno na blogu pojawią się kolejne wpisy, więc polecam śledzić szczególnie serię [kryptowaluty dla leniwych](../category/kryptowaluty/):
 
 - [9 błędów początkujących](../kryptowaluty-9-bledow-poczatkujacych/)
-- [Jak Zachować Bezpieczeństwo i Anonimowość Inwestując w Kryptowaluty?](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/)
+- [Jak zachować bezpieczeństwo i anonimowość, inwestując w kryptowaluty?](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/)
 
-Ceny kryptowalut można śledzić na bardzo dobrym polskim portalu [Coinpaprika ](https://coinpaprika.com/pl/)lub na popularnych [CoinMarketCap ](https://coinmarketcap.com/)i [CoinGecko](https://www.coingecko.com/).
+Ceny kryptowalut można śledzić na bardzo dobrym polskim portalu [Coinpaprika](https://coinpaprika.com/pl/) lub na popularnych [CoinMarketCap](https://coinmarketcap.com/) i [CoinGecko](https://www.coingecko.com/).
 
-Jeśli chodzi o Youtube, polecam [kanał Phila Koniecznego](https://www.youtube.com/channel/UCQpBmjL9kJ768fty4tbqa6Q).
+Jeśli chodzi o YouTube, polecam [kanał Phila Koniecznego](https://www.youtube.com/channel/UCQpBmjL9kJ768fty4tbqa6Q).
 
 ## **Podsumowanie**
 
@@ -166,6 +166,8 @@ Jeśli chodzi o Youtube, polecam [kanał Phila Koniecznego](https://www.youtube.
 3. Nie inwestuj więcej, niż możesz stracić.
 4. Nie daj się ponieść emocjom, opracuj i realizuj strategię inwestycyjną.
 
-**Powodzenia! **
+**Powodzenia!**
 
-![Bitcoin to the moon!](../assets/images/573fc6ca-giphy.gif)Lecimy!
+![Bitcoin to the moon!](../assets/images/bitcoin-to-the-moon.webp)
+
+Lecimy!

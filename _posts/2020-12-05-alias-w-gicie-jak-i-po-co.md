@@ -1,5 +1,5 @@
 ---
-title: "Aliasy w Gicie – Jak i Po Co?"
+title: "Aliasy w Gicie – jak i po co?"
 date: 2020-12-05
 slug: "alias-w-gicie-jak-i-po-co"
 permalink: /alias-w-gicie-jak-i-po-co/
@@ -21,13 +21,13 @@ Im mniej do wpisania, tym mniej czasu trzeba na to poświęcić. Proste drobne z
 
 #### Bezbłędność
 
-Ile razy zdarzyło Ci się wpisać `git checkot` zamiast `git checkout` lub popełnić inną podobną literówkę? Pisząc krócej, np. `gco` zmniejszasz szansę na taki błąd.
+Ile razy zdarzyło Ci się wpisać `git checkot` zamiast `git checkout` lub popełnić inną podobną literówkę? Pisząc krócej, np. `gco`, zmniejszasz szansę na taki błąd.
 
 ## Jak?
 
 Skoro dotarłeś tutaj, to znaczy, że widzisz w tym sens. Przejdźmy więc do konkretów!
 
-Zobaczmy na przykładzie polecenia
+Zobaczmy to na przykładzie polecenia:
 
 ```
 git reset --hard origin/master
@@ -39,7 +39,7 @@ git reset --hard origin/master
 git config --global alias.rh 'reset --hard origin/master'
 ```
 
-Alias został dodany do konfiguracji Gita, którą możesz podejrzeć i edytować, wpisująć
+Alias został dodany do konfiguracji Gita, którą możesz podejrzeć i edytować, wpisując:
 
 ```
 git config --global --edit
@@ -53,6 +53,6 @@ Są inne, ciekawsze i jeszcze bardziej przydatne sposoby na aliasy, ale wymagaj�
 
 Aliasy można też wykorzystywać w innych sytuacjach, gdzie przydają się jeszcze bardziej, na przykład chcąc [zrobić porządek w repozytorium](../synchronizacja-i-porzadek-w-repozytorium/).
 
-Polecam oczywiście zapoznać się [dokumentacją aliasów](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases).  
-  
-To był pierwszy wpis z serii Jest Git, sprawdź pozostałe [tutaj](../category/git/)!
+Polecam oczywiście zapoznać się z [dokumentacją aliasów](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases).
+
+To był pierwszy wpis z serii Jest Git. Sprawdź pozostałe [tutaj](../category/git/)!

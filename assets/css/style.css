@@ -84,7 +84,7 @@ nav a:hover, nav a[aria-current="page"] { color: var(--green); }
 .article-header .post-meta { margin-bottom: 16px; }
 .article-header h1, .page-header h1 { margin: 0; font-size: clamp(36px, 6vw, 56px); }
 .article-byline { margin: 18px 0 0; color: var(--muted); font-size: 14px; }
-.article-cover { display: block; width: 100%; max-height: 470px; margin: 0 0 38px; object-fit: cover; border-radius: 10px; }
+.article-cover { display: block; width: 100%; height: auto; max-height: 470px; margin: 0 0 38px; object-fit: contain; border-radius: 10px; }
 .article-body { color: #343a35; font-size: 17px; line-height: 1.85; overflow-wrap: anywhere; }
 .article-body > :first-child { margin-top: 0; }
 .article-body h2 { margin: 48px 0 16px; color: var(--ink); font-size: 30px; }
@@ -95,7 +95,7 @@ nav a:hover, nav a[aria-current="page"] { color: var(--green); }
 .article-body li { padding-left: 4px; margin: 4px 0; }
 .article-body blockquote { margin: 28px 0; padding: 5px 0 5px 22px; border-left: 3px solid #9cb991; color: #536157; font-size: 18px; }
 .article-body blockquote p:last-child { margin-bottom: 0; }
-.article-body img { height: auto; border-radius: 8px; }
+.article-body img { display: block; width: auto; height: auto; max-width: 100%; max-height: 720px; margin: 24px auto; object-fit: contain; border-radius: 8px; }
 .article-body figure { margin: 28px 0; }
 .article-body figcaption { margin-top: 8px; color: var(--muted); font-size: 13px; text-align: center; }
 .article-body pre { overflow-x: auto; margin: 24px 0; padding: 20px; border: 1px solid #e1e5de; border-radius: 8px; background: #f0f2ed; color: #26352b; font-size: 14px; line-height: 1.65; }

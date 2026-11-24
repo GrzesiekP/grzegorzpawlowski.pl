@@ -1,5 +1,5 @@
 ---
-title: "Synchronizacja i Porządek w Repozytorium Git"
+title: "Synchronizacja i porządek w repozytorium Git"
 date: 2021-01-26
 slug: "synchronizacja-i-porzadek-w-repozytorium"
 permalink: /synchronizacja-i-porzadek-w-repozytorium/
@@ -43,17 +43,17 @@ Jednocześnie trochę namieszałem 😱
 
 A teraz jak z tego wybrnąć bez konieczności tworzenia forka od nowa?
 
-Najpierw sprawdzam, cze mam poprawnie zdefiniowany origin: `git remote -v`. Powiniem zobaczyć coś takiego:
+Najpierw sprawdzam, czy mam poprawnie zdefiniowany origin: `git remote -v`. Powinienem zobaczyć coś takiego:
 
 ![](../assets/images/c775ad40-git_remote_-v.gif)
 
-Robię zapasową gałąź, na której będą wszystkie commity, w tym super ważna zmiana w Readme.
+Robię zapasową gałąź, na której będą wszystkie commity, w tym superważna zmiana w README.
 
 ```
 git checkout -b backup-branch && git checkout master
 ```
 
-Teraz, podobnie jak przy synchronizacji master-branch, resetuję mojego master do stanu upstreama
+Teraz, podobnie jak przy synchronizacji master-branch, resetuję mojego mastera do stanu upstreama:
 
 ```
 git fetch upstream master
@@ -61,7 +61,7 @@ git reset --hard upstream/master
 git push --force
 ```
 
-Na koniec jeszcze zbieram super ważnego commita z mojej zapasowej gałęzi.
+Na koniec jeszcze zbieram superważnego commita z mojej zapasowej gałęzi.
 
 ```
 git cherry-pick 4debd79a14d4776d5f098217c63b5886671c89de
