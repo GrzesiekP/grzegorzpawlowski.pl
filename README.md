@@ -4,9 +4,9 @@ Prosta, statyczna strona na Jekyll i GitHub Pages. Artykuły są plikami Markdow
 
 ## Publikacja na GitHub Pages
 
-1. Wypchnij repozytorium do GitHuba na domyślną gałąź (`main` lub `master`).
+1. Wypchnij repozytorium do GitHuba na gałąź `master`.
 2. W repozytorium otwórz **Settings → Pages** i jako źródło wybierz **GitHub Actions**.
-3. Workflow `Publish site` zbuduje i opublikuje stronę po każdym pushu.
+3. Workflow `Publish site` zbuduje i opublikuje stronę po każdym pushu na `master` (nie uruchamia się dla pull requestów).
 4. Dla domeny `grzegorzpawlowski.pl` ustaw rekordy DNS zgodnie z instrukcją GitHub Pages i w **Settings → Pages** włącz wymuszenie HTTPS. Plik `CNAME` jest już przygotowany.
 
 Przed przełączeniem DNS sprawdź, czy strona opublikowała się poprawnie pod adresem GitHuba. Nie wyłączaj jeszcze WordPressa — najpierw zweryfikuj artykuły, obrazy i stare adresy wpisów na wersji testowej.
