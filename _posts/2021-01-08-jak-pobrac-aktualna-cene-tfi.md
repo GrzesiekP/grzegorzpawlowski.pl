@@ -48,7 +48,8 @@ Skazano mnie na wyciąganie ceny funduszu z HTML-a. Pomyślałem przez chwilę o
 Do prostego wyciągnięcia jednego stringa z HTML-a wystarczą proste operacje na stringach. Podobno *jak coś jest głupie, ale działa, to nie jest głupie*.
 
 ```
-    const pattern = '<div class="end_date_price"><span class="fund_value">'    const startIndex = result.lastIndexOf(pattern) + pattern.length
+    const pattern = '<div class="end_date_price"><span class="fund_value">'
+    const startIndex = result.lastIndexOf(pattern) + pattern.length
     const newString = result.substring(startIndex)
     const endIndex = newString.indexOf(' <')
     const priceString = newString.substr(0, endIndex).replace(',', '.')

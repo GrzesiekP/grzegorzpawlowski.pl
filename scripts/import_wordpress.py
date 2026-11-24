@@ -67,6 +67,8 @@ def walk(element: Element):
 def raw_text(node: Element | str) -> str:
     if isinstance(node, str):
         return node
+    if node.tag == "br":
+        return "\n"
     return "".join(raw_text(child) for child in node.children)
 
 
@@ -153,9 +155,9 @@ def inline(node: Element | str, image_map: dict[str, str], article_slugs: set[st
         href = node.attrs.get("href", "")
         return f"[{children}]({local_url(href, image_map, article_slugs)})" if href else children
     if tag in {"strong", "b"}:
-        return f"**{children}**" if children.strip() else children
+        return emphasized(children, "**")
     if tag in {"em", "i"}:
-        return f"*{children}*" if children.strip() else children
+        return emphasized(children, "*")
     if tag == "code":
         return f"`{children.strip('` ')}`" if children else ""
     if tag in {"del", "s", "strike"}:
@@ -170,6 +172,15 @@ def inline(node: Element | str, image_map: dict[str, str], article_slugs: set[st
         src = node.attrs.get("src", "")
         return f"[Otwórz osadzony materiał]({src})" if src else ""
     return children
+
+
+def emphasized(children: str, marker: str) -> str:
+    if not children.strip():
+        return children
+    leading = children[:len(children) - len(children.lstrip())]
+    trailing = children[len(children.rstrip()):]
+    content = children[len(leading):len(children) - len(trailing) if trailing else None]
+    return f"{leading}{marker}{content}{marker}{trailing}"
 
 
 def list_markdown(element: Element, image_map: dict[str, str], article_slugs: set[str], depth: int = 0) -> str:
@@ -222,7 +233,7 @@ def markdown(element: Element | str, image_map: dict[str, str], article_slugs: s
     if tag == "table":
         rows = []
         for row in (item for item in walk(element) if item.tag == "tr"):
-            cells = ["".join(inline(child, image_map, article_slugs) for child in cell.children).strip().replace("|", "\\|") for cell in row.children if isinstance(cell, Element) and cell.tag in {"td", "th"}]
+            cells = [re.sub(r"  \n|\n", "<br>", "".join(inline(child, image_map, article_slugs) for child in cell.children).strip()).replace("|", "\\|") for cell in row.children if isinstance(cell, Element) and cell.tag in {"td", "th"}]
             if cells:
                 rows.append(cells)
         if rows:

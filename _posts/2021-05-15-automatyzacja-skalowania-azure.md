@@ -9,7 +9,7 @@ image: "/assets/images/7552a937-AzureObrazekWyrozniajacy-1024x512.jpg"
 layout: post
 ---
 
-Azure pozwala na skalowanie horyzontalne (*scale-in/scale-out*, czyli zmiana ilości) lub wertykalne (*scale-down/scale-up tier*, czyli zmiana poziomu) instancji usług (np. *App Service Plan*). Automatyzacja skalowania jest domyślnie możliwa tylko horyzontalnie. Jeżeli z jakiegoś powodu potrzebujesz automatyzacji skalowania wertykalnego, można to zrobić za pomocą *Runbooka *i *Alertów*.
+Azure pozwala na skalowanie horyzontalne (*scale-in/scale-out*, czyli zmiana ilości) lub wertykalne (*scale-down/scale-up tier*, czyli zmiana poziomu) instancji usług (np. *App Service Plan*). Automatyzacja skalowania jest domyślnie możliwa tylko horyzontalnie. Jeżeli z jakiegoś powodu potrzebujesz automatyzacji skalowania wertykalnego, można to zrobić za pomocą *Runbooka* i *Alertów*.
 
 ## Przykład: Automatyzacja skalowanie App Service Planu
 
