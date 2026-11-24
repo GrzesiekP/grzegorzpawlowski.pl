@@ -1,0 +1,24 @@
+title: Grzegorz Pawłowski
+description: Praktycznie o IT — programowanie, Azure, bezpieczeństwo i rzeczy, które ułatwiają pracę.
+url: https://grzegorzpawlowski.pl
+baseurl: ""
+lang: pl-PL
+permalink: /:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+plugins: []
+category_urls:
+  Azure: /category/azure/
+  Bezpieczeństwo: /category/bezpieczenstwo/
+  Git: /category/git/
+  "Google Sheets": /category/google-sheets/
+  Inne: /category/inne/
+  Kryptowaluty: /category/kryptowaluty/
+  SQL: /category/sql/
+exclude:
+  - README.md
+  - scripts
+  - Gemfile
+  - Gemfile.lock
