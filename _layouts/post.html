@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="article">
+  <header class="article-header">
+    <a class="back-link" href="{{ '/' | relative_url }}">← Wszystkie wpisy</a>
+    <div class="post-meta">
+      {% if page.categories.first %}<span class="category">{{ page.categories.first }}</span>{% endif %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d.%m.%Y" }}</time>
+    </div>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="article-byline">Grzegorz Pawłowski</p>
+  </header>
+  {% if page.image %}<img class="article-cover" src="{{ page.image | relative_url }}" alt="" fetchpriority="high">{% endif %}
+  <div class="article-body">
+    {{ content }}
+  </div>
+  <footer class="article-footer">
+    <p>Jeśli ten wpis był przydatny, <a href="{{ '/kontakt/' | relative_url }}">daj mi znać</a>.</p>
+    <a class="back-link" href="{{ '/' | relative_url }}">← Wróć do wszystkich wpisów</a>
+  </footer>
+</article>

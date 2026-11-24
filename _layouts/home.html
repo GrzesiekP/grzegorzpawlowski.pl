@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<section class="home-intro">
+  <p class="eyebrow">Blog Grzegorza Pawłowskiego</p>
+  <h1>Technologia, która <span>ułatwia życie.</span></h1>
+  <p class="intro-copy">Praktycznie o IT — o programowaniu, chmurze, bezpieczeństwie i rozwiązaniach, które pomagają robić więcej, robiąc mniej.</p>
+</section>
+
+<section class="posts-section" aria-labelledby="posts-heading">
+  <div class="section-heading">
+    <div><p class="eyebrow">Notatki i doświadczenia</p><h2 id="posts-heading">Wpisy</h2></div>
+    <span class="post-count">{{ site.posts.size }} artykułów</span>
+  </div>
+  <div class="post-grid">
+    {% for post in site.posts %}
+      <article class="post-card{% unless post.image %} post-card-text{% endunless %}">
+        {% if post.image %}<a class="card-image" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"></a>{% endif %}
+        <div class="card-content">
+          <div class="post-meta">
+            {% if post.categories.first %}{% assign category_name = post.categories.first %}<a class="category" href="{{ site.category_urls[category_name] | relative_url }}">{{ category_name }}</a>{% endif %}
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d.%m.%Y" }}</time>
+          </div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+          <p>{{ post.excerpt | escape }}</p>
+          <a class="read-more" href="{{ post.url | relative_url }}">Czytaj wpis <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
