@@ -7,9 +7,14 @@ categories: ["Azure"]
 excerpt: "Azure pozwala na skalowanie horyzontalne (scale-in/scale-out, czyli zmianę liczby) lub wertykalne (scale-down/scale-up tier, czyli zmianę poziomu) instancji usług (np. App Service Plan).…"
 image: "/assets/images/7552a937-AzureObrazekWyrozniajacy-1024x512.jpg"
 layout: post
+updated: 2026-11-24
+update_note: |
+  Konta Run As wycofano 30.09.2023 r., a AzureRM nie jest już wspieranym modułem do nowych wdrożeń. Przykład zaktualizowałem do modułów Az i Managed Identity, z jawnym wyborem subskrypcji i domyślnym trybem bez zmiany zasobów. Uprościłem go do skalowania S1 → S2 → S3, żeby nie sugerować uniwersalnej kolejności wszystkich SKU. Skalowanie wymaga testów dostępności i limitów kosztu.
+
+  Źródła: [migracja Run As](https://learn.microsoft.com/en-us/azure/automation/migrate-run-as-accounts-managed-identity), [Managed Identity w Automation](https://learn.microsoft.com/en-us/azure/automation/enable-managed-identity-for-automation), [Set-AzAppServicePlan](https://learn.microsoft.com/en-us/powershell/module/az.websites/set-azappserviceplan).
 ---
 
-Azure pozwala na skalowanie horyzontalne (*scale-in/scale-out*, czyli zmianę liczby) lub wertykalne (*scale-down/scale-up tier*, czyli zmianę poziomu) instancji usług (np. *App Service Plan*). Automatyzacja skalowania jest domyślnie możliwa tylko horyzontalnie. Jeżeli z jakiegoś powodu potrzebujesz automatyzacji skalowania wertykalnego, można to zrobić za pomocą *Runbooka* i *Alertów*.
+Azure oferuje skalowanie horyzontalne (*scale-in/scale-out*, czyli zmianę liczby instancji) i wertykalne (*scale-down/scale-up*, czyli zmianę rozmiaru lub poziomu usługi). Dostępne mechanizmy automatyzacji zależą od konkretnej usługi i planu — nie można powiedzieć, że w całym Azure automatyzacja działa tylko poziomo. Ten przykład dotyczy zmiany SKU **App Service Planu** przez runbook i alert, a nie automatycznego skalowania dowolnej usługi.
 
 ## Przykład: Automatyzacja skalowania App Service Planu
 
@@ -19,100 +24,65 @@ W skrócie, Runbook uruchamia skrypt PowerShell, który zmienia tier App Service
 
 #### Runbook
 
-1. Stwórz Automation Account (*Create Azure Run As account* na tak).
-2. Zaimportuj odpowiednie moduły: Automation account -> shared resources -> modules -> browse. Wybierz AzureRM.Profile i AzureRM.Websites.
-3. W utworzonym koncie przejdź do Runbooks i stwórz nowy Runbook. Możesz użyć też gotowych, klikając *Browse gallery* i znajdując skrypt, który spełnia Twoje wymagania. Ja w tym przykładzie sam napisałem [krótki i prosty skrypt](https://raw.githubusercontent.com/GrzesiekP/VerticalScaleUp/master/VerticalScaleUp.ps1). Możecie go znaleźć w galerii pod nazwą VerticalScaleUp i [na GitHubie](https://github.com/GrzesiekP/VerticalScaleUp).
-4. Wybierz typ PowerShell
-5. Kliknij Edit i napisz kod, który skaluje App Service Plan
-6. Zapisz i opublikuj. Runbook można przetestować, klikając „Start”.
+1. Stwórz Automation Account i włącz jego systemową Managed Identity.
+2. Nadaj tej tożsamości uprawnienia do odczytu i zmiany **konkretnego** App Service Planu, zamiast uprawnień administratora całej subskrypcji.
+3. W środowisku wykonawczym runbooka udostępnij zgodne wersje `Az.Accounts` i `Az.Websites` oraz wybierz wspierany runtime PowerShell.
+4. Utwórz runbook PowerShell. Poniższy przykład obsługuje wyłącznie rodzinę Standard: S1, S2 i S3. Sprawdź dostępność i cenę tych SKU dla własnego systemu operacyjnego, regionu i planu.
+5. Zapisz i opublikuj. Najpierw uruchom go **bez** `Apply`: zaloguje się, odczyta plan i wypisze proponowaną zmianę, ale jej nie wykona.
+6. Dopiero po testach na środowisku nieprodukcyjnym świadomie ustaw `Apply`. Zmiana może zwiększyć rachunek i wpłynąć na wszystkie aplikacje współdzielące plan.
 
-```
-Param
-(
-  [Parameter (Mandatory= $true)]
-  [String] $resourceGroupName = "",
-
-  [Parameter (Mandatory= $true)]
-  [String] $appServicePlanName = "",
-
-  [Parameter (Mandatory= $false)]
-  [String] $maxAllowedTier = "F1"
+```powershell
+param (
+    [Parameter(Mandatory = $true)]
+    [string] $SubscriptionId,
+    [Parameter(Mandatory = $true)]
+    [string] $ResourceGroupName,
+    [Parameter(Mandatory = $true)]
+    [string] $AppServicePlanName,
+    [ValidateSet('S1', 'S2', 'S3')]
+    [string] $MaxAllowedSku = 'S3',
+    [switch] $Apply
 )
 
-$connectionName = "AzureRunAsConnection"
+$ErrorActionPreference = 'Stop'
+Disable-AzContextAutosave -Scope Process | Out-Null
+$context = (Connect-AzAccount -Identity).Context
+$context = Set-AzContext -SubscriptionId $SubscriptionId -DefaultProfile $context
+$plan = Get-AzAppServicePlan -ResourceGroupName $ResourceGroupName `
+    -Name $AppServicePlanName -DefaultProfile $context
 
-# Adjust tier levels and their order to fit your needs.
-$tierLevels = @("F1", "D1", "B1", "B2", "B3", "S1", "S2", "S3", "P1", "P2", "P3")
-$tierConfigs = @{
-    F1=@("Free","");
-    D1=@("Shared","");
-    B1=@("Basic","Small");
-    B2=@("Basic","Medium");
-    B3=@("Basic","Large");
-    S1=@("Standard","Small");
-    S2=@("Standard","Medium");
-    S3=@("Standard","Large");
-    P1=@("Premium","Small");
-    P2=@("Premium","Medium");
-    P3=@("Premium","Large");
+$steps = @('S1', 'S2', 'S3')
+$currentIndex = [Array]::IndexOf($steps, $plan.Sku.Name)
+$maxIndex = [Array]::IndexOf($steps, $MaxAllowedSku)
+if ($currentIndex -lt 0) {
+    throw 'This example only supports Standard S1/S2/S3 plans.'
+}
+if ($currentIndex -ge $maxIndex) {
+    Write-Output 'At or above the configured limit; no change.'
+    return
 }
 
-Function IndexOf {
-    param (
-        [array]$Array, [string]$Item
-    )
-
-    return (0..($Array.Count-1)) | Where-Object {$array[$_] -eq $Item}
+$nextSku = $steps[$currentIndex + 1]
+$sizes = @{ S1 = 'Small'; S2 = 'Medium'; S3 = 'Large' }
+Write-Output ("Proposed change: {0} -> {1}" -f $plan.Sku.Name, $nextSku)
+if (-not $Apply) {
+    Write-Output 'Preview only. Set Apply explicitly to change the plan.'
+    return
 }
 
-try {
-    $servicePrincipalConnection=Get-AutomationConnection -Name $connectionName
-    Add-AzureRmAccount -ServicePrincipal -TenantId $servicePrincipalConnection.TenantId -ApplicationId $servicePrincipalConnection.ApplicationId -CertificateThumbprint $servicePrincipalConnection.CertificateThumbprint
-
-    $currentPlan = Get-AzureRmAppServicePlan -ResourceGroupName $resourceGroupName -Name $appServicePlanName
-    $currentTier = $currentPlan.Sku.Name
-    Write-Output "Current tier: $currentTier"
-
-    $currentTierIndex = IndexOf -Array $tierLevels -Item $currentTier
-    Write-Output "Current tier index: $currentTierIndex"
-    $indexOfMaxAllowedTier = IndexOf -Array $tierLevels -Item $maxAllowedTier
-    $nextTier = $tierLevels[$currentTierIndex + 1]
-
-    if ($currentTierIndex -lt $indexOfMaxAllowedTier) {
-        Write-Output "Scaling $currentTier to $nextTier"
-
-        $targetTierConfig = $tierConfigs[$nextTier]
-        $targetTier = $targetTierConfig[0]
-        $targetWorkerSize = $targetTierConfig[1]
-        if ($targetWorkerSize -eq "") {
-            Set-AzureRmAppServicePlan -ResourceGroupName $resourceGroupName -Name $appServicePlanName -Tier $targetTier
-        } else {
-            Set-AzureRmAppServicePlan -ResourceGroupName $resourceGroupName -Name $appServicePlanName -Tier $targetTier -WorkerSize $targetWorkerSize
-        }
-    } else {
-        $ErrorMessage = "Cannot scale up to $nextTier. CuurentTier $currentTier is the higest allowed."
-        throw $ErrorMessage
-    }
-}
-
-catch {
-    if (!$servicePrincipalConnection) {
-        $ErrorMessage = "Connection $connectionName not found."
-        throw $ErrorMessage 
-    } 
-    else { 
-        Write-Error -Message $_.Exception 
-        throw $_.Exception
-    }
-}
+Set-AzAppServicePlan -ResourceGroupName $ResourceGroupName `
+    -Name $AppServicePlanName -Tier 'Standard' -WorkerSize $sizes[$nextSku] `
+    -NumberofWorkers $plan.NumberOfWorkers -DefaultProfile $context
 ```
+
+To przykład dydaktyczny, nie gotowy kontroler autoskalowania. Nie obsługuje równoległych uruchomień, histerezy ani skalowania w dół. Ustaw ograniczenia częstotliwości i przetestuj scenariusze błędów, zanim powiążesz go z alertem. [Dawne repozytorium VerticalScaleUp](https://github.com/GrzesiekP/VerticalScaleUp) zawiera historyczny kod AzureRM, nie powyższy wariant Az.
 
 #### Alerting
 
 1. Przejdź do Alertów Azure i dodaj „New alert rule”
 2. W Scope wybierz Twój App Service Plan.
 3. W Condition skonfiguruj warunek, po spełnieniu którego ma się wywołać akcja skalowania. Np. kiedy średnie zużycie pamięci przekroczy 75%.
-4. W Actions stwórz nową grupę. Jako Action type wybierz Automation Runbook, a następnie wskaż stworzony Runbook.
+4. W Actions stwórz nową grupę. Jako Action type wybierz Automation Runbook, a następnie wskaż stworzony Runbook. Skonfiguruj wymagane parametry i przetestuj sposób przekazania danych alertu; payload webhooka nie jest automatycznie dowolnym zestawem parametrów skryptu. Nie włączaj `Apply`, dopóki nie sprawdzisz zachowania automatyzacji.
 5. Kliknij Review + create i gotowe!
 
 Automatyzacja skalowania to jedno. Osobną kwestią jest dobre skonfigurowanie, kiedy ASP powinien się skalować. To już kwestia indywidualna, która zależy od sposobu, w jaki jest używany. Jeśli hostujesz na nim API dla sklepu internetowego, z którego korzystają użytkownicy jednej strefy czasowej, to możliwe, że wykres użycia będzie wyglądał całkiem regularnie i można skalować np. o konkretnej godzinie, bez monitorowania metryk i ustawiania alertów. Ale kiedy zmienność zużycia jest mniej przewidywalna, trzeba mądrze dobrać poziomy, na których ma się skalować. Nieźle opisuje to [Dokumentacja Microsoftu](https://docs.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-best-practices#manual-scaling-is-reset-by-autoscale-min-and-max).
@@ -123,6 +93,6 @@ Czasami w skryptach z *Runbooks gallery* pojawiają się problemy z kodowaniem, 
 
 Upewnij się, że Runbook ma uprawnienia do modyfikowania App Service Planu.
 
-Aplikacje hostowane na App Service Planie będą przez chwilę niedostępne, ponieważ skalowanie wertykalne wymaga ich restartu (są przenoszone na nowy, wyższy lub niższy plan). Podobny downtime występuje w przypadku innych usług, np. baz SQL. Podczas testów aplikacja była niedostępna przez co najwyżej kilka sekund, więc w przypadku produkcyjnym, jeśli aplikacja jest dobrze zaprojektowana, nie powinno być problemów.
+Zmiana rozmiaru planu może wiązać się z przenoszeniem obciążeń i restartami. Nie zakładaj stałego, kilkusekundowego czasu niedostępności: zależy on od usługi, liczby instancji, aplikacji i sposobu wdrożenia. Wynik pojedynczego testu nie jest SLA. Przed zmianą produkcji przetestuj dostępność, zachowanie długich żądań, gotowość instancji i scenariusz powrotu do poprzedniego SKU. Skalowanie baz SQL ma własne zasady i nie należy utożsamiać go ze skalowaniem App Service.
 
 Jeśli zastanawiasz się nad kosztami, jakie realnie generują poszczególne poziomy App Service Planów, zobacz [mój wpis o Azure Pricing Calculator](../azure-pricing-calculator/).

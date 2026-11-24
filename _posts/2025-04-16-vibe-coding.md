@@ -4,14 +4,19 @@ date: 2025-04-16
 slug: "vibe-coding"
 permalink: /vibe-coding/
 categories: ["Inne"]
-excerpt: "Czy wiesz, że vibe coding, wprowadzony przez Andreja Karpathy’ego w lutym 2025 roku, już zdążył zrewolucjonizować sposób tworzenia oprogramowania? Według raportu Y Combinator z marca 2025 aż 25%…"
+excerpt: "Vibe coding nie jest synonimem każdego programowania z AI. Gdzie kończy się szybki eksperyment, a zaczyna odpowiedzialność za zrozumienie, testowanie i utrzymanie kodu?"
 image: "/assets/images/35f54e81-f561f7ce-ef7b-4c42-9b8d-f0c26a7f578a-1024x585.png"
 layout: post
+updated: 2026-11-24
+update_note: |
+  Rozdzieliłem pierwotne znaczenie vibe codingu (akceptowanie kodu bez jego czytania) od programowania z AI pod kontrolą inżyniera. Usunąłem niepotwierdzone mnożniki „5×”, „+75% produktywności” i „20% błędów”. Deklaracje startupów nie są kontrolowanym pomiarem. Dodałem wyniki METR z 2025 r. i ich aktualizację z lutego 2026 r. — nie istnieje jeden uniwersalny procent wpływu AI na wydajność.
+
+  Źródła: [Karpathy — pierwotny wpis](https://twitter.com/karpathy/status/1886192184808149383), [Simon Willison — rozróżnienie pojęć](https://simonwillison.net/2025/Mar/19/vibe-coding/), [METR 2025](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/), [METR 2026 — ograniczenia nowego pomiaru](https://metr.org/blog/2026-02-24-uplift-update/).
 ---
 
-Czy wiesz, że vibe coding, wprowadzony przez Andreja Karpathy’ego [w lutym 2025 roku](https://en.wikipedia.org/wiki/Vibe_coding), już zdążył zrewolucjonizować sposób tworzenia oprogramowania? Według raportu Y Combinator z marca 2025, aż 25% startupów w ich zimowej grupie posiadało kod, który w 95% został wygenerowany przez sztuczną inteligencję.
+Termin **vibe coding** spopularyzował Andrej Karpathy w lutym 2025 r. W [pierwotnym opisie](https://twitter.com/karpathy/status/1886192184808149383) chodziło o kierowanie modelem przez opis oczekiwań i ocenę działania, bez czytania oraz pełnego rozumienia generowanego kodu. To węższe znaczenie niż po prostu „używam AI przy programowaniu”.
 
-To nowe podejście do programowania pozwala programistom skupić się na kierowaniu, testowaniu i udoskonalaniu kodu generowanego przez AI zamiast na ręcznym pisaniu każdej linijki. Co więcej, vibe coding otwiera drzwi do tworzenia aplikacji nawet dla osób bez rozległej wiedzy programistycznej.
+Gdy czytasz zmiany, rozumiesz rozwiązanie, testujesz je i odpowiadasz za jego jakość, mówimy raczej o **programowaniu wspomaganym AI**, nie o vibe codingu w pierwotnym sensie. [Simon Willison wyjaśnił tę różnicę już w marcu 2025 r.](https://simonwillison.net/2025/Mar/19/vibe-coding/) Oba podejścia mogą ułatwić eksperymenty, ale nie mają tego samego profilu ryzyka.
 
 W tym artykule przyjrzymy się bliżej temu fascynującemu trendowi. Przeanalizujemy jego zalety i wady, sprawdzimy, gdzie sprawdza się najlepiej, a gdzie może stwarzać problemy, oraz zastanowimy się nad jego wpływem na przyszłość programowania.
 
@@ -29,17 +34,17 @@ Co ciekawe, pojawienie się tego terminu zbiegło się z okresem pewnego spowoln
 
 Jednym z najbardziej atrakcyjnych aspektów vibe codingu jest obietnica uczynienia z każdego programisty „10x developera”, a z istniejących „10x developerów” – „100x developerów” [<sup>[2]</sup>](https://dev.to/thomascherickal/vibe-coding-will-10x-every-developer-yet-never-ever-replace-them-5d60). Ta wizja znaczącego zwiększenia produktywności okazała się niezwykle pociągająca.
 
-Według dostępnych danych, vibe coding może przyspieszyć tworzenie Minimum Viable Products (MVPs) nawet pięciokrotnie w porównaniu do tradycyjnych metod [<sup>[3]</sup>](https://fireup.pro/pl/blog/vibe-coding-jak-sztuczna-inteligencja-zmienia-rozwoj-oprogramowania-w-2025-roku). W praktyce oznacza to, że programiści mogą skupić się na strategicznych aspektach projektu, zamiast tracić czas na szczegóły składni i debugowanie.
+Historie o wielokrotnym przyspieszeniu prototypowania są atrakcyjne, ale przytoczone tu wcześniej „5×” nie miało opisanej metodologii ani reprezentatywnej próby. Nie należy traktować go jako wyniku badania. Oszczędność czasu przy generowaniu kodu może zostać częściowo lub całkowicie zużyta na sprawdzanie i poprawki.
 
-Niewątpliwie, narzędzia AI pozwalają programistom na efektywniejsze zaliczanie przeglądów kodu, pisanie czystego kodu bez większego wysiłku oraz automatyczne generowanie testów jednostkowych i dokumentacji [<sup>[2]</sup>](https://dev.to/thomascherickal/vibe-coding-will-10x-every-developer-yet-never-ever-replace-them-5d60). Jak twierdzi Marc Tuscher, dyrektor ds. technologii w firmie Sereact: „Tempo, jakie można osiągnąć w porównaniu do samodzielnego kodowania, jest szalone” [<sup>[4]</sup>](https://businessinsider.com.pl/technologie/nowe-technologie/jak-nauczyc-sie-skutecznych-promptow-vibe-coding-jako-przyszlosc/f5z6qzl).
+AI może przygotować testy, dokumentację lub szkic implementacji. Każdy z tych wyników wymaga weryfikacji — test wygenerowany z błędnego założenia może jedynie utrwalić błąd. Entuzjastyczne wypowiedzi użytkowników są świadectwem ich doświadczeń, nie gwarancją „czystego kodu bez wysiłku”.
 
 ### 3. Wpływ Y Combinator i startupów
 
-Y Combinator, jeden z najważniejszych inkubatorów startupów na świecie, odegrał kluczową rolę w popularyzacji vibe codingu. Według Garry’ego Tana, CEO Y Combinator, aż [81% startupów](https://www.businessinsider.com/vibe-coding-startups-impact-leaner-garry-tan-y-combinator-2025-3) w ich najnowszej grupie to firmy związane z AI, a około 25% z nich ma 95% kodu napisanego przez modele językowe [<sup>[5]</sup>](https://www.businessinsider.com/vibe-coding-startups-impact-leaner-garry-tan-y-combinator-2025-3).
+Y Combinator pomógł spopularyzować hasło. W relacjach z marca 2025 r. [Garry Tan mówił o ok. 25% firm zimowej grupy YC z kodem w 95% generowanym przez AI](https://www.businessinsider.com/vibe-coding-startups-impact-leaner-garry-tan-y-combinator-2025-3). Była to deklaracja dotycząca konkretnej grupy, nie audyt kodu ani wynik dla wszystkich startupów. Udział wygenerowanego kodu nie mierzy sam w sobie produktywności, bezpieczeństwa czy stopnia jego zrozumienia.
 
-Co więcej, Tan twierdzi, że dzięki vibe codingowi firmy osiągają przychody rzędu 1-10 milionów dolarów rocznie z zespołami liczącymi mniej niż 10 osób, co wcześniej było niemal niemożliwe w przypadku wczesnoetapowych startupów [<sup>[5]</sup>](https://www.businessinsider.com/vibe-coding-startups-impact-leaner-garry-tan-y-combinator-2025-3). „W dzisiejszych czasach ludzie dochodzą do miliona lub 10 milionów dolarów rocznego przychodu z mniej niż 10 osobami, a to naprawdę nigdy wcześniej się nie zdarzało we wczesnoetapowych inwestycjach venture” – podkreśla [<sup>[5]</sup>](https://www.businessinsider.com/vibe-coding-startups-impact-leaner-garry-tan-y-combinator-2025-3).
+Tan wskazywał też małe zespoły osiągające wysokie przychody. Taka obserwacja nie dowodzi, że spowodował je vibe coding ani że wcześniej małe firmy nie mogły osiągać podobnych wyników. Potrzebna byłaby porównywalna grupa i kontrola innych czynników.
 
-Dobrym przykładem tego trendu jest Anysphere, startup stojący za narzędziem Cursor, który osiągnął 100 milionów dolarów rocznego przychodu w zaledwie 12 miesięcy, operując małym zespołem [<sup>[6]</sup>](https://www.geekwire.com/2025/why-startups-should-pay-attention-to-vibe-coding-and-approach-with-caution/). Takie historie sukcesu dodatkowo napędzają zainteresowanie vibe codingiem wśród programistów i firm technologicznych.
+Medialne historie sukcesu, np. o wzroście Anysphere, producenta Cursora, napędzały zainteresowanie [<sup>[6]</sup>](https://www.geekwire.com/2025/why-startups-should-pay-attention-to-vibe-coding-and-approach-with-caution/). Trzeba przy tym odróżniać ARR — roczne tempo powtarzalnych przychodów w danym momencie — od przychodu faktycznie osiągniętego przez cały poprzedni rok. Sukces sprzedawcy narzędzia nie jest pomiarem efektywności każdego użytkownika.
 
 ## Zalety i możliwości vibe codingu
 
@@ -47,7 +52,7 @@ Vibe coding to nie tylko modny termin – przynosi konkretne korzyści dla róż
 
 ### 1. Szybkie prototypowanie i MVP
 
-Przede wszystkim, vibe coding radykalnie przyspiesza tworzenie pierwszych wersji produktów. Według dostępnych danych, umożliwia stworzenie Minimum Viable Products (MVPs) nawet [pięciokrotnie szybciej](https://fireup.pro/pl/blog/vibe-coding-jak-sztuczna-inteligencja-zmienia-rozwoj-oprogramowania-w-2025-roku) niż tradycyjne metody programowania [<sup>[3]</sup>](https://fireup.pro/pl/blog/vibe-coding-jak-sztuczna-inteligencja-zmienia-rozwoj-oprogramowania-w-2025-roku). Zamiast spędzać tygodnie na ręcznym pisaniu kodu, proces ten zajmuje teraz minuty lub godziny [<sup>[7]</sup>](https://webego.pl/blog/vibe-coding-rewolucja-w-programowaniu-z-pomoca-ai-dla-marketingu-i-biznesu/).
+Przy prostym, jednorazowym prototypie generowanie może szybko dać coś, co da się uruchomić i obejrzeć. Nie oznacza to, że tygodnie pracy nad dowolnym produktem zamieniają się w minuty. Weryfikacja potrzeb użytkowników, bezpieczeństwo i utrzymanie nie znikają po wygenerowaniu interfejsu.
 
 Ten przyspieszony cykl rozwoju jest szczególnie cenny dla startupów i zespołów pracujących w metodykach zwinnych, gdzie szybkie testowanie hipotez biznesowych decyduje o sukcesie projektu. Jak zauważają twórcy korzystający z vibe codingu: „Idealnie sprawdza się do szybkiego MVP, proof-of-conceptu albo prototypowania landingów” [<sup>[8]</sup>](https://pl.linkedin.com/posts/mateusz-mirkowski-18755134_vibe-coding-zagro%C5%BCenie-czy-zbawca-%C5%9Bwiata-activity-7309826074106892288-F1Qe).
 
@@ -59,7 +64,11 @@ Ta demokratyzacja procesu tworzenia oprogramowania otwiera nowe możliwości dla
 
 ### 3. Wzrost produktywności dla programistów
 
-Ponadto, profesjonalni programiści również czerpią korzyści z vibe codingu. Automatyzacja powtarzalnych zadań pozwala im skupić się na kreatywnym rozwiązywaniu problemów i projektowaniu architektury aplikacji [<sup>[3]</sup>](https://fireup.pro/pl/blog/vibe-coding-jak-sztuczna-inteligencja-zmienia-rozwoj-oprogramowania-w-2025-roku). Według prognoz Gartnera, [do 2028 roku aż 75% programistów](https://fireup.pro/pl/blog/vibe-coding-jak-sztuczna-inteligencja-zmienia-rozwoj-oprogramowania-w-2025-roku) w firmach będzie korzystać z asystentów AI do kodowania [<sup>[3]</sup>](https://fireup.pro/pl/blog/vibe-coding-jak-sztuczna-inteligencja-zmienia-rozwoj-oprogramowania-w-2025-roku), co może zwiększyć ich produktywność nawet o 75% [<sup>[3]</sup>](https://fireup.pro/pl/blog/vibe-coding-jak-sztuczna-inteligencja-zmienia-rozwoj-oprogramowania-w-2025-roku).
+Automatyzacja rutynowych zadań może pomagać profesjonalistom, zwłaszcza gdy sprawdzają wynik. Przytoczona wcześniej prognoza adopcji asystentów AI przez 75% programistów do 2028 r. nie oznaczała wzrostu produktywności o 75%. To różne wielkości; ten drugi wniosek był błędny.
+
+W [badaniu METR z lipca 2025 r.](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) 16 doświadczonych programistów wykonało 246 zadań we własnych projektach open source. Dopuszczenie ówczesnych narzędzi AI wydłużyło czas pracy średnio o 19%. Wynik dotyczy tej próby, zadań i generacji narzędzi, nie dowodzi, że AI zawsze spowalnia.
+
+W [aktualizacji z lutego 2026 r.](https://metr.org/blog/2026-02-24-uplift-update/) METR opisał nowsze dane sugerujące przyspieszenie, ale też poważne problemy selekcji uczestników i pomiaru. Autorzy nie uznali ich za wiarygodną podstawę precyzyjnego oszacowania aktualnego efektu. W praktyce mierz czas do zaakceptowanego rozwiązania, wraz z przeglądem i poprawkami, zamiast liczyć wygenerowane linie.
 
 Marc Tuscher, dyrektor ds. technologii w firmie Sereact, podkreśla: „Tempo, jakie można osiągnąć w porównaniu do samodzielnego kodowania, jest szalone” [<sup>[4]</sup>](https://businessinsider.com.pl/technologie/nowe-technologie/jak-nauczyc-sie-skutecznych-promptow-vibe-coding-jako-przyszlosc/f5z6qzl). Tanay Kothari, CEO Wispr Flow, dodaje: „Ludzie korzystający z narzędzi AI wykonują mniej więcej dwa razy więcej pracy” [<sup>[4]</sup>](https://businessinsider.com.pl/technologie/nowe-technologie/jak-nauczyc-sie-skutecznych-promptow-vibe-coding-jako-przyszlosc/f5z6qzl).
 
@@ -75,7 +84,7 @@ Co więcej, istnieje fundamentalna różnica między programami a produktami. Vi
 
 ### 2. Problemy z jakością, bezpieczeństwem i skalowalnością
 
-Badania wykazały, że kod generowany przez narzędzia AI ma wskaźnik błędów sięgający 20% <sup>[12]</sup>. Ponadto kod generowany przez AI często zawiera liczne zagrożenia bezpieczeństwa:
+Nie ma tu zweryfikowanego źródła z metodologią dla dawnego twierdzenia o „20% błędów”; usuwam tę liczbę. Niezależnie od autorstwa kodu trzeba sprawdzić m.in.:
 
 - Niezweryfikowany kod z podatnościami na ataki SQL injection czy XSS
 - Ujawnienie wrażliwych danych i mechanizmów uwierzytelniania
@@ -86,7 +95,7 @@ W konsekwencji, aplikacje tworzone poprzez vibe coding mogą mieć problemy z wy
 
 ### 3. Ryzyko uzależnienia od AI i utraty umiejętności
 
-Ponadto, nadmierne poleganie na AI prowadzi do „erozji umiejętności” – programiści mogą stopniowo tracić zdolność samodzielnego rozwiązywania problemów i debugowania [<sup>[3]</sup>](https://fireup.pro/pl/blog/vibe-coding-jak-sztuczna-inteligencja-zmienia-rozwoj-oprogramowania-w-2025-roku). Jeśli AI wykonuje większość prostych zadań, młodsi specjaliści mają mniej okazji do nauki rzemiosła, co w dłuższej perspektywie prowadzi do luki kompetencyjnej [<sup>[15]</sup>](https://pl.linkedin.com/pulse/vibe-coding-z-perspektywy-analityk%C3%B3w-i-architekt%C3%B3w-andrzej-sobczak-lbvtf).
+Nadmierne delegowanie bez sprawdzania może ograniczać ćwiczenie samodzielnego rozwiązywania problemów. To ryzyko i argument za świadomą nauką, a nie wykazana w przytoczonych opiniach nieuchronna „erozja umiejętności”. AI może też wspierać naukę, jeśli użytkownik weryfikuje wyjaśnienia i potrafi odtworzyć rozumowanie.
 
 Mimo to, wartości związane z inżynierskim myśleniem pozostają niezbędne. Tanay Kothari, CEO Wispr Flow, podkreśla: „Największa wartość pochodzi z klarownego myślenia. Umiejętność analizowania problemów, rozkładania ich na części i myślenia o nich w sposób abstrakcyjny, to zawsze będzie przydatne” [<sup>[4]</sup>](https://businessinsider.com.pl/technologie/nowe-technologie/jak-nauczyc-sie-skutecznych-promptow-vibe-coding-jako-przyszlosc/f5z6qzl).
 
@@ -96,7 +105,7 @@ Patrząc na dynamiczny rozwój vibe codingu, warto zadać fundamentalne pytanie:
 
 ### 1. Kiedy vibe coding ma sens
 
-Andrej Karpathy wskazuje, że vibe coding sprawdza się szczególnie w „jednorazowych projektach weekendowych”. Faktycznie, to podejście doskonale funkcjonuje przy prototypowaniu, szybkim testowaniu pomysłów czy tworzeniu prostych narzędzi wewnętrznych. Wielu ekspertów potwierdza, że vibe coding to skuteczna metoda budowania MVP (Minimum Viable Product), pozwalająca na błyskawiczne weryfikowanie koncepcji biznesowych. Jednakże ważne jest zrozumienie, że nawet przy korzystaniu z AI programista powinien rozumieć, co faktycznie powstaje – „pracując nad dużym kodem, AI dąży do próby napisania całości i finalnie gubi detale”.
+Karpathy opisywał to podejście w kontekście jednorazowych projektów weekendowych. Niskiego ryzyka eksperyment bez prawdziwych danych i uprawnień to inne zastosowanie niż produkt dla klientów. Nawet narzędzie „tylko wewnętrzne” może wymagać poważnej ochrony, jeśli przetwarza dane firmy. Przejście do wdrożenia wymaga przeglądu i zrozumienia rozwiązania — czyli wyjścia poza pierwotny vibe coding.
 
 ### 2. Gdzie kończy się jego użyteczność
 
@@ -108,7 +117,7 @@ Mimo rosnących możliwości AI, niektóre umiejętności pozostają nieocenione
 
 ## Wnioski
 
-Niewątpliwie, vibe coding zmienił sposób, w jaki tworzymy oprogramowanie. Mimo że narzędzia AI znacząco przyspieszają proces programowania i otwierają nowe możliwości dla osób nietechnicznych, należy zachować zdrowy rozsądek podczas ich wykorzystywania.
+Narzędzia AI otwierają nowe możliwości tworzenia i eksperymentowania. Ich wpływ na czas i jakość zależy jednak od zadania, użytkownika, modelu oraz sposobu weryfikacji. Nie uzasadnia to jednego mnożnika produktywności dla całej branży.
 
 Doświadczenie pokazuje, że vibe coding sprawdza się znakomicie przy szybkim prototypowaniu i tworzeniu MVP. Jednakże złożone projekty nadal wymagają solidnych podstaw programistycznych, głębokiego zrozumienia kodu oraz umiejętności rozwiązywania problemów.
 
@@ -116,9 +125,9 @@ Patrząc w przyszłość, vibe coding prawdopodobnie stanie się jednym z wielu 
 
 ## Najczęściej zadawane pytania
 
-**Q1. Co to jest vibe coding?** Vibe coding to podejście do programowania, w którym programiści wykorzystują narzędzia sztucznej inteligencji do generowania kodu na podstawie opisów w języku naturalnym. Pozwala to na szybsze tworzenie prototypów i MVP, ale wymaga ostrożnego stosowania w bardziej złożonych projektach.
+**Q1. Co to jest vibe coding?** W pierwotnym znaczeniu: tworzenie przez polecenia dla AI i ocenę działania bez czytania oraz pełnego rozumienia kodu. Używanie AI z rzetelnym przeglądem i odpowiedzialnością za wynik to szersza kategoria programowania wspomaganego AI.
 
-**Q2. Jakie są główne zalety vibe codingu?** Główne zalety vibe codingu to znaczne przyspieszenie procesu tworzenia prototypów i MVP, zwiększona dostępność programowania dla osób nietechnicznych oraz potencjalny wzrost produktywności doświadczonych programistów przy rutynowych zadaniach.
+**Q2. Jakie są główne zalety vibe codingu?** Niski próg rozpoczęcia eksperymentu i możliwość szybkiego obejrzenia prototypu. Oszczędność czasu nie jest gwarantowana, zwłaszcza po doliczeniu weryfikacji i utrzymania.
 
 **Q3. Czy vibe coding zastąpi tradycyjne programowanie?** Vibe coding prawdopodobnie nie zastąpi całkowicie tradycyjnego programowania. Sprawdza się dobrze w prostszych projektach, ale złożone aplikacje nadal wymagają głębokiej wiedzy technicznej, umiejętności rozwiązywania problemów i dbałości o jakość kodu.
 

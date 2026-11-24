@@ -14,7 +14,7 @@ layout: null
     <title>{{ post.title | xml_escape }}</title>
     <link href="{{ post.url | absolute_url }}" />
     <id>{{ post.url | absolute_url }}</id>
-    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <updated>{{ post.updated | default: post.date | date_to_xmlschema }}</updated>
     <summary>{{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}</summary>
   </entry>
   {% endfor %}

@@ -7,6 +7,11 @@ categories: ["Bezpieczeństwo"]
 excerpt: "Na pierwszy rzut oka wszystko się zgadza. Nazwa: Gdzie się ukryć. Opis: schrony, miejsca ochronne, mapa. Czerwony pasek, poważna tematyka, bezpieczeństwo. I dokładnie z takim nastawieniem…"
 image: "/assets/images/fc913ef5-gdziesieukryc-731x1024.jpg"
 layout: post
+updated: 2026-11-24
+update_note: |
+  Recenzja i zrzuty opisują stan z grudnia 2025 r., nie ponowny test dzisiejszej aplikacji. Sam manifest nie potwierdza działania offline, a endpoint używany przez frontend nie jest automatycznie publicznym API. Poprawiłem też krytykę radia oraz niebezpieczną sugestię dotyczącą walki: najpierw ucieczka i ukrycie, obrona dopiero w ostateczności. Nie ma ogólnego prawnego przyzwolenia na użycie dowolnej siły.
+
+  Źródła: [rządowy poradnik — sygnały i kanały ostrzegania](https://www.gov.pl/web/poradnikbezpieczenstwa/sygnaly-alarmowe-i-komunikaty-ostrzegawcze), [zagrożenia terrorystyczne](https://www.gov.pl/web/poradnikbezpieczenstwa/zagrozenia-terrorystyczne), [MDN — PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
 ---
 
 Na pierwszy rzut oka wszystko się zgadza. Nazwa: **Gdzie się ukryć**. Opis: schrony, miejsca ochronne, mapa. Czerwony pasek, poważna tematyka, bezpieczeństwo. I dokładnie z takim nastawieniem wchodzisz na stronę: *OK, pokażcie mi, gdzie w razie czego mam iść*. Tylko że po chwili okazuje się, że **najciekawsze rzeczy w tej aplikacji wcale nie są na mapie**… ale o tym za chwilę.
@@ -15,9 +20,9 @@ Na pierwszy rzut oka wszystko się zgadza. Nazwa: **Gdzie się ukryć**. Opis: s
 
 Zacznijmy od plusów. Technicznie to jest zrobione sensownie.
 
-To nie jest natywna aplikacja, tylko strona, którą można dodać do ekranu głównego telefonu – klasyczne PWA (czy jak ktoś woli: SPA + Web App Manifest).
+W czasie testu była to aplikacja webowa z instrukcją dodania do ekranu głównego. PWA nie jest po prostu synonimem „SPA + manifest”; może być też wielostronicowe. Instalowalność i praca offline to odrębne właściwości.
 
-Działa w przeglądarce, działa na telefonie, działa offline.
+Działała w przeglądarce na telefonie. Nie mam tu udokumentowanego testu zakresu działania bez sieci, więc wycofuję wcześniejsze bezwarunkowe „działa offline”. Mapy, kafelki, lokalizacja, poradniki i aktualizacja danych wymagają osobnego sprawdzenia, np. po wcześniejszym pobraniu i ponownym uruchomieniu w trybie samolotowym. Sam manifest nie zapewnia cache; zwykle odpowiada za niego service worker i konkretna strategia przechowywania danych.
 
 Jest nawet czytelna instrukcja „Zainstaluj aplikację” – i to jest jeden z tych momentów, gdzie ktoś faktycznie pomyślał o użytkowniku (szczególnie tym mniej biegłym technicznie), a nie tylko o checkboxach w projekcie.
 
@@ -38,7 +43,7 @@ Mapa jest. Punkty są. Można kliknąć, zobaczyć adres, współrzędne, odleg�
 
 [![Szczegóły miejsca ochronnego na mapie](../assets/images/bb7da542-IMG_6371-1-473x1024.webp)](../assets/images/bb7da542-IMG_6371-1-473x1024.webp)
 
-Nie ma zdjęć, nie ma opisu wejścia, nie ma informacji, czy to jest dostępne realnie, czy tylko „na papierze”. Choć według przepisów powinno być. A może jest to miejsce na jakieś opinie użytkowników (podobnie jak w Google)? W sytuacji kryzysowej to są rzeczy absolutnie kluczowe, aby szybko się tam dostać. Druga sprawa: **zasięg**. Mapa pokazuje obiekty w promieniu kilku kilometrów od aktualnej lokalizacji. I to jest fajne… dopóki nie potrzebujesz sprawdzić czegoś gdzie indziej.
+W oglądanym widoku brakowało mi zdjęć, opisu wejścia i potwierdzenia realnej dostępności. Sam punkt na mapie nie dowodzi, że obiekt jest otwarty ani że ma parametry schronu — nie każde miejsce doraźnego ukrycia jest schronem. Nie zweryfikowałem podstawy dawnego zdania, że „według przepisów powinno być” dostępne, więc nie traktuj go jako ustalenia prawnego. Warto sprawdzić lokalne informacje i wejście wcześniej, a podczas zagrożenia stosować się do poleceń służb. Druga sprawa: **zasięg**. W moim teście mapa pokazywała otoczenie bieżącej lokalizacji, co utrudniało szybkie sprawdzenie innego obszaru.
 
 Wyobraź sobie prosty scenariusz:
 
@@ -72,11 +77,11 @@ Bo edukacyjnie to jest dużo cenniejsze niż sama mapa. No i sama aplikacja mog�
 
 ## Sygnały alarmowe – i bardzo poważny zgrzyt
 
-Jest sekcja o sygnałach alarmowych. Opisano, czym się różni alarm od odwołania alarmu. I nagle widzisz coś takiego: **Posłuchaj: Alarm dla ludności cywilnej**. Klikasz. I… nic się nie dzieje. I to jest naprawdę duży problem. Bo jeśli mówimy o **bezpieczeństwie**, to możliwość *odsłuchania* sygnału jest ważniejsza niż jego opis tekstowy. Nie chodzi o estetykę. Chodzi o „pamięć mięśniową”, o rozpoznanie dźwięku w stresie. Bez pliku audio ta sekcja jest po prostu niekompletna.
+W zrzucie z mojego testu z grudnia 2025 r. widać sekcję o sygnałach alarmowych i przycisk **Posłuchaj: Alarm dla ludności cywilnej**. Wtedy kliknięcie nie odtworzyło dźwięku. Możliwość odsłuchania może ułatwić naukę sygnału, ale tekstowe objaśnienie i oficjalny komunikat nadal są ważne. Nie sprawdzałem ponownie, czy przycisk działa obecnie; historyczny test nie wystarcza, by stwierdzić, że sekcja nadal jest niekompletna.
 
 [![Poradnik o sygnałach alarmowych](../assets/images/3e8eecf1-IMG_6366-1-473x1024.webp)](../assets/images/3e8eecf1-IMG_6366-1-473x1024.webp)
 
-## „Włącz radio lub telewizor” – czyli instrukcja z innej epoki
+## „Włącz radio lub telewizor” — potrzebne są różne kanały
 
 W poradniku „Co zrobić, gdy usłyszysz alarm?” pojawia się punkt: **Włącz radio lub telewizor**. I tu serio musiałem się zatrzymać. Bo (i pewnie nie ja jeden):
 
@@ -84,7 +89,9 @@ W poradniku „Co zrobić, gdy usłyszysz alarm?” pojawia się punkt: **Włąc
 - nie mam telewizora,
 - alarm mogę usłyszeć poza domem.
 
-Za to **prawie każdy ma telefon**. Powiadomienia RCB, aplikacja RSO, komunikaty w mObywatelu – to powinno być pierwsze, a nie ostatnie źródło informacji. To nie jest drobna uwaga stylistyczna. To jest realna luka między instrukcją a rzeczywistością.
+Telefon jest wygodny, ale może nie mieć zasilania lub dostępu do przeciążonej sieci. Radio bateryjne pozostaje sensownym kanałem awaryjnym. Zgodnie z rządowym poradnikiem korzystaj z kilku oficjalnych źródeł: radia, telewizji, Alertu RCB, RSO i komunikatów służb, stosownie do ich dostępności. Nie każda aplikacja zapewnia te same ostrzeżenia. Problemem byłby brak alternatyw, a nie samo zalecenie włączenia radia.
+
+Ogłoszenie alarmu dla ludności to modulowany dźwięk syreny przez 3 minuty, a odwołanie — dźwięk ciągły przez 3 minuty. Dźwięk nie wyjaśnia rodzaju zagrożenia; sprawdź komunikat i wykonuj polecenia. Brak odtwarzania w moim historycznym teście nie dowodzi, że funkcja nadal jest uszkodzona.
 
 [![Instrukcja postępowania po usłyszeniu alarmu](../assets/images/a183791f-IMG_6367-1-473x1024.webp)](../assets/images/a183791f-IMG_6367-1-473x1024.webp)
 
@@ -102,23 +109,19 @@ Sekcja „Uciekaj – Ukryj się – Walcz” jest znana i sensowna. Ale kiedy d
 - parasol,
 - butelka.
 
-I mam z tym problem. Bo to ustawia człowieka **w pozycji nigdy nieprzygotowanej ofiary**. A może dodać:
+Najważniejsza jest kolejność i warunki: **uciekaj**, jeśli możesz bezpiecznie się oddalić; gdy to niemożliwe — **ukryj się**, zablokuj dostęp i wycisz telefon. **Broń się dopiero w ostateczności**, gdy nie możesz uciec ani się ukryć, a życie jest bezpośrednio zagrożone. Nie szukaj napastnika i nie próbuj go konfrontować, jeśli możesz uniknąć kontaktu.
 
-- gaz pieprzowy,
-- nóż,
-- zachętę do przygotowania się *wcześniej*, a nie improwizowania w ostatniej chwili?
-
-A do tego przypominajkę: „Art. 25 § 1. *Nie popełnia przestępstwa, kto w obronie koniecznej odpiera bezpośredni, bezprawny zamach na jakiekolwiek dobro chronione prawem.*”, więc nie wahaj się zabić terrorysty.
+Wycofuję wcześniejszą rekomendację przygotowania noża i zdanie „nie wahaj się zabić”. Były niebezpiecznym uproszczeniem. Obrona konieczna ma prawne granice i wymaga oceny konkretnego zamachu; nie daje ogólnego przyzwolenia na dowolną przemoc. Ten wpis nie jest instruktażem walki ani poradą prawną.
 
 [![Poradnik dotyczący zagrożeń terrorystycznych](../assets/images/53cca73d-IMG_6370-1-473x1024.webp)](../assets/images/53cca73d-IMG_6370-1-473x1024.webp)
 
-To jest trudny temat, jasne. Ale unikanie go w imię „bezpiecznego przekazu” też jest decyzją – i moim zdaniem nie najlepszą. Nie zrozumcie mnie źle. Nie chodzi mi o to, żeby zachęcać każdego do zgrywania kozaka, który rzuci się z nożem na masowego zabójcę z karabinem. Chodzi o to, żeby zachęcać do wcześniejszego przygotowania się na taką sytuację.
+Wcześniejsze przygotowanie to przede wszystkim znajomość wyjść, plan kontaktu i podstaw pierwszej pomocy. Gdy jest bezpiecznie, powiadom 112 i przekaż lokalizację oraz zaobserwowane informacje. Nie filmuj zdarzenia zamiast się ewakuować; nie publikuj materiałów, które mogą ujawnić pozycje ukrywających się osób lub służb. Po przybyciu policji wykonuj polecenia i trzymaj ręce widoczne.
 
 Dla zainteresowanych tym, z jakimi zagrożeniami naprawdę będziemy się mierzyć, polecam [ten film na YouTube](https://www.youtube.com/watch?v=Cj0bEBrpVkM).
 
 ## API – potencjał, który aż się prosi o wykorzystanie
 
-Na koniec coś, co zauważą głównie techniczni. Strona korzysta z **własnego API**. Otwartego. I to jest super. Tylko… nigdzie nie ma dokumentacji. A szkoda, bo:
+Na koniec coś technicznego: frontend pobiera dane z endpointów, co daje potencjał integracji. To jednak nie dowodzi istnienia **publicznego, wspieranego API**. Nie znalazłem wówczas dokumentacji ani warunków ponownego użycia; dostępność żądania w przeglądarce nie jest licencją ani gwarancją stabilności. Udokumentowane API mogłoby umożliwić:
 
 - można by zrobić alternatywne wizualizacje,
 - integracje,

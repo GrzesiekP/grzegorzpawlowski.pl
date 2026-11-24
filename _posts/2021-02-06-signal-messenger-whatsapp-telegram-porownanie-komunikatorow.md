@@ -7,9 +7,14 @@ categories: ["Inne"]
 excerpt: "Facebook monopolizuje nie tylko media społecznościowe, ale też komunikację przez internet. WhatsApp i Messenger to czołówka popularności, a oba należą do Facebooka. Dlaczego warto zastanowić się…"
 image: "/assets/images/a8a52168-BezpObrazekWyrozniajacy-1024x512.jpg"
 layout: post
+updated: 2026-11-24
+update_note: |
+  Zrzuty popularności i etykiet prywatności pozostają archiwalne (2020/2021). Poprawiłem porównanie szyfrowania: Meta ogłosiła domyślne E2EE osobistych rozmów Messengera w grudniu 2023 r.; Telegram szyfruje czaty chmurowe klient–serwer, lecz nie end-to-end. Signal ogranicza metadane, ale nie ukrywa magicznie wszystkich informacji o ruchu. Uaktualniłem też opis kopii zapasowych.
+
+  Źródła: [Messenger](https://about.fb.com/news/2023/12/default-end-to-end-encryption-on-messenger/), [Telegram FAQ](https://telegram.org/faq), [MTProto](https://core.telegram.org/mtproto), [Signal — metadane](https://signal.org/blog/sealed-sender/), [Signal Secure Backups](https://signal.org/blog/introducing-secure-backups/), [kopie WhatsApp](https://blog.whatsapp.com/end-to-end-encrypted-backups-on-whatsapp).
 ---
 
-Facebook monopolizuje nie tylko media społecznościowe, ale też komunikację przez internet. WhatsApp i Messenger to czołówka popularności, a oba należą do Facebooka. Dlaczego warto zastanowić się nad przynajmniej ograniczeniem korzystania z nich? Jakie są alternatywy? Do porównania stają komunikatory: [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/), [Telegram](https://telegram.org/) i [Signal](https://signal.org/pl/).
+WhatsApp i Messenger należą do jednej grupy, znanej w chwili publikacji jako Facebook, a obecnie Meta. Dlaczego warto zastanowić się nad przynajmniej ograniczeniem zależności od jednego dostawcy? Jakie są alternatywy? Do porównania stają komunikatory: [Messenger](https://www.messenger.com/), [WhatsApp](https://www.whatsapp.com/), [Telegram](https://telegram.org/) i [Signal](https://signal.org/pl/).
 
 ![Ranking popularności platform społecznościowych w październiku 2020 r.](../assets/images/6485b5f4-Global+Social+Media+Platform+Ranking+October+2020+DataReport.jpg)
 
@@ -17,7 +22,7 @@ Najpopularniejsze platformy społecznościowe (miesięczna liczba aktywnych uży
 
 ## Prywatność
 
-Mało kto zdaje sobie sprawę z tego, do jak wielu danych o nas ma dostęp Facebook, jeśli używamy na co dzień 2–3 aplikacji tej firmy. Dzięki wprowadzonej niedawno przez Apple funkcjonalności można sprawdzić, jakie to dane i do czego są wykorzystywane. W tabelce poniżej porównanie dla tytułowej czwórki.
+Etykiety prywatności App Store pokazują deklarowane przez wydawców kategorie danych i cele ich przetwarzania. To nie niezależny audyt ani dowód, że każda instalacja zbiera wszystkie wymienione dane. Poniższe porównanie pochodzi z czasu publikacji w 2021 r.; aktualne etykiety i polityki trzeba sprawdzić osobno.
 
 ![Porównanie danych zbieranych przez cztery komunikatory](../assets/images/e4c883d1-Poronanie-dane-653x1024.jpg)
 
@@ -33,13 +38,13 @@ Z tą wiedzą przechodzimy do kolejnego akapitu, żeby sprawdzić, kto tak napra
 
 ## Niezależność
 
-Jest takie powiedzenie: „Jeśli coś jest za darmo, to Ty jesteś produktem”. W tym przypadku produktem są nasze dane. Dzięki takiej ilości danych, ich posiadacz może Cię profilować – dowiedzieć się, co lubisz, z kim się spotykasz, jaką masz osobowość, poglądy, w jakim jesteś nastroju, gdzie pracujesz, co kupujesz. To bardzo cenne przy doborze reklam. Przykładowo, Facebook, wiedząc że jesteś akurat w dobrym nastroju, a gdy odwiedzałeś stronę swojego banku analiza obrazu rozpoznała na twojej twarzy satysfakcję, w dodatku spotkałeś ostatnio osobę, którą bardzo lubisz i która ostatnio kupiła nowe buty, wyświetli Ci reklamę tych butów. Szansa, że je kupisz, jest wtedy większa. „Wielki Brat” zna Cię dobrze.
+Jest takie powiedzenie: „Jeśli coś jest za darmo, to Ty jesteś produktem”. To przestroga, nie uniwersalna reguła — darmową usługę można finansować także z darowizn. Dane o aktywności mogą służyć profilowaniu reklamowemu, ale etykieta prywatności nie dowodzi konkretnej metody profilowania. Dawny przykład o odczytywaniu przez Facebooka emocji z twarzy podczas wizyty w banku nie miał tu potwierdzenia i go usuwam.
 
 Sprawdźmy, do kogo należą i kto tworzy poszczególne komunikatory.
 
 #### Messenger
 
-Wydawcą jest firma Facebook, Inc. – właściciel portalu społecznościowego Facebook. Jest także właścicielem aplikacji WhatsApp i Instagram.
+Komunikator należy do grupy Meta, wcześniej znanej jako Facebook, Inc., podobnie jak WhatsApp i Instagram.
 
 #### WhatsApp
 
@@ -51,11 +56,11 @@ Aplikacja autorstwa Telegram FZ-LLC. Telegram został stworzony przez Mikołaja 
 
 #### **Signal**
 
-Rozwijany przez Signal Foundation – amerykańską organizację non-profit założoną w 2018 r. przez Moxie Marlinspike’a i Briana Actona, który był współzałożycielem WhatsAppa i opuścił go po przejęciu komunikatora przez Facebooka. Kod Signala jest publicznie dostępny na [GitHubie](https://github.com/signalapp) – jest to aplikacja open-source. To ważne, bo wiadomo, że Signal niczego nie ukrywa przed użytkownikami – można dokładnie sprawdzić, jak działa. Signal Foundation utrzymuje się jedynie z dobrowolnych darowizn i grantów.
+Signal jest rozwijany w ramach organizacji non-profit. Signal Foundation założyli w 2018 r. Moxie Marlinspike i Brian Acton, współzałożyciel WhatsAppa. Kod Signala jest publicznie dostępny na [GitHubie](https://github.com/signalapp), co umożliwia niezależną analizę. Open source nie gwarantuje jednak braku błędów ani zgodności każdej uruchomionej instancji ze źródłem. Model finansowania opiera się na wsparciu organizacji, a nie sprzedaży reklam.
 
 #### Cenzura
 
-Niezależność to też brak Twojej zależności od aplikacji. W tym przypadku szczególnie groźny jest monopol Facebooka. Wyobraź sobie, że nagle tracisz dostęp do wszystkich wiadomości na Messengerze, bo np. Facebook zbanował Twoje konto. Tak, jest takie ryzyko – wystarczy, że napiszesz, że kupiłeś ostatnio pedały do roweru i masz o nich złą opinię albo w dyskusji o przepisie na murzynka napiszesz, że biała czekolada jest lepsza. Algorytm Facebooka uzna, że obrażasz ludzi i jesteś groźny dla społeczeństwa. I co zrobisz? Nic nie zrobisz? Jeśli można zablokować prezydenta USA, to czemu nie przeciętnego Polaka? Lepiej nie być zależnym od jednej firmy.
+Niezależność to również możliwość zachowania kontaktu po blokadzie konta, awarii albo zmianie regulaminu. Błędy moderacji mogą się zdarzać, ale dawne przykłady zdań rzekomo automatycznie powodujących bana nie były tu udokumentowane. Warto mieć alternatywny kanał kontaktu i rozumieć procedurę odzyskiwania konta u każdego dostawcy.
 
 ## Bezpieczeństwo
 
@@ -67,32 +72,34 @@ Na taki atak podatni są użytkownicy Messengera, do którego można się zalogo
 
 ### Przechwycenie danych podczas wysyłania i odbierania (podsłuch)
 
-Podstawowe zabezpieczenie przed tym zagrożeniem to szyfrowana komunikacja – E2EE (end-to-end encryption). Również w tym przypadku Signal wybija się na tle konkurencji – szyfrowane są nie tylko wiadomości, ale i metadane (kto z kim rozmawia, kiedy, skąd itp.). Signal i WhatsApp mają przewagę nad Telegramem w kwestii szyfrowania rozmów grupowych, których ten ostatni nie szyfruje. Kolejnego minusa można przyznać Telegramowi za to, że szyfrowanie nie jest włączone domyślnie – działa tylko w trybie „tajnych czatów” – podobnie jak w przypadku Messengera. Co więcej, mechanizmy szyfrowania Telegrama, w przeciwieństwie do Signala, nie są open-source, więc możliwość ich niezależnej weryfikacji jest mocno ograniczona.
+Szyfrowanie transportowe chroni połączenie z serwerem; **E2EE** chroni treść pomiędzy urządzeniami rozmówców także przed pośredniczącym serwerem. Signal i WhatsApp używają E2EE domyślnie w prywatnych rozmowach. Meta ogłosiła wdrażanie domyślnego E2EE dla osobistych wiadomości i połączeń Messengera w grudniu 2023 r.; sprawdzaj oznaczenia i wyjątki dla konkretnego rodzaju rozmowy.
+
+Zwykłe czaty i grupy tekstowe Telegrama są szyfrowane klient–serwer, **nie end-to-end**. E2EE wiadomości jest dostępne w indywidualnych tajnych czatach, które nie synchronizują się jak czaty chmurowe. Nie należy utożsamiać grup tekstowych z osobno obsługiwanymi połączeniami E2EE. Dokumentacja MTProto i kod klientów są publiczne; kod serwerowy Telegrama nie jest w całości otwarty.
+
+Signal minimalizuje zatrzymywane metadane i rozwija mechanizmy takie jak sealed sender. Nie oznacza to całkowitego ukrycia IP, czasu komunikacji czy odporności na analizę ruchu. E2EE nie chroni też przed rozmówcą, który skopiuje wiadomość, ani przed przejętym urządzeniem.
 
 ### Włamanie na telefon i dostęp do komunikatora
 
-Dostęp niepożądanej osoby do telefonu oznacza dużo poważniejsze kłopoty niż tylko odczytanie wiadomości. Istotne jest, aby dane w pamięci telefonu nie były łatwo dostępne – aby też były zaszyfrowane. Signal szyfruje wszystkie dane i pliki przechowywane na urządzeniu, w przeciwieństwie do WhatsAppa.
+Dostęp niepożądanej osoby do odblokowanego telefonu może pozwolić na odczyt wiadomości mimo E2EE. Ochrona danych lokalnych zależy od systemu, wersji aplikacji, blokady urządzenia, kopii i eksportów. Nie ma podstaw do ogólnego twierdzenia, że Signal szyfruje „wszystko”, a WhatsApp nic. Aktualizuj system i aplikacje, używaj mocnej blokady oraz sprawdzaj podłączone urządzenia.
 
 ### Włamanie na serwery wydawcy komunikatora – wyciek danych i/lub wiadomości użytkownika
 
 Wycieki danych się zdarzają – nawet firmom, które użytkownicy uważali za godne zaufania – bo to przecież „poważna firma i nie pozwoli sobie na wpadki”. A jednak w ostatnich latach wyciekły dane z takich firm jak Marriott, CouchSurfing, British Airways, Yahoo, Uber, Morele.net, Twitter, GitHub, LinkedIn i… Facebook. Wykradzione dane mogą zawierać adres e-mail i hasło, ale także inne dane gromadzone na serwerach firmy.
 
-Porównanie bezpieczeństwa (przepisane z ilustracji do czytelnej tabeli):
+Porównanie po korekcie (dotyczy głównie prywatnych wiadomości, nie każdej funkcji produktu):
 
 | Funkcja | Messenger | WhatsApp | Telegram | Signal |
 | --- | --- | --- | --- | --- |
-| Szyfrowanie E2E | Tylko „tajne czaty” | Domyślne | Tylko „tajne czaty” | Domyślne |
-| Szyfrowanie wiadomości grupowych | Nie | Tak | Nie | Tak |
-| Szyfrowanie metadanych | Nie | Nie | Nie | Tak |
-| Szyfrowanie danych na urządzeniu | ? | Nie | Nie | Tak |
-| Kopia zapasowa na serwerach | Tak | Tak | Tak | Nie |
-| Szyfrowanie kopii zapasowej | ? | Nie | Tylko „tajne czaty” | Nie dotyczy |
-| Dostęp z innej platformy | Tak | Nie | Nie | Nie |
-| Mechanizmy szyfrowania open-source | Nie | Tak | Nie | Tak |
+| E2EE wiadomości | Domyślne dla osobistych rozmów; sprawdź rodzaj czatu | Domyślne w prywatnych rozmowach | Tylko indywidualne tajne czaty | Domyślne |
+| E2EE grup tekstowych | Dla obsługiwanych osobistych rozmów E2EE | Tak | Nie | Tak |
+| Historia i kopie | Zabezpieczone przechowywanie historii; sprawdź odzyskiwanie | Opcjonalne kopie E2EE — sprawdź ustawienia | Czaty chmurowe nie mają E2EE; tajne czaty są związane z urządzeniem | Opcjonalne Secure Backups z E2EE ogłoszone w 2025 r.; dostępność zależy od wersji/platformy |
+| Korzystanie na wielu urządzeniach | Tak | Tak | Tak dla czatów chmurowych | Tak przez urządzenia powiązane |
+
+Synchronizacja historii to nie to samo co kopia zapasowa. E2EE rozmowy nie gwarantuje automatycznie E2EE każdego eksportu lub backupu. Zabezpiecz klucz odzyskiwania i sprawdź aktualne instrukcje konkretnej aplikacji.
 
 ### Podsumowanie
 
-Pod kątem prywatności, bezpieczeństwa i zaufania, te cztery komunikatory na pewno się różnią. Mam nadzieję, że udało mi się te różnice wyjaśnić i przedstawić. Celowo nie wspominałem o funkcjach poszczególnych aplikacji, bo wszystkie spełniają swoje zadanie jako komunikatory, w tym do rozmów grupowych, audio i wideo oraz przesyłania plików, zdjęć itp. Czy wniosek z tego tekstu jest taki, żeby porzucić Messengera lub WhatsAppa i zmienić go na Telegrama lub Signala? W skrócie, tak! Od jakiegoś czasu używam głównie Signala, którego wybrałem ze względu na podejście do prywatności i niezależność. Czy każdemu bym go polecił? Każdemu, komu bardziej zależy na własnym bezpieczeństwie, prywatności, anonimowości i niezależności niż na bajerach, przyzwyczajeniu i względnej wygodzie.
+Nadal preferuję Signala ze względu na domyślne E2EE i podejście do minimalizacji danych. Nie oznacza to anonimowości ani odporności na każde zagrożenie. Sama przesiadka z WhatsAppa na zwykły czat Telegrama nie poprawia ochrony treści przed operatorem — traci się wtedy E2EE. Dobierz komunikator do zagrożeń, ustawień kopii i możliwości rozmówców, zamiast polegać na jednej tabeli „bezpieczny/niebezpieczny”.
 
 #### Źródła
 

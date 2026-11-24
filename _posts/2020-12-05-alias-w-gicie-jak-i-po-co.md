@@ -7,6 +7,11 @@ categories: ["Git"]
 excerpt: "Po co to właściwie? Przecież nikt rozsądny nie będzie uczył się czegoś, co nie ma sensu."
 image: "/assets/images/0dd89b09-jest_git-1024x680.jpg"
 layout: post
+updated: 2026-11-24
+update_note: |
+  Pierwotny przykład skracał `git reset --hard`, które może bezpowrotnie usunąć niezacommitowane zmiany. Zastąpiłem go bezpiecznym aliasem do przeglądania historii. Sama zasada konfigurowania aliasów się nie zmieniła.
+
+  Źródła: [aliasy Gita](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases), [działanie reset --hard](https://git-scm.com/docs/git-reset).
 ---
 
 ## Po co aliasy?
@@ -30,13 +35,13 @@ Skoro dotarłeś tutaj, to znaczy, że widzisz w tym sens. Przejdźmy więc do k
 Zobaczmy to na przykładzie polecenia:
 
 ```
-git reset --hard origin/master
+git log --oneline --graph --decorate
 ```
 
-Żeby trochę to uprościć, chciałbym przypisać do tego alias `git rh`. Mogę to zrobić w konsoli:
+Żeby trochę to uprościć, chciałbym przypisać do tego alias `git lg`. Mogę to zrobić w konsoli:
 
 ```
-git config --global alias.rh 'reset --hard origin/master'
+git config --global alias.lg 'log --oneline --graph --decorate'
 ```
 
 Alias został dodany do konfiguracji Gita, którą możesz podejrzeć i edytować, wpisując:
@@ -48,6 +53,8 @@ git config --global --edit
 Możesz też po prostu dopisywać kolejne aliasy w pliku konfiguracyjnym.
 
 ![Git aliases in work gif](../assets/images/70722c2e-git_alias.gif)
+
+Animacja pochodzi z pierwotnej wersji wpisu i pokazuje dawny alias `rh` do resetowania. To nie jest polecenie do zwykłej synchronizacji pracy: `reset --hard` zmienia stan gałęzi i usuwa niezapisane zmiany. Do poznawania aliasów użyj powyższego `lg`.
 
 Są inne, ciekawsze i jeszcze bardziej przydatne sposoby na aliasy, ale wymagają nieco więcej pracy, więc opiszę je na blogu innym razem.
 

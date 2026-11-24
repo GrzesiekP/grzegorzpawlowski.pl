@@ -7,6 +7,11 @@ categories: ["Bezpieczeństwo"]
 excerpt: "Jest kilka rodzajów pamięci przeglądarki, w których można przechowywać wrażliwe dane, jak np. tokeny. Różnią się one między innymi funkcjonalnością, stopniem izolacji i możliwościami zabezpieczenia…"
 image: "/assets/images/60233684-sejf.jpeg"
 layout: post
+updated: 2026-11-24
+update_note: |
+  Poprawiłem istotne błędy: `sessionStorage` nie chroni przed XSS w tej samej karcie, `HttpOnly` blokuje odczyt ciasteczka, ale nie działania w imieniu użytkownika, a domknięcie nie jest pełną ochroną przed XSS. Przykład Node.js zastąpiłem przeglądarkowym Web Workerem. Nie ma uniwersalnego „bezpiecznego magazynu”, który naprawi aplikację wykonującą złośliwy kod.
+
+  Źródła: [OWASP — HTML5 Security](https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html), [MDN — sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage), [Set-Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie), [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 ---
 
 Jest kilka rodzajów pamięci przeglądarki, w których można przechowywać wrażliwe dane, jak np. tokeny. Różnią się one między innymi funkcjonalnością, stopniem izolacji i możliwościami zabezpieczenia przed atakami. Które rozwiązanie jest najbezpieczniejsze?
@@ -17,15 +22,15 @@ Jest kilka rodzajów pamięci przeglądarki, w których można przechowywać wra
 
 ### XSS – Cross-Site Scripting
 
-XSS polega na uruchomieniu w przeglądarce kodu JavaScript, który wykona jakiś atak, np. odczyta token i prześle go do atakującego. Zazwyczaj ma miejsce, gdy złośliwy kod JS jest jakoś wstrzyknięty do aplikacji i uruchomiony po stronie klienta, w przeglądarce innego użytkownika – ofiary. Np. jeśli na jakiejś stronie można publikować własny HTML, można zawrzeć w nim taki obrazek `<img src='x' onerror='alert('Hacked!')'/>`, który w przeglądarce ofiary wykona kod `onerror`.
+XSS polega na uruchomieniu w kontekście aplikacji złośliwego kodu, np. JavaScriptu odczytującego token. Może do tego dojść przez niebezpieczne wstawienie niezaufanych danych do HTML-a. Jeśli aplikacja pozwoli na atrybuty zdarzeń, ilustracją problemu jest `<img src="x" onerror="alert('Hacked!')">`. Sam adres obrazka nie staje się automatycznie kodem — istotny jest sposób jego użycia i sanitizacji.
 
 ### XDS – Cross-Directory Scripting
 
-XDS ma taki sam cel jak XSS, ale inną drogę działania. Jest możliwy, kiedy aplikacje, które powinny być odizolowane, wcale takie nie są. Na przykład kiedy są na tej samej domenie, ale pod inną ścieżką: `https://grzegorzpawlowski.pl/safeapp` oraz `https://example.com/notsafeapp`. W obu przypadkach mamy ten sam origin (poniżej wyjaśnienie, czym jest origin), więc zabezpieczenia polegające na izolacji per origin nie zadziałają.
+Pod tą nazwą opisuję problem aplikacji współdzielących origin, choć powinny być odizolowane. Przykład: `https://example.com/safeapp` i `https://example.com/notsafeapp`. Różne ścieżki nie tworzą różnych originów. Skrypt z jednej takiej aplikacji może mieć dostęp do wspólnego magazynu drugiej. Osobne domeny z poprzedniej wersji przykładu były błędem.
 
-### CSRF (XSS+CSRF) – Cross-Site Request Forgery
+### CSRF – Cross-Site Request Forgery
 
-CSRF to wykonanie niepożądanego requestu w imieniu ofiary ataku. Przykład: atakiem XSS wstrzykujemy złośliwy kod JS, który wykonuje takie żądanie do API zabezpieczonego tokenem. Nie musimy mieć dostępu do samego tokena, ale możemy robić autoryzowane nim żądania do backendu. Przed CSRF można się chronić, ale to temat na osobny tekst.
+CSRF to wymuszenie niepożądanego żądania z innej witryny, gdy przeglądarka dołącza poświadczenia, np. ciasteczko sesji. Nie wymaga XSS. Z kolei XSS w samej aplikacji może wykonywać uwierzytelnione żądania nawet bez odczytu tokena i często obchodzi zabezpieczenia CSRF. To dwa różne zagrożenia.
 
 ## CORS Policy i Same Origin Policy
 
@@ -43,9 +48,9 @@ Zanim przejdziemy do omawiania sposobów przechowywania i ich bezpieczeństwa, w
 
 **CORS** (Cross-Origin Resource Sharing) – współdzielenie zasobów pomiędzy originami. Polityka CORS określa, czy i na jakich zasadach może się to odbywać.
 
-**Same Origin Policy** (ten sam origin) oznacza po prostu, że zasoby są niedostępne dla innego originu.
+**Same Origin Policy** ogranicza przede wszystkim odczyt danych i interakcje między originami. Nie zakazuje każdego wysłania żądania cross-origin. CORS pozwala serwerowi kontrolować udostępnianie odpowiedzi skryptom innych originów; nie zastępuje uwierzytelnienia ani ochrony CSRF.
 
-Jak Same Origin Policy może zablokować atak XSS? Rozpatrzmy bardzo podstawowy scenariusz:
+Jak Same Origin Policy ogranicza odczyt danych z obcej witryny? Rozpatrzmy scenariusz (to jeszcze nie XSS w aplikacji giełdy):
 
 1. Użytkownik jest zalogowany np. do konta na giełdzie kryptowalut (np. BitBay – [archiwalna strona giełdy](https://web.archive.org/web/20210812222443/https://bitbay.net/pl)), więc przeglądarka przechowuje jakiś token dostępu.
 2. Odwiedza złośliwą stronę `https://bezpiecznydarmowydogecoin.com`
@@ -65,14 +70,14 @@ Ataki XSS są możliwe, kiedy dane w pamięci pochodzą z tego samego origina. P
 
 Pamięć lokalna jest także podatna na ataki XDS, opisane na początku.
 
-Istotny jest fakt, że token z pamięci lokalnej, żeby został wysłany do backendu, musi zostać w kodzie frontendowym odczytany z pamięci i przesłany np. w nagłówku. Z jednej strony jest to dodatkowa rzecz do zaimplementowania, z drugiej daje kontrolę nad danymi i zabezpiecza przed atakiem CSRF.
+Token z pamięci lokalnej nie jest automatycznie dołączany do żądań. W typowym API z nagłówkiem `Authorization` ogranicza to klasyczny CSRF, o ile serwer nie akceptuje równocześnie automatycznie dołączanych poświadczeń inną drogą. Nie chroni przed XSS ani błędami CORS i autoryzacji.
 
 #### Podsumowanie
 
 ##### Zalety
 
 - Izolacja per origin.
-- Dane nie mogą zostać automatycznie wysłane do backendu – zabezpieczenie przed CSRF.
+- Token nie jest automatycznie dołączany do żądań — ogranicza klasyczny CSRF w odpowiednio zaprojektowanym API.
 - Dane są zachowywane pomiędzy sesjami – jest do nich dostęp z innych kart, okien czy po przeładowaniu strony.
 
 ##### Wady
@@ -81,22 +86,22 @@ Istotny jest fakt, że token z pamięci lokalnej, żeby został wysłany do back
 
 ### Pamięć sesji – Session Storage
 
-Ta opcja też oferuje izolację zgodnie z Same Origin Policy. Różnica jest jednak taka, że dane są usuwane, kiedy kończy się sesja. Dane nie są współdzielone między kartami, oknami czy iframe’ami, co daje kolejną korzyść z punktu widzenia bezpieczeństwa. Rozważmy przykład:
+Ta opcja jest dzielona według origina **i karty najwyższego poziomu**. Dane przetrwają przeładowanie oraz nawigację w tej samej karcie; nie są po prostu kasowane przy otwarciu kolejnego linku. Iframe tego samego origina w tej karcie korzysta z tego samego magazynu. Rozważmy przykład:
 
-1. Użytkownik jest zalogowany do strony (np. Facebook), sesja jest aktywna, a token przechowywany w pamięci sesji.
-2. Klika złośliwy link, pod którym kryje się atak XSS.
-3. Link otwiera się w nowej albo w tej samej karcie.
-4. W obu przypadkach z poprzedniego punktu będzie to nowa sesja, która nie ma dostępu do pamięci sesji poprzedniej (z Facebooka), więc złośliwy kod nie będzie miał dostępu do tokena.
+1. Aplikacja zapisuje token w `sessionStorage`.
+2. Podatna strona tej aplikacji uruchamia złośliwy skrypt w tej samej karcie i originie.
+3. Skrypt może odczytać token — izolacja między kartami nie zapobiega temu XSS.
+4. Osobna karta zwykle ma własny magazyn, ale nowa strona z `opener` może początkowo dostać kopię magazynu otwierającej strony. Nie jest to niezawodna granica ochrony tokena.
 
-Fakt, że dane w pamięci sesji nie są współdzielone między sesjami, uniemożliwia już atak XDS, na który byliśmy narażeni, używając pamięci lokalnej.
+Różne ścieżki tego samego origina w jednej karcie nie są odizolowane przez `sessionStorage`. Ten magazyn nie rozwiązuje opisanego problemu XDS.
 
 #### Podsumowanie
 
 ##### Zalety
 
 - Izolacja per origin.
-- Dane nie mogą zostać automatycznie wysłane do backendu, więc jest zabezpieczenie przed CSRF.
-- Atak XSS nie jest możliwy poza obrębem sesji.
+- Token nie jest automatycznie dołączany do żądań, podobnie jak w `localStorage`.
+- Krótszy czas przechowywania i rozdzielenie kart ograniczają ekspozycję, ale nie eliminują XSS.
 
 ##### Wady
 
@@ -108,15 +113,15 @@ W przypadku ciasteczek, zabezpieczenie zależy od ustawionych flag, a konkretnie
 
 Jeśli flaga `HttpOnly` jest włączona, ciasteczko jest niedostępne dla kodu JS, więc token w nim przechowywany jest zabezpieczony przed dostępem ze złośliwego kodu z ataku XSS. Jednocześnie jednak JS aplikacji frontendowej również nie ma dostępu do tokena, więc w przypadku niektórych aplikacji po prostu nie możemy z tego rozwiązania skorzystać ze względów funkcjonalnych. Biorąc jednak pod uwagę, że tokenów zazwyczaj używamy, żeby uwierzytelnić się w jakimś API, to ograniczenie jest raczej rzadkie.
 
-Token w ciasteczku `HttpOnly` jest zabezpieczony przed atakiem XSS, ale nadal można się do niego dostać przy pomocy ataku XSS+CSRF.
+`HttpOnly` uniemożliwia odczyt ciasteczka przez JavaScript, ale przeglądarka nadal może dołączyć je do żądania wykonanego przez złośliwy skrypt. To użycie sesji bez poznania tokena, a nie obejście `HttpOnly`. Dla sesji stosuj też HTTPS, flagę `Secure`, odpowiednie `SameSite` oraz serwerową ochronę CSRF tam, gdzie jest potrzebna. Ścieżka `Path` ciasteczka nie jest granicą bezpieczeństwa między aplikacjami.
 
 Ciasteczka powinny mieć zawsze `HttpOnly:true`, jeśli zawierają wrażliwe dane. W innym przypadku można je wyciągnąć w prosty sposób:
 
 ```
 document.cookie
    .split('; ')
-   .find(r => r.startsWith('secretAccessToken'))
-   .split('=')[1]
+    .find(r => r.startsWith('secretAccessToken='))
+    ?.slice('secretAccessToken='.length)
 ```
 
 Nawet nie znając klucza, pod jakim zapisany jest token, można po prostu pobrać wszystkie ciasteczka i poszukać, czy jest w nich coś przydatnego do ataku.
@@ -134,7 +139,7 @@ Nawet nie znając klucza, pod jakim zapisany jest token, można po prostu pobra�
 
 ### In-Memory
 
-Wydaje się to być najbezpieczniejszy z omawianych sposobów na przechowywanie wrażliwych danych. Jednak samo stwierdzenie, że można bezpiecznie przechowywać dane in-memory, jest błędne, bo wszystko zależy od implementacji tego rozwiązania.
+Pamięć procesu strony ogranicza trwałość tokena, ale nie jest automatycznie najbezpieczniejsza. Domknięcie ogranicza bezpośredni dostęp do zmiennej, nie odbiera jednak złośliwemu skryptowi możliwości działania w kontekście aplikacji.
 
 **Rozważmy następujące przykłady**
 
@@ -143,7 +148,8 @@ Załóżmy, że w HTML jest pole `secretInput`, gdzie przesyłamy sekret, oraz m
 #### Przykład 1 – globalna zmienna
 
 ```
-funtion saveSecret() {
+let secret;
+function saveSecret() {
    secret = document.getElementById('secretInput').value;
 }
 ```
@@ -153,13 +159,14 @@ Tutaj nie ma praktycznie żadnego zabezpieczenia. Zmienna `secret` jest globalni
 #### Przykład 2 – stała
 
 ```
-funtion saveSecret() {
+const globalData = {};
+function saveSecret() {
    const secret = document.getElementById('secretInput').value;
    globalData['secret'] = secret
 }
 ```
 
-Zapisanie do stałej `secret` powoduje, że jest ona dostępna tylko w zakresie funkcji `saveSecret`.
+Deklaracja `const` wewnątrz funkcji ogranicza zasięg wiązania do jej bloku. Samo `const` nie jest mechanizmem ochrony sekretów i nie czyni obiektów niemutowalnymi.
 
 Problem może się pojawić, kiedy później wartość `secret` zostanie przypisana do innej zmiennej, która jest widoczna dla złośliwego kodu, jak w tym przypadku do `globalData`.
 
@@ -171,7 +178,7 @@ Obejściem powyższego problemu jest domknięcie funkcji (w celu emulacji metody
 let token = (function() {
   async function fetchToken() {
     let fetchedToken;
-    const request = new Request("http://example.com/token");
+     const request = new Request("/token");
     let response = await window.fetch(request)
     fetchedToken = await response.json()
   }
@@ -184,14 +191,14 @@ let token = (function() {
 })();
 ```
 
-Takie zabezpieczenie działa pod dwoma warunkami. Po pierwsze, zamknięta funkcja **nie może zwracać zmiennej zawierającej token**. Zwracana z funkcji wartość będzie widoczna dla złośliwego kodu, więc token zostanie odkryty w przypadku ataku. Po drugie, jeśli zamknięta metoda korzysta z zewnętrznie zdefiniowanych metod, np. natywnej `fetch`, **można zaatakować podstawiając swój kod za tę metodę**. Takie podstawienie można zrobić wstrzykując następujący kod:
+Ten fragment pokazuje tylko zasięg zmiennej: `fetchedToken` nie jest zwracany ani zachowywany do kolejnych wywołań, więc nie stanowi jeszcze użytecznego magazynu tokenów. Ujawnienie tokena przez publiczną metodę zniweczyłoby izolację. Co więcej, złośliwy kod może podmienić współdzielone funkcje, np. `fetch`. W poniższym demonstracyjnym interceptorze używam `clone()`, aby nie zużyć strumienia odpowiedzi przed aplikacją:
 
 ```
 let fetch = window.fetch;
 window.fetch = async function() { 
   let fetchPromise = fetch.apply(this, arguments);
   let resp = await fetchPromise;
-  let json = await resp.json();
+   let json = await resp.clone().json();
   alert(JSON.stringify(json));
   return fetchPromise
 };
@@ -199,18 +206,18 @@ window.fetch = async function() {
 
 W powyższym przykładzie podstawiony fałszywy `fetch` woła prawdziwą metodę `fetch`, przechwytuje zwracany z niej wynik, a następnie zwraca go, jak gdyby robiła to oryginalna metoda.
 
-Jest i na to zabezpieczenie.
+Można ograniczyć tę konkretną podmianę, ale nie naprawia to całego problemu XSS.
 
 #### Przykład 4 – domknięcie + lokalna kopia podatnej metody
 
-W tym przypadku wszystko wygląda tak samo z wyjątkiem tego, że na początku do lokalnej zmiennej przypisujemy natywną metodę `window.fetch`, żeby mieć pewność, że korzystamy z niej, a nie z podstawionej.
+Tutaj zachowujemy referencję do bieżącego `window.fetch`. Pomaga to tylko wtedy, gdy zaufany kod wykona się przed jego podmianą; nie daje pewności, że przechwycona funkcja jest natywna.
 
 ```
 let token = (function() {
   let localFetch = window.fetch;
   async function localFetchToken() {
     let fetchedToken ;
-    const request = new Request("http://localhost:3000/secret");
+     const request = new Request("/token");
     let response = await localFetch(request)
     fetchedToken = await response.json()
   }
@@ -223,7 +230,7 @@ let token = (function() {
 })();
 ```
 
-W tym przypadku podstawiona metoda nie przechwyci tokena, ponieważ wewnątrz `localFetchToken` wołamy lokalną kopię `window.fetch`, a nie po prostu `fetch`, która może zostać podstawiona.
+Późniejsza podmiana `window.fetch` nie zmieni zachowanej referencji. Inne punkty zaczepienia oraz możliwość wykonywania operacji przez XSS pozostają. Także ten fragment tylko pobiera i odrzuca dane, zamiast implementować pełną obsługę sesji.
 
 Niestety, to rozwiązanie też nie jest idealne. Im więcej zewnętrznie zdefiniowanych funkcji używamy w naszej zamkniętej metodzie, tym więcej lokalnych kopii trzeba zrobić. To się po prostu źle skaluje. Jeśli do tego dodać, że możemy używać zewnętrznych bibliotek, to jest jeszcze gorzej – nie jesteśmy w stanie przecież zrobić lokalnych kopii wszystkich metod używanych wewnątrz tych bibliotek.
 
@@ -236,116 +243,88 @@ Problemem jest przechowywanie danych poza zakresem funkcji. Z założenia dane w
 ##### Zalety
 
 - Dane są przechowywane tylko in-memory.
-- Dane są zabezpieczone przed dostępem z poziomu wstrzykniętego złośliwego kodu.
+- Domknięcie utrudnia bezpośredni odczyt lokalnej zmiennej, nie gwarantuje odporności na XSS.
 - Mamy kontrolę nad wysyłaniem danych.
 
 ##### Wady
 
 - Implementacja jest bardziej skomplikowana. Trzeba używać domknięcia, żeby zabezpieczyć dane.
-- Trzeba korzystać z lokalnych kopii funkcji, żeby całkowicie zabezpieczyć token, co powoduje problemy ze skalowaniem i wykorzystaniem zewnętrznych bibliotek.
+- Zachowanie referencji do funkcji ogranicza niektóre podmiany, lecz nie zapewnia pełnej ochrony tokena i sesji.
 - Przechowywanie tokenów poza zakresem zamkniętej funkcji jest problematyczne.
 
 ### Web Workery
 
-Web Workery pozwalają uruchomić kod JS w osobnym (odseparowanym od głównego) wątku. Z frontendem komunikują się specjalnym kanałem `MessageChannel`. Aplikacja może wysłać tym kanałem wiadomość – żądanie jakiejś akcji, którą Web Worker ma wykonać, po czym zwrócić dane do aplikacji.
+Web Workery uruchamiają JavaScript poza głównym wątkiem, we własnym kontekście globalnym. Komunikacja odbywa się przez `postMessage` i zdarzenia `message`; można też używać `MessageChannel`. To nie jest obietnica osobnego procesu systemowego.
 
 W kontekście bezpieczeństwa istotne jest, że jakikolwiek kod, który chciałby mieć dostęp do tokena zapisanego w pamięci Web Workera, musi istnieć w tym Web Workerze. Zewnętrzny kod nie ma do niej dostępu. Jednak trzeba pamiętać, że token **nie może być zwracany z Web Workera** do aplikacji, bo atakujący mógłby podstawić fałszywy `MessageChannel` i uzyskać dostęp do zwracanej wartości (podobnie jak to było z fałszywym `fetch`).
 
-Mimo że atakujący nie ma dostępu do samego tokena, to mógłby wysłać do Web Workera polecenie np. wysłania jakiegoś żądania do backendu, więc mamy podatność na CSRF – podobnie jak w przypadku ciasteczek. Jednak w przeciwieństwie do ciasteczek zaufany kod JS ma dostęp do tokena, więc nie mamy już tego ograniczenia funkcjonalnego.
+XSS może wysyłać do workera takie same polecenia jak aplikacja. Trzeba więc ograniczyć interfejs komunikatów i uprawnienia; to nadużycie interfejsu przez XSS, nie klasyczny CSRF. Jeśli worker ma chronić token przed głównym wątkiem, nie powinien go temu wątkowi zwracać.
 
-Poniżej mamy przykład kodu z wykorzystaniem Web Workera w NodeJS. W głównym wątku jest uruchamiana właściwa aplikacja frontendowa (`app.js`), a w osobnym wątku Web Worker (`api-worker.js`).
+Poniżej przeglądarkowy przykład z atrapą tokena i API, bez żądań sieciowych. Uruchom pliki z tego samego origina przez HTTP(S). `worker_threads` z Node.js z pierwotnej wersji wpisu nie jest API Web Workerów w przeglądarce.
 
-Cała logika z pobieraniem i wykorzystaniem tokena znajduje się w Web Workerze, odizolowana od głównego wątku aplikacji. Zakładając, że uda się atak XSS, tylko kod głównej aplikacji możemy uznać za niebezpieczny. Odizolowany proces Web Workera jest nadal czysty, więc przechowywany tam token jest bezpieczny.
+Sekret pozostaje w workerze, ale XSS nadal może poprosić go o dozwolone dane. Walidacja typu komunikatu nie rozpoznaje, czy wysłał go zaufany kod czy skrypt atakującego. Uwierzytelnienie i autoryzacja danych użytkownika muszą być egzekwowane przez prawdziwy backend.
 
 **app.js**
 
 ```
-const { Worker } = require('worker_threads');
-
 const apiWorker = new Worker('./api-worker.js');
-
-const callback = (data) => console.log(data)
-
-apiWorker.on('message', messageFromWorker => callback(messageFromWorker));  
-
-apiWorker.postMessage({ userId: 'user1'}); 
+apiWorker.addEventListener('message', event => console.log(event.data));
+apiWorker.postMessage({ type: 'GET_MY_DATA' });
 ```
 
 **api-worker.js**
 
 ```
-const { parentPort } = require('worker_threads');
-
-tokenCache = {}
-
-const callFakeTokenService = function() {
-    return { token: 'secretToken123' }
+const token = 'DEMO_ONLY_NOT_A_REAL_SECRET';
+function callFakeApiService(accessToken) {
+    if (accessToken !== token) throw new Error('Bad token');
+    return { data: [1, 2, 3] };
 }
-
-const callFakeApiService = function(token, userId) {
-    if (token === 'secretToken123') {
-        return { data: [1,2,3], user: userId }
-    } else {
-        return 'bad token'
+self.addEventListener('message', event => {
+    const message = event.data;
+    if (!message || message.type !== 'GET_MY_DATA' ||
+        Object.keys(message).length !== 1) {
+        self.postMessage({ error: 'Unsupported message' });
+        return;
     }
-}
-
-parentPort.once('message',
-    message => 
-    {
-        let userId = message.userId
-
-        let token = ''
-        if (!tokenCache[userId]) {
-            let tokenResponse = callFakeTokenService()
-            token = tokenResponse.token
-        } else {
-            token = tokenCache[userId]
-        }
-        
-        tokenCache[userId] = token
-
-        let apiResponse = callFakeApiService(token, userId)
-
-        return parentPort.postMessage(apiResponse);
-    }
-); 
+    self.postMessage(callFakeApiService(token));
+});
 ```
 
 #### Problemy
 
-Problem pojawia się, jeśli potrzebujemy przechować token w pamięci, np. pomiędzy sesjami. Zwykły Web Worker z powyższego przykładu się nie sprawdzi, ponieważ będzie żył tylko do momentu zakończenia swojej pracy. Rozwiązaniem tego problemu jest zastosowanie [Shared Workera](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker), do którego mamy dostęp z różnych kontekstów – różnych okien przeglądarki itp. Jest to nieco bardziej skomplikowane, szczególnie jeśli używamy jakiegoś frameworka – np. Angulara. Jednak to również jest osobny temat, niezwiązany już z bezpieczeństwem.
+Worker nie jest trwałym magazynem. Dedicated Worker jest związany ze swoim dokumentem; [SharedWorker](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker) może obsługiwać kilka zgodnych kontekstów, np. kart, ale nie gwarantuje przetrwania zamknięcia przeglądarki czy kolejnej sesji. Nie buduj odzyskiwania sesji na założeniu, że proces workera będzie stale żył.
 
-Dodatkowo, z powodu opisanej wcześniej izolacji, Web Worker nie ma dostępu do ciasteczek, do których ma dostęp kod w głównym wątku. Może to być problemem na przykład w sytuacji, kiedy w Web Workerze chcemy pobrać access token, a żeby to zrobić, musimy użyć refresh tokena, który jest w głównym wątku.
+Worker nie ma `document.cookie`, ale jego `fetch` może wysyłać ciasteczka, także `HttpOnly`, zgodnie z regułami `credentials`, originów i `SameSite`. Odczyt wartości ciasteczka i dołączenie go przez przeglądarkę do żądania to różne rzeczy. Refresh tokena w ciasteczku `HttpOnly` nie odczyta ani główny wątek, ani worker.
 
 #### Podsumowanie
 
 ##### Zalety
 
-- Dane istnieją tylko w obrębie odizolowanego procesu, w którym działa Web Worker – zabezpieczone przed złośliwym kodem, który infekuje aplikacje w głównym wątku.
+- Oddzielny kontekst JavaScriptu ogranicza bezpośredni odczyt danych przez główny wątek.
 - Mamy kontrolę nad wysyłaniem danych.
-- Dane są zachowane między sesjami – do momentu aż przechowujący je Web Worker zostanie zatrzymany.
+- SharedWorker może współdzielić stan między kartami, ale nie jest trwałym magazynem między sesjami.
 
 ##### Wady
 
 - Najbardziej skomplikowane z opisanych rozwiązań.
 - Komplikuje się jeszcze bardziej, jeśli trzeba przechowywać token trwalej niż tylko chwilowo.
-- Żądania wysyłane z kontekstu Web Workera nie mają dostępu do ciasteczek HttpOnly z głównego wątku.
-- Możliwy jest atak CSRF.
+- XSS może nadużyć dozwolonych operacji workera; sam oddzielny wątek nie chroni sesji.
+- Przy uwierzytelnianiu ciasteczkami nadal trzeba uwzględnić ochronę CSRF.
 
 ## Podsumowanie
 
-| **Rozwiązanie** | **XSS** | **XDS** | **CSRF** |
+| **Rozwiązanie** | **Bezpośredni odczyt przez XSS** | **Działania w imieniu ofiary przez XSS** | **Automatyczne dołączanie poświadczeń** |
 | --- | --- | --- | --- |
-| Local Storage | Podatny | Podatny | Bezpieczny |
-| Session Storage | Podatny | Bezpieczny | Bezpieczny |
-| Ciasteczka HttpOnly | Bezpieczny | Bezpieczny | Podatny |
-| In-memory* | Bezpieczny | Bezpieczny | Bezpieczny |
-| Web Worker | Bezpieczny | Bezpieczny | Podatny |
+| Local Storage | Tak | Możliwe | Nie |
+| Session Storage | Tak, w tej samej karcie/originie | Możliwe | Nie |
+| Ciasteczko HttpOnly | Nie przez JS | Możliwe | Tak, zależnie od reguł ciasteczek |
+| Domknięcie in-memory | Utrudniony; zależy od interfejsu i implementacji | Możliwe | Nie |
+| Web Worker | Nie bezpośrednio z głównego wątku | Możliwe przez interfejs workera | Zależy od sposobu uwierzytelniania |
 
-*Pod warunkiem implementacji domknięcia i lokalnych kopii funkcji
+To nie ranking odporności na każdy atak. Ścieżki jednego origina nie są odrębnymi strefami zaufania. Dla aplikacji z backendem warto rozważyć sesję w ciasteczku `HttpOnly; Secure` z odpowiednim `SameSite` i ochroną CSRF, zamiast udostępniać tokeny JavaScriptowi. Szczegóły zależą od architektury.
 
-Bezpieczeństwo pamięci przeglądarki to jedna sprawa, ale na bezpieczeństwo trzeba patrzeć szerzej. Wszystko, co tutaj opisałem, jest możliwe dopiero, jeśli atakującemu uda się wykonać atak XSS/XDS. Więc dopóki mamy pewność, że aplikacja nie jest podatna na atak, to nawet w local storage token jest bezpieczny.
+Każdy wariant wymaga zapobiegania XSS: bezpiecznych operacji na DOM, kodowania danych w odpowiednim kontekście, sanitizacji dopuszczanego HTML-a, kontroli zależności i CSP jako dodatkowej warstwy. Nie zakładaj, że „na pewno nie mamy XSS”, więc miejsce przechowywania sekretów przestaje mieć znaczenie.
 
 Inspiracją do tego tekstu były teksty na [blogu Auth0](https://auth0.com/blog/secure-browser-storage-the-facts/) i [ropnop blog](https://blog.ropnop.com/storing-tokens-in-browser/), które z jednej strony nieco odchudziłem, a z drugiej uzupełniłem o pewne brakujące tam informacje.
 

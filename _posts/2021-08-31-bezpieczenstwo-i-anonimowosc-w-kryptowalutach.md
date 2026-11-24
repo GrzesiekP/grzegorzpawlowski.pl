@@ -4,12 +4,17 @@ date: 2021-08-31
 slug: "bezpieczenstwo-i-anonimowosc-w-kryptowalutach"
 permalink: /bezpieczenstwo-i-anonimowosc-w-kryptowalutach/
 categories: ["Kryptowaluty"]
-excerpt: "Wraz ze wzrostem popularności kryptowalut przybywa ludzi, którzy patrzą na nie jedynie pod kątem szybkiego zarobku, nie zastanawiając się nad kwestią bezpieczeństwa i anonimowości. Te dwie cechy…"
+excerpt: "Bitcoin jest pseudonimowy, nie anonimowy. Historyczne porady o zakupach gotówkowych i portfelach wymagają uwzględnienia weryfikacji AML i publicznej historii transakcji."
 image: "/assets/images/7f2297a4-KryptoObrazekWyrozniajacy-1024x512.jpg"
 layout: post
+updated: 2026-11-24
+update_note: |
+  Wycofuję błędne zapewnienia o anonimowości bitomatów i braku obowiązku sprawdzania danych. Gotówka nie wyłącza KYC/AML, a Bitcoin ma publiczną historię transakcji. Usunąłem poradę z kartą SIM i rekomendację papierowego portfela jako „najlepszego”. Tabela cen pozostaje archiwalna; jej pierwotnej daty nie udało się wiarygodnie potwierdzić.
+
+  Źródła: [Bitcoin — prywatność](https://bitcoin.org/en/protect-your-privacy), [bezpieczeństwo portfela](https://bitcoin.org/en/secure-your-wallet), [FlyingAtom — obowiązek weryfikacji niezależnie od kwoty](https://flyingatom.com/aml/), [MF — kryptowaluty](https://podatki.gov.pl/podatki-osobiste/pit/informacje-podstawowe/co-jest-opodatkowane/zbycie-kryptowalut). Przywołanie operatora nie jest potwierdzeniem bieżącej dostępności jego usług.
 ---
 
-Wraz ze wzrostem popularności kryptowalut przybywa ludzi, którzy patrzą na nie jedynie pod kątem szybkiego zarobku, nie zastanawiając się nad kwestią bezpieczeństwa i anonimowości. Te dwie cechy są ważnymi zaletami wynikającymi z pierwotnego założenia, że ma to być bezpieczny i anonimowy środek płatniczy niezależny od globalnego systemu finansowego: banków i rządów. Łatwo i szybko czy bezpiecznie i anonimowo? Czy trzeba wybierać?
+Wraz ze wzrostem popularności kryptowalut przybywa ludzi skupionych na szybkim zarobku, bez uwzględnienia bezpieczeństwa i prywatności. Nie są one automatycznymi cechami każdej kryptowaluty. W szczególności Bitcoin jest pseudonimowy: adresy nie muszą zawierać nazwiska, ale transakcje są publiczne i można je ze sobą łączyć.
 
 Na szczęście, można wypracować pewien kompromis, co do którego wskazówki zebrałem poniżej.
 
@@ -17,15 +22,15 @@ Zaznaczę, że to, co jest tu napisane, ma zastosowanie do kwot od kilkuset do k
 
 ## Zakup kryptowalut
 
-Niestety – rzeczywistość idzie w takim kierunku, że coraz trudniej zachować anonimowość, korzystając z najbardziej dostępnych sposobów na zakupy: giełd i kantorów. Firmy oferujące takie usługi są zobowiązane do przestrzegania regulacji AML, a szczególnie regulacji KYC. Za tymi skrótami stoją sposoby inwigilacji, które oficjalnie mają zapobiegać praniu brudnych pieniędzy.
+Usługodawcy mogą mieć obowiązki AML (przeciwdziałanie praniu pieniędzy), w tym identyfikację i weryfikację klienta, określaną jako KYC. Zakres zależy od przepisów i operatora. Warto oceniać ochronę powierzanych danych, ale nie zakładać, że transakcja gotówkowa zwalnia z identyfikacji.
 
 KYC (ang. Know Your Customer) – regulacje wymagające odpowiedniego i pewnego zidentyfikowania klienta. Na giełdach zazwyczaj odbywa się przez wysłanie skanu dowodu osobistego oraz własnego zdjęcia w celu weryfikacji, czy rzeczywiście jest to nasz dowód.
 
-Do niedawna jedna z największych giełd świata, [Binance](https://www.binance.com/en/register?ref=10253080), nie wymagała weryfikacji i można było handlować do pewnego limitu, który (jeśli dobrze pamiętam) wynosił 2 BTC. Niestety niedawno pojawiły się [doniesienia](https://kup-bitcoin.pl/binance-wprowadza-obowiazkowa-weryfikacje-konta/), że weryfikacja będzie obowiązkowa.
+Opis dawnych limitów Binance dotyczył zmian w 2021 r., a nie dzisiejszych warunków. Nie należy dobierać usługi na podstawie nieaktualnego limitu „bez KYC”; sprawdź obowiązującą procedurę, regulamin i dostępność w swoim kraju.
 
-W przypadku kantorów zwykle weryfikacja odbywa się przez podanie i zweryfikowanie numeru telefonu. Następnie musimy zapłacić za kupione kryptowaluty przelewem bankowym, kartą lub BLIK-iem.
+Sam SMS nie jest odpowiednikiem pełnej weryfikacji tożsamości. Kantor może wymagać dokumentów i dodatkowych informacji niezależnie od wybranej metody płatności.
 
-Ostatnią opcją jest zakup w kantorze fizycznym lub bitomacie (np. Flying Atom). Tam co prawda, w związku z regulacjami też mają obowiązek poproszenia klienta o wypełnienie formularza, w którym podaje się dane osobowe, ale nie mają obowiązku sprawdzenia, czy klient podał prawdziwe dane. Teoretycznie kursy wymiany są tu mniej korzystne niż na giełdach, ale są to różnice akceptowalne. W dodatku często prowizja od wypłaty z giełdy sprawia, że **bardziej opłacalny jest Bitomat**. W bitomatach nie ma żadnej weryfikacji, więc pozwala zachować anonimowość.
+Także kantor fizyczny i bitomat mogą wymagać identyfikacji oraz weryfikacji danych. FlyingAtom w swojej polityce AML wskazuje obowiązek weryfikacji niezależnie od kwoty, również poniżej 1000 EUR. Dawne twierdzenie o podaniu dowolnych danych i anonimowym bitomacie było błędne. Porównuj rzeczywisty kurs oraz wszystkie opłaty — nie ma jednej zawsze najtańszej metody.
 
 Sam byłem zaskoczony, jakie mogą być różnice:
 
@@ -34,7 +39,7 @@ Sam byłem zaskoczony, jakie mogą być różnice:
 | Bitomat | 195 288 zł | 0,0051207 | 4,53% | 45 zł | 5 zł |
 | Giełda | 208 244 zł | 0,0048021 | 11,46% | 115 zł | 0,0005 BTC = 93 zł |
 
-Porównanie (na dzień 27.08.2020) dla zakupu za kwotę 1000 zł (kurs rynkowy wg [Coinpaprika](https://coinpaprika.com/coin/btc-bitcoin/) to 186 840 zł) w bitomacie Flying Atom i na giełdzie BitBay ([archiwalna strona giełdy](https://web.archive.org/web/20210812222443/https://bitbay.net/pl)).
+Archiwalny przykład zakupu za 1000 zł przy przyjętym kursie rynkowym 186 840 zł. W pierwotnym podpisie była data „27.08.2020”, niespójna z podanym poziomem kursu; nie mam źródła pozwalającego pewnie ustalić właściwą datę. Tabela nie jest aktualnym porównaniem FlyingAtom i BitBay. Kolumna „Kurs” uwzględnia tu koszty, więc jest efektywną ceną zakupu, a nie samym notowaniem giełdowym.
 
 ![Bitomat Flying Atom w Krakowie](../assets/images/d86892d2-iu.jpg)
 
@@ -42,15 +47,15 @@ Bitomat w Krakowie. Źródło: [flyingatom.com](https://flyingatom.com/bitomat-k
 
 ### Co robić?
 
-- Jeśli cenisz sobie anonimowość, wybierz kantor fizyczny typu Flying Atom lub bitomat i zapłać gotówką. Zachowaj jednak potwierdzenie zakupu (przyda się przy rozliczaniu podatków).
-- Jeśli dostępność kantoru lub bitomatu jest dla Ciebie problematyczna, pomyśl o kantorze online. Nie musisz wykorzystywać swojego numeru telefonu. Możesz kupić do takich celów osobną kartę SIM – najlepiej w Czechach, gdzie nie musisz jej rejestrować na swoje dane osobowe, żeby zacząć jej używać.
-- Najgorszym wyborem pod względem prywatności i anonimowości będzie giełda kryptowalut. Trzeba jednak przyznać, że jeśli zamierzasz często kupować i sprzedawać kryptowaluty, będzie to wygodna i tania opcja. Coś za coś.
+- Sprawdź wymogi identyfikacji, politykę danych i pełne koszty wybranego operatora. Nie podawaj fałszywych danych ani nie traktuj gotówki jako sposobu obejścia obowiązków.
+- Udostępniaj dane tylko po sprawdzeniu autentyczności usługi. Osobny numer telefonu może ograniczyć łączenie kontaktów, ale nie zapewnia anonimowości transakcji i nie zastępuje KYC.
+- Zachowuj potwierdzenia od początku. Dokumentacja będzie potrzebna niezależnie od metody zakupu.
 
 ## Przechowywanie kryptowalut
 
 Są różne sposoby na przechowywanie krypto. Opisałem je bardziej szczegółowo we wpisie [Jak zacząć inwestować w Bitcoina?](../jak-zaczac-inwestowac-w-bitcoina/). Który sposób będzie najlepszy?
 
-Tutaj sytuacja jest moim zdaniem jasna – najlepszy będzie portfel papierowy (oczywiście odpowiednio schowany i zabezpieczony). Dobrym wyborem jest też portfel sprzętowy, bo jedyne dane, jakie udostępniamy, to te, które podajemy producentowi podczas zakupu. Żeby zadbać o ich bezpieczeństwo (i o bezpieczeństwo samego portfela), polecam kupować tylko bezpośrednio u producenta.
+Nie ma jednego najlepszego portfela. Papierowy zapis pojedynczego klucza bywa trudny i ryzykowny w obsłudze; nie myl go z bezpieczną kopią seeda. Portfel sprzętowy może ograniczyć ekspozycję kluczy, ale nie ukrywa transakcji w blockchainie. Aplikacja towarzysząca i dostawcy infrastruktury również mogą przetwarzać dane — zakup urządzenia nie jest jedynym śladem. Zabezpiecz frazę odzyskiwania i zweryfikuj urządzenie zgodnie z dokumentacją.
 
 *Ledger Nano S ([https://shop.ledger.com/products/ledger-nano-s](https://shop.ledger.com/products/ledger-nano-s))*
 
@@ -62,8 +67,8 @@ Istotna, choć nieoczywista rada – nie udostępniaj w internecie informacji o 
 
 ### Co zrobić?
 
-- Nie trzymaj kryptowalut na giełdach.
-- Skorzystaj z dobrze zabezpieczonego portfela papierowego lub sprzętowego.
+- Rozumiej ryzyko przechowywania u operatora i samodzielnej opieki nad kluczami.
+- Wybierz utrzymywany portfel oraz przygotuj i sprawdź bezpieczną kopię odzyskiwania.
 - Jeśli kupujesz portfel sprzętowy, kupuj bezpośrednio u producenta.
 - Zachowaj dla siebie informację o swoich inwestycjach. Internet i tak wie już o Tobie wystarczająco.
 
@@ -75,14 +80,14 @@ Jednak jeśli ktoś ma informacje zarówno o zakupie, jak i sprzedaży, wie też
 
 Oczywiście nie namawiam do niepłacenia podatków. Zwracam tylko uwagę, że to my możemy być jedynymi osobami wiedzącymi o tym, że należy je zapłacić i w jakiej wysokości.
 
-Tutaj znów jest wyraźna różnica między giełdą a bitomatem. Pierwsze jest wygodne i tanie (choć nie zawsze), a drugie zapewnia anonimowość.
+Ani giełda, ani bitomat nie gwarantują anonimowości. Sprzedaż za gotówkę również może być objęta weryfikacją i obowiązkami podatkowymi. Zgodnie z informacją MF koszty wykazuje się w PIT-38 także bez sprzedaży, a zapłata kryptowalutą za towary lub usługi może być odpłatnym zbyciem.
 
 **Co zrobić?**
 
-- Sprzedawaj kryptowaluty w Bitomacie za gotówkę.
+- Dobierz legalnie dostępną metodę, porównaj koszty i bezpieczeństwo oraz zachowaj dowody transakcji. Nie wybieraj bitomatu na podstawie obietnicy anonimowości.
 
 ## Podsumowanie
 
 Nawet jeżeli niezbyt zależy Ci na anonimowości, bo myślisz, że nie jesteś przestępcą i nie masz nic do ukrycia, to zachęcam przynajmniej do przemyślenia powyższych wskazówek. Przekonanie, że skoro jesteś ok, to wielkie instytucje finansowe i rządy będą wobec Ciebie fair i będą dbały o Twoje dobro, jest… naiwne. Jeśli mówią, że chcą Twojego dobra, to czym prędzej schowaj je przed nimi 😉 Nie wspominając o pospolitych złodziejach.
 
-Jest kilka prostych wskazówek, żeby chronić swoją anonimowość niewielkim kosztem. Kupuj i sprzedawaj w bitomacie, a posiadane krypto przechowuj na portfelu sprzętowym (lub dobrze zabezpieczonym papierowym).
+Ograniczaj ujawnianie danych, zabezpieczaj urządzenia i kopie, ale nie traktuj tych kroków jako gwarancji anonimowości. Bitcoin pozostawia trwałą, publiczną historię; sprzętowy portfel ani gotówka jej nie usuwają.

@@ -39,3 +39,17 @@ Obrazki dodaj do `assets/images/`; w treści wpisu odwołuj się do nich ścież
 ## Kontrola linków i obrazów
 
 Po zbudowaniu strony uruchom `python scripts/check_site.py _site` (albo podaj inną ścieżkę do wyniku budowania). Skrypt sprawdzi lokalne linki, kotwice i obrazy zarówno dla własnej domeny, jak i dla adresu GitHub Pages z nazwą repozytorium w ścieżce. Nie wymaga dodatkowych bibliotek ani dostępu do sieci.
+
+## Aktualizacja merytoryczna wpisu
+
+Datę pierwotnej publikacji (`date`) i adres (`permalink`) pozostaw bez zmian. Notkę o korekcie dodaj w nagłówku pliku Markdown:
+
+```yaml
+updated: 2026-11-24
+update_note: |
+  Krótkie podsumowanie zmian i ograniczeń historycznego przykładu.
+
+  Źródło: [dokumentacja](https://example.com/).
+```
+
+Notka obsługuje Markdown i pojawia się pod tytułem, przed okładką oraz treścią. Popraw też błędne fragmenty w samej treści; notka nie zastępuje korekty. `updated` jest wykorzystywane również w RSS.

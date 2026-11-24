@@ -11,6 +11,12 @@ layout: default
     <h1>{{ page.title | escape }}</h1>
     <p class="article-byline">Grzegorz Pawłowski</p>
   </header>
+  {% if page.update_note %}
+  <aside class="article-update" aria-labelledby="update-heading">
+    <p id="update-heading"><strong>Aktualizacja — <time datetime="{{ page.updated | date: '%Y-%m-%d' }}">{{ page.updated | date: '%d.%m.%Y' }}</time></strong></p>
+    {{ page.update_note | markdownify }}
+  </aside>
+  {% endif %}
   {% if page.image %}<img class="article-cover" src="{% include root-path.html %}{{ page.image | remove_first: '/' }}" alt="" fetchpriority="high">{% endif %}
   <div class="article-body">
     {{ content }}

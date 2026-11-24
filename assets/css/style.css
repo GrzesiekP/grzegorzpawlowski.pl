@@ -84,6 +84,10 @@ nav a:hover, nav a[aria-current="page"] { color: var(--green); }
 .article-header .post-meta { margin-bottom: 16px; }
 .article-header h1, .page-header h1 { margin: 0; font-size: clamp(36px, 6vw, 56px); }
 .article-byline { margin: 18px 0 0; color: var(--muted); font-size: 14px; }
+.article-update { margin: 0 0 32px; padding: 20px 24px; border-left: 3px solid var(--green); border-radius: 0 8px 8px 0; background: #edf2e8; font-size: 15px; line-height: 1.75; overflow-wrap: anywhere; }
+.article-update p { margin: 0 0 12px; }
+.article-update > :last-child { margin-bottom: 0; }
+.article-update ul { margin: 0 0 12px; padding-left: 22px; }
 .article-cover { display: block; width: 100%; height: auto; max-height: 470px; margin: 0 0 38px; object-fit: contain; border-radius: 10px; }
 .article-body { color: #343a35; font-size: 17px; line-height: 1.85; overflow-wrap: anywhere; }
 .article-body > :first-child { margin-top: 0; }

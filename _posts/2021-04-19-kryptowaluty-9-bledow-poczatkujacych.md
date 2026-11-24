@@ -7,21 +7,26 @@ categories: ["Kryptowaluty"]
 excerpt: "Poniżej przedstawiłem 9 błędów popełnianych na początku inwestowania w kryptowaluty. Większość z nich sam kiedyś popełniałem, więc wiem, że są to realne problemy, a nie wymyślone na kolanie…"
 image: "/assets/images/7f2297a4-KryptoObrazekWyrozniajacy-1024x512.jpg"
 layout: post
+updated: 2026-11-24
+update_note: |
+  Usunąłem sugestie, że cierpliwość lub kolejna hossa gwarantują odzyskanie pieniędzy. Nawet długi horyzont nie eliminuje ryzyka utraty całości. Kwoty opłat i nazwy produktów z 2021 r. oznaczyłem jako historyczne; doprecyzowałem spread, opłaty sieciowe i rozliczenie polskiego PIT. Koszt ekonomiczny inwestycji nie zawsze jest kosztem podatkowym.
+
+  Źródła: [MF — kryptowaluty, PIT-38 i koszty](https://podatki.gov.pl/podatki-osobiste/pit/informacje-podstawowe/co-jest-opodatkowane/zbycie-kryptowalut), [Bitcoin — bezpieczeństwo portfela](https://bitcoin.org/en/secure-your-wallet).
 ---
 
 Poniżej przedstawiłem 9 błędów popełnianych na początku inwestowania w kryptowaluty. Większość z nich sam kiedyś popełniałem, więc wiem, że są to realne problemy, a nie wymyślone na kolanie pitu-pitu. Na wszystkie też znalazłem już rozwiązania i je również staram się przedstawić.
 
-Na początku zaznaczę tylko, że tekst dotyczy inwestowania długoterminowego (na rynku krypto oznacza to dla mnie minimum kilka tygodni), a nie tradingu – dokonywania kilku i więcej transakcji tygodniowo. Takiej zabawy z kryptowalutami nie polecam – poza ryzykiem straty pieniędzy dochodzi wtedy pewność straty czasu. Jestem zwolennikiem inwestycji długoterminowych, bo oszczędzają czas i nerwy.
+Tekst dotyczy przede wszystkim rzadszych, zaplanowanych decyzji zamiast częstego tradingu. Kilka tygodni z pierwotnego wpisu to krótki horyzont, a nie ogólnie przyjęta definicja inwestowania długoterminowego. Rzadziej wykonywane transakcje mogą ograniczać czas obsługi, ale nie gwarantują mniejszego ryzyka ani zysku.
 
 ### Trzymanie kryptowaluty na giełdach
 
 Dlaczego tego nie robić? Opisałem to krótko w [pierwszym wpisie](../jak-zaczac-inwestowac-w-bitcoina/) na temat kryptowalut, a kwestię anonimowości rozwinąłem w tekście [*Jak zachować bezpieczeństwo i anonimowość, inwestując w kryptowaluty?*](../bezpieczenstwo-i-anonimowosc-w-kryptowalutach/).
 
-Przede wszystkim Twoje środki nie są tam bezpieczne, bo nie masz dostępu do klucza prywatnego portfela. W związku z tym możesz je w każdej chwili stracić, jeśli giełda upadnie, zostanie zhakowana, zawinie się z interesem lub nawet jeśli będzie miała problemy techniczne i nie będzie można się zalogować. Wszystkie te sytuacje już się zdarzały i jest to nadal realne zagrożenie.
+Na giełdzie powierzasz klucze operatorowi. Upadłość, kradzież lub oszustwo mogą prowadzić do utraty środków; awaria może czasowo blokować dostęp, co nie jest samo w sobie równoznaczne z ich utratą. Samodzielny portfel ogranicza ryzyko operatora, lecz wymaga ochrony kluczy i kopii.
 
 #### **Rozwiązanie**
 
-Po zakupie na giełdzie od razu przelej kryptowaluty na własny portfel.
+Jeśli wybierasz własny portfel, najpierw naucz się jego obsługi, zabezpiecz kopię i sprawdź procedurę odzyskiwania. Zweryfikuj sieć i adres oraz wykonaj mały przelew testowy. Nie wypłacaj wszystkiego w pośpiechu do nieprzygotowanego portfela.
 
 ### FOMO
 
@@ -29,7 +34,7 @@ FOMO (ang. fear of missing out) – ujmując to innymi słowami niż Wikipedia �
 
 #### **Rozwiązanie**
 
-Jest bardzo prosta zasada, jak tego uniknąć. Zainteresuj się kryptowalutami, kiedy ich cena szoruje po dnie i mało kto o nich mówi poza stałymi wyjadaczami. Wtedy na spokojnie **opracuj strategię inwestycyjną** i podejmij przemyślane decyzje.
+Nie podejmuj decyzji pod presją cudzych wyników. Na spokojnie **opracuj strategię**, limit możliwej straty i warunki rezygnacji z inwestycji. Nie da się z góry pewnie rozpoznać „dna”; niska cena może spaść jeszcze bardziej.
 
 ### Brak strategii
 
@@ -39,7 +44,7 @@ Błąd powiązany z poprzednim. Kierowanie się emocjami to poważny błąd w in
 
 Żeby tego uniknąć, **opracuj strategię** (wiem – powtarzam się, ale to ważne) i zdecyduj, na jakich poziomach ceny chcesz kupić, a na jakich sprzedać. Szczegóły zależą głównie od Twojego apetytu na ryzyko, więc jest to kwestia indywidualna. Zanotuj sobie gdzieś, dlaczego wybrałeś taką, a nie inną strategię. Będzie to pomocne w przyszłości, jeśli będziesz zastanawiać się, czy w związku ze zmianami na rynku warto coś zmodyfikować w strategii.
 
-Na koniec najważniejsze – trzymaj się swojej strategii. Nie sprawdzaj z ciekawości nerwowo ceny co kilka godzin. Rób to tylko, jeśli potrzebujesz wiedzieć, czy cena osiągnęła poziom kupna lub sprzedaży. Silna wola i rozsądek nagrodzą Cię zyskami, a chciwość, panika i chwiejność opróżnią ostatecznie Twoje kieszenie.
+Unikaj nerwowego reagowania na każdy ruch ceny, ale aktualizuj plan, jeśli zmieniły się jego założenia. Dyscyplina ogranicza impulsywne decyzje — nie jest obietnicą zysku. Z góry dopuszczaj także trwałą stratę.
 
 ### Nieprzygotowanie do hossy
 
@@ -47,13 +52,13 @@ Kiedy ceny kryptowalut rosną od kilku do kilkudziesięciu procent dziennie, jes
 
 #### **Rozwiązanie**
 
-Weź pod uwagę, że jeśli w danym momencie cena Bitcoina zalicza kolejne dołki, to prawdopodobnie za jakiś czas będzie zaliczać kolejne szczyty. Historia pokazuje, że przez dużą część czasu cena jest stosunkowo stabilna i na wykresie niewiele się dzieje.
+Nie zakładaj, że po spadkach muszą przyjść nowe szczyty. Dawne cykle nie są gwarancją przyszłych wyników. Przygotowanie obsługi portfela i dokumentacji ma sens niezależnie od tego, co zrobi kurs.
 
-Wykorzystaj ten czas nudy na rynku, żeby zaplanować inwestycję ze szczegółami. Pomyśl, gdzie będziesz trzymać kupione kryptowaluty, gdzie je kupisz i gdzie sprzedasz. Przygotuj portfele, konta na giełdach (w czasie hossy z powodu nadmiaru nowych użytkowników często na weryfikację konta czeka się kilka dni), opracuj i miej pod ręką strategię. Poczytaj, co może być szczególnie zyskowne w przyszłości (tak, jak teraz np. DeFi), żeby, gdy przyjdzie czas, zająć się kupnem i sprzedażą, a nie zastanawianiem, o co w ogóle chodzi.
+Zaplanuj miejsce przechowywania, zasady zakupu i sprzedaży oraz dokumentowanie transakcji. Weryfikacja konta może potrwać; nie zakładaj natychmiastowego dostępu. Zamiast szukać kolejnej „pewnej okazji”, poznaj ryzyka projektu. Popularność DeFi z czasu publikacji nie dowodzi jego rentowności ani bezpieczeństwa.
 
 ### Krótkowzroczność
 
-Zastanów się i weź pod uwagę, jak długo może trwać Twoja inwestycja. Być może teraz, obserwując ciągłe wzrosty zakładasz, że kupisz, zarobisz 100 czy 200%, sprzedasz i po sprawie. Niekoniecznie. Jeśli będziesz mieć pecha i kupisz na górce, nie oznacza to, że Twoje pieniądze są na zawsze stracone. O ile rynek kryptowalut nadal będzie cykliczny, to za kilka lat cena znów osiągnie te szczyty, a prawdopodobnie je przebije. Jednocześnie, kiedy cena zalicza dołki i decydujesz się na zakup, weź pod uwagę, że nie wiadomo, jak długo będzie trzeba czekać na kolejne wzrosty. Warto więc inwestować z perspektywą długoterminową.
+Zastanów się, jak długo możesz nie potrzebować tych pieniędzy. Cena po zakupie może spaść i nigdy nie wrócić do poprzedniego poziomu — również po wielu latach. Nie każdy projekt przetrwa kolejny cykl. Długi horyzont nie zmienia ryzykownego aktywa w bezpieczną lokatę.
 
 #### **Rozwiązanie**
 
@@ -67,11 +72,13 @@ Powinieneś ogarniać, co, za ile i kiedy kupiłeś, sprzedałeś i gdzie to mas
 
 #### Gdzie są Twoje krypto?
 
-Załóżmy, że kupisz np. BTC i wyślesz go na swój portfel, a później stwierdzisz, że warto kupić też ETH, a następnie jeszcze inne altcoiny. Możliwe, że kupisz je na różnych giełdach i będziesz trzymać je na różnych portfelach. Być może część zostawisz na giełdach. W pewnym momencie hossa się skończy, ceny spadną i będziesz na minusie. Jako rozsądny długoterminowy inwestor nie sprzedasz wszystkiego w panice, ale poczekasz na kolejną hossę. Jednak za kilka lat, kiedy kursy kryptowalut znów wystrzelą, będziesz tracić czas na przegrzebywanie portfeli i giełd, żeby sprawdzić, ile, czego i gdzie masz. Szkoda na to cennego czasu.
+Jeżeli kupujesz różne aktywa na kilku giełdach i przenosisz je między portfelami, łatwo stracić orientację. Prowadź ewidencję także podczas spadków i długiej przerwy w handlu. Nie zakładaj, że kolejna hossa uratuje każdą pozycję. W ewidencji nie zapisuj seedów i kluczy prywatnych.
 
 #### Od czego zapłacisz podatek?
 
-Inna sytuacja to ewentualne rozliczenie podatku. Omówienie mechanizmu rozliczania dochodów z kryptowalut to temat na osobny wpis, więc ujmę to krótko. Musisz wiedzieć, ile w każdym roku wydałeś na zakup kryptowalut (koszt) i ile dostałeś za sprzedaż (przychód). Liczy się moment zakupu/sprzedaży kryptowaluty, a nie np. przelewu z konta bankowego na giełdę lub odwrotnie. Warto oczywiście zachować jakieś potwierdzenia tych transakcji, np. PDF z transakcjami z giełdy. Sugeruję przy każdej transakcji zapisać: datę i godzinę, ilość sprzedanej i kupionej waluty, kurs, wysokość prowizji (w tym jej wartość w PLN na dany dzień, jeśli jest naliczona w krypto), id transakcji (tak, żeby można było zestawić z transakcją z potwierdzenia), nazwę giełdy, obowiązujący w momencie transakcji kurs BTC/PLN.
+Według informacji MF polskie rozliczenie odpłatnego zbycia walut wirtualnych wykazuje się w **PIT-38**. Koszty nabycia wykazuje się również wtedy, gdy w danym roku nie było sprzedaży; niewykorzystane koszty przechodzą na następny rok. Wymiana krypto na krypto nie podlega opodatkowaniu, natomiast zbycie za walutę tradycyjną albo zapłata za towar, usługę lub zobowiązanie może powodować przychód. Sam przelew PLN między bankiem a giełdą nie jest jeszcze zakupem lub sprzedażą krypto.
+
+Zachowuj dokumenty, daty, ilości, wartości, prowizje, identyfikatory transakcji oraz źródła kursów do przeliczeń wymaganych przepisami. Kurs BTC/PLN zapisany w arkuszu nie zastępuje zasad przeliczania przychodu w walucie obcej. Nie każdy wydatek ekonomiczny jest kosztem uzyskania przychodu; przy nietypowych operacjach sprawdź aktualne przepisy lub poradź się specjalisty.
 
 #### Ile tak naprawdę zarobiłeś?
 
@@ -83,7 +90,7 @@ Prowadź arkusz kalkulacyjny z ewidencją transakcji, przelewów, przesyłu mię
 
 ### Kupowanie altcoinów bez ich znajomości
 
-W szczytowych fazach hossy na rynku kryptowalut rośnie praktycznie wszystko, łącznie ze scamami i shitcoinami. Jednocześnie Bitcoin jest już drogi, a nowicjuszom na rynku zysk rzędu 100-200% rocznie na BTC wydaje się nudny. Szukają więc altcoinów, które rosną po kilka tysięcy procent w ciągu miesięcy. Niestety ryzyko jest tu o wiele większe niż w przypadku Bitcoina, a większość tych projektów upada i z dna się nie podnosi (tak skończyło wiele hitów roku 2017 – [Lisk](https://coinmarketcap.com/currencies/lisk/), [Enigma](https://coinmarketcap.com/currencies/enigma/), [Substratum](https://coinmarketcap.com/currencies/substratum/), [TenX](https://coinmarketcap.com/currencies/tenx/) i wiele innych). Niektóre projekty jednak rozwijały się nawet w czasie bessy na rynku krypto i dziś nadal trzymają się dobrze (np. [Cardano](https://coinmarketcap.com/currencies/cardano/)).
+Wzrosty cen mogą przyciągać do ryzykownych lub oszukańczych projektów. Wysoka historyczna stopa zwrotu nie dowodzi jakości projektu, a niska cena pojedynczego tokena nie oznacza taniej wyceny. Wymieniane tu dawniej przykłady Lisk, Enigma, Substratum, TenX i Cardano były obserwacją z 2021 r., nie aktualnym rankingiem. Projekt może działać technicznie, a jego token nadal przynieść trwałą stratę.
 
 Jednak rozeznanie w tym, co ma szansę przetrwać w długim terminie jest bardzo trudne i wymaga głębokiej analizy projektów. W dodatku nawet kupując altcoiny z perspektywą krótkoterminowego zarobku (kilka tygodni) również warto kierować się dobrą analizą, a nie tylko popularnością. W innym przypadku, równie dobrze można wybrać na chybił-trafił cokolwiek z [TOP 100 marketcapu](https://coinmarketcap.com/).
 
@@ -105,27 +112,27 @@ Inwestując w kryptowaluty, musisz wziąć pod uwagę koszty, które wpłyną na
 
 #### Spread
 
-Po pierwsze, zawsze na giełdzie, w kantorze czy w bitomacie, kupując, zapłacisz więcej niż średni kurs, a sprzedając, dostaniesz mniej niż średni kurs – ta różnica nazywa się spread i występuje też na innych rynkach. Te różnice mogą wynosić kilka dziesiątych lub kilka procent.
+Spread to różnica między najlepszą ceną sprzedaży (ask) a kupna (bid). Nie ma jednej „średniej ceny”, po której musisz zawrzeć transakcję. Zlecenie rynkowe może dodatkowo powodować poślizg, szczególnie przy małej płynności. W kantorze lub bitomacie porównuj końcową kwotę do otrzymania z ofertami innych dostawców, z uwzględnieniem wszystkich opłat.
 
 #### Prowizja
 
-Drugim kosztem jest prowizja, jaką płacisz za wymianę krypto-krypto lub krypto-FIAT (FIAT to waluta fiducjarna – dolar, złotówka, euro itp.). Prowizje różnią się w zależności od giełdy i zazwyczaj wynoszą kilka dziesiątych procenta wartości transakcji – [tutaj przykład z giełdy BitBay (kopia archiwalna)](https://web.archive.org/web/20211020091733/https://bitbay.net/pl/tabela-oplat). Inaczej sytuacja wygląda w bitomacie – tam wszystkie koszty są już uwzględnione w kursie i zazwyczaj wynoszą ok. 3–5% od średniego kursu.
+Drugim kosztem jest prowizja za wymianę krypto-krypto lub krypto-FIAT (np. PLN, USD, EUR). Zależy m.in. od operatora, rodzaju zlecenia i obrotu. [Tabela BitBay](https://web.archive.org/web/20211020091733/https://bitbay.net/pl/tabela-oplat) to archiwalny przykład. Dawne 3–5% dla bitomatów nie jest bieżącą stawką ani regułą; operator może stosować marżę w kursie i osobne opłaty.
 
 #### Opłaty transakcyjne
 
-Trzeci koszt to opłata transakcyjna (za przesyłanie kryptowaluty), kiedy np. wysyłasz krypto z giełdy na portfel lub kiedy, sprzedając krypto, musisz wysłać je na portfel kupującego (innej osoby, kantoru, bitomatu). Różni się ona pomiędzy kryptowalutami i zależy od „zapchania sieci”. W przypadku BTC są to aktualnie koszty rzędu kilkudziesięciu zł ([możesz sprawdzić tutaj](https://bitinfocharts.com/comparison/bitcoin-median_transaction_fee.html#3m)). Natomiast w przypadku Litecoina są to dosłownie grosze.
+Opłata sieciowa zależy od sieci, popytu na miejsce w bloku i parametrów transakcji. W Bitcoinie ważny jest jej rozmiar w bajtach wirtualnych i stawka sat/vB, a nie sam procent przesyłanej kwoty. Przeliczenie na złotówki zmienia się wraz z kursem. [Historyczna mediana opłat](https://bitinfocharts.com/comparison/bitcoin-median_transaction_fee.html#3m) nie jest ofertą dla Twojej transakcji. Opłata pobierana za wypłatę przez giełdę może różnić się od faktycznego kosztu sieciowego.
 
 #### Prowizja za wypłatę
 
-Kolejny koszt to prowizja za wypłatę. Na giełdzie prowizję zapłacisz za wypłatę kryptowaluty na swój portfel, ale także za wypłatę waluty FIAT na swoje konto bankowe. Tutaj również kwoty są bardzo zróżnicowane. Giełda [BitBay (archiwalna tabela opłat)](https://web.archive.org/web/20211020091733/https://bitbay.net/pl/tabela-oplat) pobiera 6 zł za każdy przelew, a za wypłatę Bitcoina 0,0005 BTC (ok. 25 USD). W bitomatach prowizja jest wliczona w kurs.
+Sprawdź osobno wypłatę krypto i waluty tradycyjnej. Dawne stawki BitBay — 6 zł i 0,0005 BTC — to przykład z 2021 r., nie aktualny cennik. Nie dodawaj automatycznie drugi raz opłaty sieciowej, jeśli jest już zawarta w opłacie za wypłatę. Sprawdź również minimum wypłaty i obsługiwaną sieć.
 
 #### Portfel sprzętowy
 
-Jeśli zamierzasz inwestować duże kwoty, które warto dla bezpieczeństwa przechowywać na portfelu sprzętowym, to weź pod uwagę jego koszt (ceny zaczynają się od ok. 260 zł w przypadku [Ledgera Nano S](https://shop.ledger.com/products/ledger-nano-s)).
+Jeśli wybierasz portfel sprzętowy, uwzględnij cenę urządzenia i bezpiecznej kopii. Kwota ok. 260 zł dla Nano S z pierwotnego wpisu jest historyczna. Sprzęt nie chroni przed każdym phishingiem, błędną transakcją ani utratą seeda.
 
 #### Podatek
 
-Ostatnim kosztem, którego jednak nie będę szczegółowo omawiał, jest podatek. W przypadku kryptowalut w najprostszym scenariuszu zapłacimy 19% od zysku.
+W polskim PIT stawka od dochodu z odpłatnego zbycia walut wirtualnych wynosi 19%. Dochód podatkowy nie musi odpowiadać wynikowi portfela po wszystkich wydatkach. Obowiązki i dopuszczalne koszty sprawdź w źródle MF podanym u góry; to nie pełna analiza każdego przypadku.
 
 #### **Rozwiązanie**
 
@@ -135,10 +142,10 @@ Tak jak wspomniałem wcześniej, monitoruj inwestycje i uwzględniaj wszystkie o
 
 Podsumujmy, czego nie robić, a co robić:
 
-- Nie trzymaj środków na giełdzie. Przelej je na swój portfel.
+- Świadomie wybierz między ryzykiem powiernika a samodzielną ochroną kluczy.
 - Nie daj się ponieść emocjom i chciwości. Opracuj i realizuj strategię.
 - Nie zmarnuj czasu, kiedy kryptowaluty są tanie. Przygotuj się do zakupów: załóż konta na giełdach i portfele, poczytaj o kryptowalutach, blockchainie, giełdach, portfelach i rozliczaniu podatków. Przygotuj arkusz do ewidencji i monitorowania inwestycji.
-- Weź pod uwagę, że może sprzedasz kryptowaluty dopiero za kilka lat.
+- Weź pod uwagę wieloletni spadek albo trwałą utratę wartości.
 - Prowadź ewidencję transakcji i zakupów. Monitoruj inwestycję.
 - Nie kupuj altcoinów, o których prawie nic nie wiesz. Zrozum i przeanalizuj je przed zakupem.
 - Nie myl blockchaina z kryptowalutami.

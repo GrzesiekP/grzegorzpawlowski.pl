@@ -7,6 +7,11 @@ categories: ["Inne"]
 excerpt: "Pisząc testy jednostkowe, często potrzebujemy danych testowych. Częścią tych danych mogą być instancje jednej konkretnej klasy, ale różniące się wartościami właściwości w przypadku poszczególnych…"
 image: "/assets/images/27f5b253-bob.jpg"
 layout: post
+updated: 2026-11-24
+update_note: |
+  W sekcji „testy po refaktoryzacji” omyłkowo powtórzony był kod Buildera. Zastąpiłem go właściwymi testami i ustawiłem poprawny domyślny opis zamówienia, aby przypadek wysyłki wiadomości nie rzucał wyjątku. Doprecyzowałem też, że `With...` to metody konfigurujące Builder, nie metody rozszerzające C#.
+
+  Przykład nadal jest dydaktyczny: kurs walutowy jest stałą atrapą, a wysyłka e-maila zapisuje tekst do konsoli. Nie jest to integracja z usługą kursów ani pocztą.
 ---
 
 Pisząc testy jednostkowe, często potrzebujemy danych testowych. Częścią tych danych mogą być instancje jednej konkretnej klasy, ale różniące się wartościami właściwości w przypadku poszczególnych testów. Część właściwości będzie jednak wspólna lub obojętna dla większości testów. W celu uniknięcia powtarzania kodu w testach warto zastosować jakiś automat – świetnie sprawdza się tu wzorzec **Budowniczy (Builder)**.
@@ -15,7 +20,7 @@ Pisząc testy jednostkowe, często potrzebujemy danych testowych. Częścią tyc
 
 ### Mamy następujący kod
 
-**Klasę** `Order`, w której wszystkie właściwości są wymagane – ich wartości trzeba podać w konstruktorze.
+**Klasę** `Order`, do której konstruktora przekazujemy datę, cenę, walutę i opis. `Id` jest generowane wewnątrz konstruktora. Sam obowiązek podania argumentu nie oznacza jeszcze walidacji — w tej uproszczonej klasie można np. przekazać pusty opis.
 
 ```
     public class Order
@@ -37,7 +42,7 @@ Pisząc testy jednostkowe, często potrzebujemy danych testowych. Częścią tyc
     }
 ```
 
-Następnie mamy **serwis**, który wykonuje jakieś akcje na obiekcie `Order`. Jak widać, w różnych metodach różne właściwości obiektu `Order` będą potrzebne.
+Następnie mamy **serwis**, który wykonuje jakieś akcje na obiekcie `Order`. Jak widać, w różnych metodach różne właściwości obiektu `Order` będą potrzebne. Metoda `GetDummyExchangeRate` zwraca umowne `2m`, a `DummySendEmail` tylko wypisuje tekst — pokazują zależności testów, nie rzeczywisty przelicznik lub wysyłkę.
 
 ```
 public class OrderService
@@ -164,7 +169,7 @@ public class OrderBuilder
         {
             _totalPrice = 10m;
             _currency = "USD";
-            _description = "";
+            _description = "Test order";
         }
 
         public OrderBuilder WithTotalPrice(decimal totalPrice)
@@ -187,48 +192,43 @@ public class OrderBuilder
         
         public Order Build()
         {
-            return new Order(DateTime.Now, _totalPrice, _currency, _description);
+            return new Order(new DateTime(2022, 2, 22, 0, 0, 0, DateTimeKind.Utc),
+                _totalPrice, _currency, _description);
         }
     }
 ```
 
 OK, a teraz nasze testy po małej refaktoryzacji z użyciem Buildera. Nie musimy już przejmować się obojętnymi nam właściwościami, wywołując za każdym razem konstruktor. Zamiast tego budujemy sobie obiekt `Order` z interesującymi nas wartościami dla danych właściwości.
 
-```
-    public class OrderBuilder
+```csharp
+    [TestClass]
+    public class OrderServiceWithBuilderTests
     {
-        private decimal _totalPrice;
-        private string _currency;
-        private string _description;
+        private readonly OrderService _orderService = new OrderService(0.23m, "PLN");
 
-        public OrderBuilder()
+        [TestMethod]
+        public void CalculateTotalPrice()
         {
-            _totalPrice = 10m;
-            _currency = "USD";
-            _description = "";
+            var order = new OrderBuilder().WithTotalPrice(100m).Build();
+            Assert.AreEqual(123m, _orderService.CalculateTotalPrice(order));
         }
 
-        public OrderBuilder WithTotalPrice(decimal totalPrice)
+        [TestMethod]
+        public void CalculateTotalPriceInBaseCurrency()
         {
-            _totalPrice = totalPrice;
-            return this;
+            var order = new OrderBuilder()
+                .WithTotalPrice(100m)
+                .WithCurrency("USD")
+                .Build();
+            Assert.AreEqual(246m, _orderService.CalculateTotalPriceInBaseCurrency(order));
         }
 
-        public OrderBuilder WithCurrency(string currency)
+        [TestMethod]
+        public void SendMail()
         {
-            _currency = currency;
-            return this;
-        }
-
-        public OrderBuilder WithDescription(string description)
-        {
-            _description = description;
-            return this;
-        }
-        
-        public Order Build()
-        {
-            return new Order(DateTime.Now, _totalPrice, _currency, _description);
+            var order = new OrderBuilder().WithDescription("Test message").Build();
+            // W tym przykładzie brak wyjątku oznacza, że atrapa wysyłki zakończyła pracę.
+            OrderService.SendEmail(order);
         }
     }
 ```
@@ -239,8 +239,8 @@ Oczywiście prawdziwą moc Budowniczy pokazuje dopiero przy bardziej skomplikowa
 
 Na koniec kilka dobrych praktyk związanych z tym rozwiązaniem:
 
-- Domyślne dane powinny być w miarę możliwości prawidłowe. W moim przykładzie ustawiłem sensowne `TotalPrice` (10) i `Currency` (USD), ale złamałem tę zasadę, przypisując pusty string do `Description`.
-- Dodawaj tylko te metody rozszerzające (`With...`), których potrzebujesz. Jeśli dla danego przypadku (tutaj dla testów) jedna wartość jest zawsze OK, to ustaw ją jako domyślną. Ja np. mógłbym tutaj podać jako domyślną wartość `TotalPrice` 100, a nie 10, bo w obu testach, gdzie potrzebuję `TotalPrice`, mogę użyć tej samej wartości.
+- Domyślne dane powinny być w miarę możliwości prawidłowe. W przykładzie `TotalPrice` wynosi 10, `Currency` to USD, a `Description` nie jest puste. Stała data sprawia, że dane testowe nie zmieniają się z zegarem systemowym. Osobno testuj przypadki z niepoprawnymi danymi.
+- Dodawaj tylko te metody konfigurujące Builder (`With...`), których potrzebujesz. Nie są to metody rozszerzające C#. Jeśli dla danego przypadku jedna wartość jest zawsze OK, ustaw ją jako domyślną. Ja np. mógłbym podać jako domyślną wartość `TotalPrice` 100, a nie 10, bo w obu testach ceny mogę użyć tej samej wartości.
 - Staraj się w każdym teście używać nowej instancji Buildera. Zastosowanie jednej instancji dla całej klasy testowej może spowodować, że jeden test zmodyfikuje dane testowe innego testu, czym złamiemy zasadę izolacji testów.
 
 Daj znać, czy używasz Buildera do testów? Może masz jakieś podpowiedzi, co jeszcze można robić lepiej?
